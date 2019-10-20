@@ -46,8 +46,7 @@ nav ul,
 /*------------------------------------------------------Section*/
 
 .callout-container {
-    width: 100vw;
-    height: auto;
+    height: 100vh;
     background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
     background-color: #000;
     -webkit-background-size: cover;
