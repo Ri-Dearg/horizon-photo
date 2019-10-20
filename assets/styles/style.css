@@ -1,8 +1,17 @@
+/*------------------------------------------------------Stylings*/
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/*-----------------------------------------------Nav*/
+h1,
+h2,
+h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5rem;
+}
+
+/*------------------------------------------------------Nav*/
 
 nav {
     background-color: #111111;
@@ -26,10 +35,55 @@ nav ul,
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #c0cdbf;
+    color: #D3D3D3;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #fff;
+}
+
+/*------------------------------------------------------Section*/
+
+.callout-container {
+    height: 100vh;
+    background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/*------------------------------------------------------Footer*/
+
+footer {
+    background-color: #D3D3D3;
+    color: #111111
+}
+
+.social-links {
+    font-size: 1.5rem;
+}
+
+.fab {
+    color: #D3D3D3;
+    background: #111111;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.fab:hover {
+    background-color: #28a745
 }
