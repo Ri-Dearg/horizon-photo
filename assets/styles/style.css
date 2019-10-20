@@ -11,18 +11,55 @@ h3 {
     font-size: 1.5rem;
 }
 
+/*------------------------------------------------------Callout*/
+
+.callout-container {
+    height: 95vh;
+    background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
 /*------------------------------------------------------Nav*/
 
 nav {
-    background-color: #111111;
+    background-color: rgba(17, 17, 17, 0.8);
     font-family: 'Julius Sans One', sans-serif;
     letter-spacing: 2px;
     font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
 }
 
 nav ul,
 #collapseNavbar {
     width: 100%
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .navlogo {
@@ -41,22 +78,6 @@ nav ul,
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #fff;
-}
-
-/*------------------------------------------------------Section*/
-
-.callout-container {
-    height: 100vh;
-    background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
 /*------------------------------------------------------Footer*/
