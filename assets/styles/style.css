@@ -27,20 +27,20 @@ h3 {
     position: relative;
 }
 
-.overlay {
+/*.overlay {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
-}
+}*/
 
 
 /*------------------------------------------------------Nav*/
 
 nav {
-    background-color: rgba(17, 17, 17, 0.8);
+    background-color: rgba(17, 17, 17, 0.7);
     font-family: 'Julius Sans One', sans-serif;
     letter-spacing: 2px;
     font-size: 1.5rem;
@@ -79,6 +79,17 @@ nav ul,
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #fff;
 }
+
+/*------------------------------------------------------Jumbotron*/
+
+#jumbotext {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #D3D3D3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 
 /*------------------------------------------------------Footer*/
 
