@@ -14,6 +14,7 @@ h3 {
 /*------------------------------------------------------Callout*/
 
 /* Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
+
 .callout-container {
     height: 95vh;
     background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
@@ -39,7 +40,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    
+
 }
 
 nav ul,
@@ -49,6 +50,7 @@ nav ul,
 
 
 /* Used to overlay navbar on image */
+
 .navbar {
     position: absolute;
     top: 0;
@@ -103,6 +105,47 @@ section {
     max-width: 225px;
 }
 
+#europelink {
+    height: 250px;
+    background: url("../images/europe.jpg") no-repeat;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#asialink {
+    height: 250px;
+    background: url("../images/asia.jpg") no-repeat;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#africalink {
+    height: 250px;
+    background: url("../images/africa.jpg") no-repeat;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 /*------------------------------------------------------Footer*/
 
@@ -115,7 +158,7 @@ footer {
     font-size: 1.5rem;
 }
 
-/* Code used from: https://github.com/Ri-Dearg/resume-project/blob/master/assets/css/style.css (Correct link to COde Institute)*/ 
+/* Code used from: https://github.com/Ri-Dearg/resume-project/blob/master/assets/css/style.css (Correct link to COde Institute)*/
 
 .fab {
     color: #D3D3D3;
