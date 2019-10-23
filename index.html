@@ -4,9 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat&display=swap" rel="stylesheet">
+    <!--favicon links-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
@@ -26,20 +30,25 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon//ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!--Local Stylesheet-->
     <link rel="stylesheet" href="assets/styles/style.css" type="text/css" />
     <title>Horizon Photography</title>
 </head>
 
 <body>
+    <!-- 1. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
     <div class="jumbotron jumbotron-fluid p-0 m-0">
+        <!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
         <div class="container-fluid callout-container p-0 m-0">
             <nav class="navbar navbar-expand-md navbar-dark p-0">
+                <!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
                 <a href="index.html" class="d-md-none">
-            <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-            </a>
+                    <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+                </a>
+                <!-- 2. End -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="collapseNavbar">
                     <ul class="navbar-nav justify-content-center">
                         <li class="nav-item m-md-auto">
@@ -48,11 +57,13 @@
                         <li class="nav-item m-md-auto">
                             <a class="nav-link p-0" href="gallery.html">Gallery</a>
                         </li>
+                        <!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
                         <li class="d-none d-md-block m-md-auto">
                             <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-                    </a>
+                                <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+                            </a>
                         </li>
+                        <!-- 3. End -->
                         <li class="nav-item m-md-auto">
                             <a class="nav-link p-0" href="about.html">Blog</a>
                         </li>
@@ -62,6 +73,7 @@
                     </ul>
                 </div>
             </nav>
+            <!-- 1. Jumbotron container-->
             <div class="container-fluid" id="jumbotext">
                 <div class="row">
                     <div class="col-sm-8 px-1">
@@ -77,17 +89,21 @@
                     </div>
                 </div>
             </div>
+            <!-- 1. End -->
         </div>
 
         <section class="container-fluid">
             <div class="row">
                 <div class="col-sm-4 d-flex align-items-center p-3">
+                    <!--Photo by Warren Wong on Unsplash: https://unsplash.com/photos/VVEwJJRRHgk-->
                     <img src="assets/images/portrait1.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait"></img>
                 </div>
                 <div class="col-sm-8">
+                    <!-- 4. Class used to position the header to the right on medium and larger screens-->
                     <div class="d-md-flex flex-row-reverse">
                         <h1 class="display-4">About</h1>
                     </div>
+                    <!-- 4. End -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est placeat, quasi mollitia, veniam voluptates nemo praesentium soluta sapiente culpa ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, autem. Deserunt
                         quidem blanditiis, id, deleniti mollitia dignissimos iusto assumenda dolore quaerat magni incidunt asperiores pariatur beatae omnis vero voluptatibus ab?</p>
                 </div>
@@ -104,6 +120,7 @@
                     <h2>Contact</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, culpa.</p>
                 </div>
+                <!--Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
                 <div class="col-sm-4 mt-3">
                     <h2>Social</h2>
                     <ul class="list-inline social-links">
