@@ -70,6 +70,7 @@ The main issues I encountered were:
 - I was not happy with the way the image was displayed on smaller devices as the person in the photo was out of view and much of the image was being cut off. I mirrored the image and made some containers transparent, laying them on top of the image instead of above and below. Resolved.
 - The fluid jumbotron was not fluid on larger devices. I wrapped more elements within it for resolution.
 The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position. Resolved.
+- Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
 
 
 ## Deployment
