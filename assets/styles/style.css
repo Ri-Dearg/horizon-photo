@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,
@@ -130,7 +131,7 @@ section {
 
 #europelink {
     height: 250px;
-    background: url("../images/europe.jpg") no-repeat;
+    background: url("../images/europe-500.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -147,7 +148,7 @@ section {
 
 #asialink {
     height: 250px;
-    background: url("../images/asia.jpg") no-repeat;
+    background: url("../images/asia-500.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -164,7 +165,7 @@ section {
 
 #africalink {
     height: 250px;
-    background: url("../images/africa.jpg") no-repeat;
+    background: url("../images/africa-500.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -181,10 +182,6 @@ section {
 
 
 /*------------------------------------------------------Animations*/
-
-#anim-overflow {
-    overflow: hidden;
-}
 
 .div-hover {
     -webkit-animation: zoom-out 0.8s ease-in-out;

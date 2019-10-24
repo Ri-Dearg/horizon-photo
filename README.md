@@ -65,12 +65,13 @@ So far I have only developed the homepage.
 I have tested the site and its layout on multiple devices and different sizes. It seems fully responsive with a clean layout on each device.
 
 The main issues I encountered were:
-- The navbar toggle icon would shift position when opening the collapsable menu to the bottom left from the top right. There were also issues with the alignment of the text and width after adding the jumbotron. I used CSS to tidy things up. Resolved.
-- The logo image would display in the middle of the collapsable menu when expanded duw to its central position on larger devices, interrupting the list and meaning the logo would not be displayed in the navbar on smaller form factors. I placed two logos in the code and used bootstrap classes to set their display to none depending on device size. Resolved.
+- The navbar toggle icon would shift position when opening the collapsable menu to the bottom left from the top right. There were also issues with the alignment of the text and width after adding the jumbotron. I used CSS to tidy things up.
+- The logo image would display in the middle of the collapsable menu when expanded duw to its central position on larger devices, interrupting the list and meaning the logo would not be displayed in the navbar on smaller form factors. I placed two logos in the code and used bootstrap classes to set their display to none depending on device size.
 - I was not happy with the way the image was displayed on smaller devices as the person in the photo was out of view and much of the image was being cut off. I mirrored the image and made some containers transparent, laying them on top of the image instead of above and below. Resolved.
 - The fluid jumbotron was not fluid on larger devices. I wrapped more elements within it for resolution.
-The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position. Resolved.
+The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position.
 - Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
+- Had to stop the animation from expanding the page width on mobile devices. Set overflow-x to hidden on the body element.
 
 
 ## Deployment
