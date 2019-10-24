@@ -131,7 +131,7 @@ section {
 
 #europelink {
     height: 250px;
-    background: url("../images/europe-500.jpg") no-repeat;
+    background: url("../images/europe-300.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -148,7 +148,7 @@ section {
 
 #asialink {
     height: 250px;
-    background: url("../images/asia-500.jpg") no-repeat;
+    background: url("../images/asia-300.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -165,7 +165,7 @@ section {
 
 #africalink {
     height: 250px;
-    background: url("../images/africa-500.jpg") no-repeat;
+    background: url("../images/africa-300.jpg") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
