@@ -183,11 +183,13 @@ section {
 /*------------------------------------------------------Animations*/
 
 .div-hover {
+    overflow: hidden;
     -webkit-animation: zoom-out 0.8s ease-in-out;
     animation: zoom-out 0.8s ease-in-out;
 }
 
 .div-hover:hover {
+    overflow: hidden;
     -webkit-animation: zoom-in 0.8s ease-in-out forwards;
     animation: zoom-in 0.8s ease-in-out forwards;
 }
