@@ -72,6 +72,7 @@ The main issues I encountered were:
 The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position.
 - Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
 - Had to stop the animation from expanding the page width on mobile devices. Set overflow-x to hidden on the body element.
+- Newsletter form had unusual positioning on small desktop sizes. Had to change style so it is a responsive inline form.
 
 
 ## Deployment

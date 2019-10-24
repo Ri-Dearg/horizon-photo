@@ -12,6 +12,9 @@ h3 {
     font-size: 1.5rem;
 }
 
+.signup {
+    font-weight: 800;
+}
 /*------------------------------------------------------Callout*/
 
 /* Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
@@ -36,13 +39,10 @@ h3 {
 /*------------------------------------------------------Nav*/
 
 nav {
-    background-color: rgba(17, 17, 17, 0.7);
+    background-color: #000;
     font-family: 'Julius Sans One', sans-serif;
     letter-spacing: 2px;
     font-size: 1.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
 
 }
@@ -55,7 +55,8 @@ nav ul,
 
 /* Used to overlay navbar on image */
 
-.navbar {
+.callout-container .navbar {
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -83,7 +84,7 @@ nav ul,
 
 .btn-success {
     color: #fff;
-    background-color: #00611C
+    background-color: #00611C;
 }
 
 
@@ -93,6 +94,10 @@ nav ul,
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.newsletter-box {
+    overflow-x: hidden;
 }
 
 /*------------------------------------------------------Section*/
