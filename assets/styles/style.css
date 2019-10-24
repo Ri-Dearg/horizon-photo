@@ -189,19 +189,19 @@ section {
 /*------------------------------------------------------Animations*/
 
 .div-hover {
-    -webkit-animation: zoom-out 0.8s ease-in-out;
-    animation: zoom-out 0.8s ease-in-out;
+    -webkit-animation: zoom-out 0.6s ease-in-out;
+    animation: zoom-out 0.6s ease-in-out;
 }
 
 .div-hover:hover {
-    -webkit-animation: zoom-in 0.8s ease-in-out forwards;
-    animation: zoom-in 0.8s ease-in-out forwards;
+    -webkit-animation: zoom-in 0.6s ease-in-out forwards;
+    animation: zoom-in 0.6s ease-in-out forwards;
 }
 
 .link-hover {
-    -webkit-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .link-hover:hover {
