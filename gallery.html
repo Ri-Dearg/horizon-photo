@@ -9,7 +9,7 @@
     <!--Fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CMontserrat&display=swap" rel="stylesheet">
     <!--favicon links from https://www.favicon-generator.org/-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -73,9 +73,90 @@
     </div>
 
 
-    <section class="container-fluid">
+    <!-- <section class="container-fluid px-1" id="gallery-sect">
+        <div class="d-flex flex-row">
+            <div class="d-flex flex-column">
+                <img src="assets/images/africa-300.jpg" class="img-fluid">
+                <img src="assets/images/portrait1-300.jpg" class="img-fluid">
+            </div>
+            <div class="d-flex flex-column">
+                <img src="assets/images/portrait1-300.jpg" class="img-fluid">
+                <img src="assets/images/europe-300.jpg" class="img-fluid">
+            </div>
+            <div class="d-flex flex-column">
+                <img src="assets/images/asia-300.jpg" class="img-fluid">
+                <img src="assets/images/africa-300.jpg" class="img-fluid">
+            </div>
+        </div>
+
+    </section>-->
+
+    <!--Layout utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/-->
+    <!-- Grid row -->
+    <section class="row px-4" id="gallery-sect">
+
+        <!-- Grid column--> 
+        <div class="col-md-12 d-flex justify-content-center">
+            <ul class="list-group list-group-horizontal justify-content-center">
+                <li class="list-group-item flex-even filter p-2" data-rel="eu">Europe</li>
+                <li class="list-group-item flex-even filter p-2" id="aspic" data-rel="as">Asia</li>
+                <li class="list-group-item flex-even filter p-2" data-rel="af">Africa</li>
+                <li class="list-group-item flex-even filter active p-2" data-rel="all">All</li>
+            </ul>
+        </div>
+        <!--<div class="col-md-12 d-flex justify-content-center">
+            <button type="button" class="btn filter" data-rel="eu">Europe</button>
+            <button type="button" class="btn filter" data-rel="as" id=#aspic>Asia</button>
+            <button type="button" class="btn filter" data-rel="af">Africa</button>
+            <button type="button" class="btn btn-success filter active" data-rel="all">All</button>
+        </div>-->
+        <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="gallery" id="gallery">
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all eu">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all as">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all af">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all af">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all af">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="mb-3 pics animation all eu">
+                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+            </div>
+            <!-- Grid column -->
 
     </section>
+    <!-- Grid row -->
+
 
     <footer class="container-fluid">
         <div class="row">
@@ -126,9 +207,29 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Javascript utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/-->
+    <script>
+        $(function() {
+            var selectedClass = "";
+            $(".filter").click(function() {
+                selectedClass = $(this).attr("data-rel");
+                $("#gallery").fadeTo(400, 0);
+                $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+                setTimeout(function() {
+                    $("." + selectedClass).fadeIn().addClass('animation');
+                    $("#gallery").fadeTo(300, 1);
+                }, 300);
+            });
+        });
+        $(".list-group li").on("click", function() {
+            $(".list-group li").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+
 </body>
 
 </html>

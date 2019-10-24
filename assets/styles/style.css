@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #000;
     overflow-x: hidden;
 }
 
@@ -15,6 +16,7 @@ h3 {
 .signup {
     font-weight: 800;
 }
+
 /*------------------------------------------------------Callout*/
 
 /* Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
@@ -189,19 +191,19 @@ section {
 /*------------------------------------------------------Animations*/
 
 .div-hover {
-    -webkit-animation: zoom-out 0.6s ease-in-out;
-    animation: zoom-out 0.6s ease-in-out;
+    -webkit-animation: zoom-out 0.7s ease-in-out;
+    animation: zoom-out 0.7s ease-in-out;
 }
 
 .div-hover:hover {
-    -webkit-animation: zoom-in 0.6s ease-in-out forwards;
-    animation: zoom-in 0.6s ease-in-out forwards;
+    -webkit-animation: zoom-in 0.7s ease-in-out forwards;
+    animation: zoom-in 0.7s ease-in-out forwards;
 }
 
 .link-hover {
-    -webkit-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .link-hover:hover {
@@ -277,3 +279,72 @@ footer {
 .fab:hover {
     background-color: #00611C
 }
+
+/*------------------------------------------------------Gallery*/
+
+#gallery-sect {
+    background-color: #000;
+}
+
+.flex-column {
+    max-width: 34%;
+}
+
+#gallery-sect img {
+    margin: 5px;
+}
+
+
+/*Code from https://stackoverflow.com/a/35806840*/
+.flex-even {
+    flex: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+.list-group {
+    max-width:95%;
+    width: 350px;
+}
+
+/*CSS utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/*/
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+}
+
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (max-width: 450px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+
+/* End---------------------------------*/
