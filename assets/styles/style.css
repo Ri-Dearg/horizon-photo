@@ -19,12 +19,15 @@ h3 {
     height: 95vh;
     background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 }
@@ -105,16 +108,39 @@ section {
     max-width: 225px;
 }
 
+/* Needs Peer Review*/
+
+/* How to make a box a link: https://stackoverflow.com/a/8743920 */
+
+.gallerylink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.centered-link {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+
 #europelink {
     height: 250px;
     background: url("../images/europe.jpg") no-repeat;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 }
@@ -123,12 +149,15 @@ section {
     height: 250px;
     background: url("../images/asia.jpg") no-repeat;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 }
@@ -137,15 +166,80 @@ section {
     height: 250px;
     background: url("../images/africa.jpg") no-repeat;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 }
+
+
+/*------------------------------------------------------Animations*/
+
+.div-hover {
+    -webkit-animation: zoom-out 0.8s ease-in-out;
+    animation: zoom-out 0.8s ease-in-out;
+}
+
+.div-hover:hover {
+    -webkit-animation: zoom-in 0.8s ease-in-out forwards;
+    animation: zoom-in 0.8s ease-in-out forwards;
+}
+
+.link-hover {
+    -webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.link-hover:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+
+/* Code from https://stackoverflow.com/a/16516826*/
+
+@-webkit-keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+    to {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+    to {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+}
+
+@-webkit-keyframes zoom-in {
+    0% {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+}
+
+/*End Peer Review*/
 
 /*------------------------------------------------------Footer*/
 
