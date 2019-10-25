@@ -73,7 +73,7 @@ The "About" title aligned to the right loked ugly on smaller device forms. I use
 - Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
 - Had to stop the animation from expanding the page width on mobile devices. Set overflow-x to hidden on the body element.
 - Newsletter form had unusual positioning on small desktop sizes. Had to change style so it is a responsive inline form.
-- The layout of the gallery had uneven spaces at the end due to using a free template. I changed the display property of the gallery to flex and created div flex-columns inside flexbox that wrapped different pictures per column. I then auto aligned them vertically for a more even spacing between content.
+- The layout of the gallery had uneven spaces at the end due to using a free template. I changed the display property of the gallery to flex and created div flex-columns inside flexbox that wrapped different pictures per column. I then auto aligned them vertically for a more even spacing between content. This also creates a much nicer aesthetic and better use of the modal on smaller device screens.
 
 
 ## Deployment
