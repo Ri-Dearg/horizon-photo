@@ -294,16 +294,36 @@ footer {
     margin: 5px;
 }
 
+.modal-body, .modal-header, .modal-content, .modal-dialog{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button.close {
+    color: #D3D3D3;
+}
+
+button.close:hover {
+    color: #fff;
+}
 
 /*Code from https://stackoverflow.com/a/35806840*/
-.flex-even {
+
+.g-filter {
     flex: 1;
     flex-basis: 0;
     text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #343a40;
+}
+
+.list-group-item.active {
+    background-color: #6c757d;
+    border-color: #343a40;
 }
 
 .list-group {
-    max-width:95%;
+    max-width: 95%;
     width: 350px;
 }
 
