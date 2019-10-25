@@ -286,20 +286,11 @@ footer {
     background-color: #000;
 }
 
-#gallery-sect img {
-    margin: 0 3px;
-}
-
-.modal-body, .modal-header, .modal-content, .modal-dialog{
+.modal-body,
+.modal-header,
+.modal-content,
+.modal-dialog {
     background-color: rgba(0, 0, 0, 0);
-}
-
-button.close {
-    color: #D3D3D3;
-}
-
-button.close:hover {
-    color: #fff;
 }
 
 .g-filter {
@@ -308,17 +299,40 @@ button.close:hover {
     text-align: center;
     cursor: pointer;
     color: #fff;
-    background-color: #343a40;
+    background-color: #000;
+    border-bottom: 1px solid #6c757d;
+    border-width: 0 0 1px 0;
 }
 
 .list-group-item.active {
     background-color: #6c757d;
-    border-color: #343a40;
+    border-bottom: 1px solid #6c757d;
+    transition: all 0.7s ease-in-out;
 }
 
 .list-group {
     max-width: 95%;
     width: 350px;
+}
+
+.list-group-horizontal .list-group-item:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-horizontal .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.pics {
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 /*CSS utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/*/
