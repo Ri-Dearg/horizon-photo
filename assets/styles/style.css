@@ -286,12 +286,8 @@ footer {
     background-color: #000;
 }
 
-.flex-column {
-    max-width: 34%;
-}
-
 #gallery-sect img {
-    margin: 5px;
+    margin: 0 3px;
 }
 
 .modal-body, .modal-header, .modal-content, .modal-dialog{
@@ -305,8 +301,6 @@ button.close {
 button.close:hover {
     color: #fff;
 }
-
-/*Code from https://stackoverflow.com/a/35806840*/
 
 .g-filter {
     flex: 1;
