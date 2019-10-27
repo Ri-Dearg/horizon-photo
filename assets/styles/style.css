@@ -336,6 +336,7 @@ footer {
 /*CSS utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/*/
 
 .gallery {
+
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -374,3 +375,24 @@ footer {
 }
 
 /* End---------------------------------*/
+
+
+/*CSS utilised and edited from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
+
+.card-image {
+    width: 30vw;
+    /* layout hack */
+    background: #fff center center no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+}
+
+.card-image>img {
+    width: 100%;
+    opacity: 0;
+}
+
+.card-image.is-loaded {
+    filter: none;
+    transition: filter 1s;
+}
