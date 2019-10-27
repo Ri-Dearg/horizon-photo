@@ -19,7 +19,7 @@ h3 {
 
 /*------------------------------------------------------Callout*/
 
-/* Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
+/*Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
 
 .callout-container {
     height: 95vh;
@@ -293,6 +293,14 @@ footer {
     background-color: rgba(0, 0, 0, 0);
 }
 
+button.close {
+    color: #D3D3D3;
+}
+
+button.close:hover {
+    color: #fff;
+}
+
 .g-filter {
     flex: 1;
     flex-basis: 0;
@@ -332,6 +340,8 @@ footer {
     margin-left: 6px;
     margin-right: 6px;
 }
+
+/*------------------------------------------------------Gallery Layout*/
 
 /*CSS utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/*/
 
@@ -374,14 +384,13 @@ footer {
     }
 }
 
-/* End---------------------------------*/
 
+/*------------------------------------------------------Gallery Blur*/
 
 /*CSS utilised and edited from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
 
 .card-image {
     width: 30vw;
-    /* layout hack */
     background: #fff center center no-repeat;
     background-size: cover;
     filter: blur(8px);
