@@ -18,16 +18,26 @@ h3 {
 }
 
 /*page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/*/
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
 .se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(../images/loading.gif) center no-repeat #000;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loading.gif) center no-repeat #000;
 }
 
 /*------------------------------------------------------Callout*/
@@ -49,6 +59,10 @@ h3 {
     -ms-flex-pack: center;
     justify-content: center;
     position: relative;
+}
+
+#aboutme {
+    background-color: #00611C;
 }
 
 /*------------------------------------------------------Nav*/
@@ -118,7 +132,7 @@ nav ul,
 /*------------------------------------------------------Section*/
 
 section {
-    background-color: #00611C;
+    background-color: #000;
     color: #fff;
     text-align: justify;
 }
@@ -295,10 +309,6 @@ footer {
 
 /*------------------------------------------------------Gallery*/
 
-#gallery-sect {
-    background-color: #000;
-}
-
 .modal-body,
 .modal-header,
 .modal-content,
@@ -422,6 +432,64 @@ button.close:hover {
 
 
 
+.blogsearch,
+.blogsearch-submit {
+    width: 85%;
+    border: none;
+}
+
 .blogsearch {
-    width: 80%;
+    border-bottom: 1px solid #6c757d;
+    background-color: #000;
+    color: #fff;
+}
+
+.blogsearch-submit {
+    background-color: #00611C;
+    color: #fff;
+}
+
+.blogsearch-submit:hover {
+    background-color: rgba(0, 97, 28, 0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+.blogsearch-submit:focus {
+    background-color: #007b23;
+    transition: all 0.2s ease-in-out;
+}
+
+.blogsearch:focus {
+    border-bottom: 1px solid #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.blogsearch:focus,
+.blogsearch-submit:focus {
+    outline: 0px;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+/* Used to remove "x" on search field. Found at https://geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html*/
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }

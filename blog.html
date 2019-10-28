@@ -73,13 +73,13 @@
     </header>
 
     <section class="container-fluid">
-        <form>
-            <div class="form-row">
-                <div class="col-md-4 d-flex justify-content-center">
-                    <input type="search" name="blogsearch" placeholder="Search" class="blogsearch my-3" />
+        <form action="" method="get">
+            <div class="form-row mt-2">
+                <div class="col-md-3 d-flex justify-content-center my-auto">
+                    <input type="search" name="blogsearch" placeholder="Search" class="blogsearch" />
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <input list="tag" name="tags" placeholder="Search by tag" class="blogsearch my-auto" />
+                <div class="col-md-3 d-flex justify-content-center my-3">
+                    <input list="tag" name="tags" placeholder="Search by tag" class="blogsearch" />
                     <datalist id="tag">
                     <option value="China"></option>
                     <option value="France"></option>
@@ -90,8 +90,8 @@
                     <option value="Tanzania"></option>
                 </datalist>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <input list="category" name="categories" placeholder="Search Category" class="blogsearch my-3" />
+                <div class="col-md-3 d-flex justify-content-center my-auto">
+                    <input list="category" name="categories" placeholder="Search Category" class="blogsearch" />
                     <datalist id="category">
                     <option value="Abstract"></option>
                      <option value="Architecture"></option>
@@ -100,6 +100,9 @@
                     <option value="Portrait"></option>
                     <option value="Street"></option>
                 </datalist>
+                </div>
+                <div class="col-md-3 d-flex justify-content-center my-3">
+                    <input type="submit" value="Search" class="blogsearch-submit">
                 </div>
             </div>
         </form>
