@@ -107,13 +107,20 @@
             </div>
         </form>
 
-        <div class="row">
-            <div class="col">
-
+        <article class="row blogbox mx-3 mx-md-5 my-3 p-0">
+            <div class="col-md-6 p-0">
+                <img src="assets/images/africa-800w.jpg" alt="Kilamanjaro" class="blogimg"></img>
             </div>
-            <div class="col-sm-8"></div>
-        </div>
-
+            <div class="col-md-6 mx-auto p-0 px-md-3 mt-3 mt-md-0" >
+                <h1 class="m-0">Africa</h1>
+                <div class="blogtxt">
+                    <p class="txtover m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugiat similique ullam cupiditate obcaecati, recusandae veniam, alias ad adipisci eaque quidem ipsum labore, vel nostrum mollitia. Necessitatibus accusamus cumque hic,
+                        dolorum quisquam facilis ut numquam fuga laudantium in sapiente consequuntur fugit iure officiis vel pariatur! Similique ipsa, quam quia sequi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ipsum voluptatibus quae
+                        laborum id molestiae impedit nisi ea quibusdam sit, expedita. Fugit facere quo expedita!</p>
+                </div>
+                <h2 class="lead mt-1 mt-md-0"><a href="#">Read more</a></h2>
+            </div>
+        </article>
     </section>
 
     <footer class="container-fluid">
@@ -165,9 +172,36 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        // javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
+        window.addEventListener('load', function() {
+
+            setTimeout(lazyLoad, 1000);
+
+        });
+
+        function lazyLoad() {
+            var card_images = document.querySelectorAll('.card-image');
+
+            card_images.forEach(function(card_image) {
+                var image_url = card_image.getAttribute('data-image-full');
+                var content_image = card_image.querySelector('img');
+
+                content_image.src = image_url;
+
+                content_image.addEventListener('load', function() {
+                    card_image.style.backgroundImage = 'url(' + image_url + ')';
+                    card_image.className = card_image.className + ' is-loaded';
+                });
+
+            });
+
+        }
+    </script>
+
 </body>
 
 </html>

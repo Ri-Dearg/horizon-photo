@@ -493,3 +493,28 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
+
+
+.blogbox {
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.blogimg {
+    height: auto;
+    width: 100%;
+}
+
+.blogtxt {
+    overflow: hidden;
+}
+
+
+/* Found at https://css-tricks.com/line-clampin/*/
+.txtover {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+
+}
