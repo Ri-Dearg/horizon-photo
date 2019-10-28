@@ -418,3 +418,10 @@ button.close:hover {
     filter: none;
     transition: filter 1s;
 }
+
+
+
+
+.blogsearch {
+    width: 80%;
+}
