@@ -22,6 +22,11 @@ a, a:hover {
     font-weight: 800;
 }
 
+.form-control, .btn {
+    border-radius: 0;
+}
+
+
 /*page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/*/
 
 .no-js #loader {
@@ -504,7 +509,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .blogbox {
     background-color: #000;
-    border-radius: 3px;
     color: #fff;
 }
 
@@ -566,3 +570,22 @@ article a:focus: {
     border: none;
 }
 
+
+/*------------------------------------------------------contact*/
+
+#contact {
+    background-color: #00611C;
+    width: 100%
+}
+
+.contact-row {
+    max-width: 600px;
+}
+
+#cmessage {
+    height: 150px;
+}
+
+.btn-dark {
+    background-color: #000;
+}
