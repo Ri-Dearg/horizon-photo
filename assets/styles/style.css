@@ -13,6 +13,11 @@ h3 {
     font-size: 1.5rem;
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: #fff
+}
+
 .signup {
     font-weight: 800;
 }
@@ -107,6 +112,10 @@ nav ul,
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #fff;
+}
+
+.navbar-toggler {
+    margin-right: 3px;
 }
 
 /*------------------------------------------------------Jumbotron*/
@@ -280,7 +289,7 @@ section {
 
 footer {
     background-color: #D3D3D3;
-    color: #111111
+    color: #111111;
 }
 
 .social-links {
@@ -430,8 +439,6 @@ button.close:hover {
 }
 
 
-
-
 .blogsearch,
 .blogsearch-submit {
     width: 85%;
@@ -512,6 +519,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* Found at https://css-tricks.com/line-clampin/*/
+
 .txtover {
     display: -webkit-box;
     -webkit-line-clamp: 7;
@@ -521,6 +529,40 @@ input[type="search"]::-webkit-search-results-decoration {
 
 article a {
     background-color: #00611C;
-    color: #fff;
     padding: 3px;
 }
+
+article a:hover {
+    background-color: rgba(0, 97, 28, 0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+article a:focus: {
+    background-color: #007b23;
+    transition: all 0.2s ease-in-out;
+}
+
+#archive {
+    background-color: #00611C;
+    color: #fff;
+}
+
+#archive a, #archive a:hover {
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #00611C;
+    border: none;
+}
+
+.card-header {
+    background-color: #00611C;
+    border: none;
+}
+
+.card .btn-success {
+    border: none;
+}
+
