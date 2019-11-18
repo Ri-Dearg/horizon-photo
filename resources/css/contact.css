@@ -1,0 +1,17 @@
+
+#contact {
+    background-color: #00611C;
+    width: 100%
+}
+
+.contact-row {
+    max-width: 600px;
+}
+
+#cmessage {
+    height: 150px;
+}
+
+.btn-dark {
+    background-color: #000;
+}
