@@ -4,39 +4,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css" type="text/css">
+    <!--Fontawesome CSS-->
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One%7CMontserrat&display=swap" rel="stylesheet">
     <!--favicon links from https://www.favicon-generator.org/-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="resources/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="resources/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resources/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="resources/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resources/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="resources/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/favicon//ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="resources/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!--Local Stylesheet-->
-    <link rel="stylesheet" href="assets/styles/style.css" type="text/css" />
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="resources/css/main.css" type="text/css" />
     <title>Horizon Photography</title>
 
     <!--page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/js/modernizr.min.js"></script>
     <script>
         $(window).load(function() {
             $(".se-pre-con").fadeOut("slow");;
@@ -57,7 +57,7 @@
             <nav class="navbar navbar-expand-md navbar-dark p-0">
                 <!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
                 <a href="index.html" class="d-md-none">
-                    <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+                    <img src="resources/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                 </a>
                 <!-- 2. End -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +74,7 @@
                         <!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
                         <li class="d-none d-md-block m-md-auto">
                             <a href="index.html">
-                                <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+                                <img src="resources/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                             </a>
                         </li>
                         <!-- 3. End -->
@@ -110,7 +110,7 @@
         <div class="row">
             <div class="col-sm-4 d-flex p-3">
                 <!--Photo by Warren Wong on Unsplash: https://unsplash.com/photos/VVEwJJRRHgk-->
-                <img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
+                <img src="resources/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
             </div>
             <div class="col-sm-8">
                 <!-- 4. Class used to position the header to the right on medium and larger screens-->
@@ -194,9 +194,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendors/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
 
 </body>
 
