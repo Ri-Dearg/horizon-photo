@@ -1,5 +1,23 @@
 /*------------------------------------------------------Stylings*/
 
+@font-face {
+    font-family: 'Julius Sans One';
+    src: url('../fonts/juliussansone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/juliussansone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
@@ -31,8 +49,8 @@ a, a:hover {
     background-color: #00611C;
 }
 
-/*------------------------------------------------------Nav*/
 
+/*------------------------------------------------------Nav*/
 nav {
     background-color: #000;
     font-family: 'Julius Sans One', sans-serif;
