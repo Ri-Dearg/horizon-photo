@@ -1,6 +1,5 @@
 
 #contact {
-    background-color: #00611C;
     width: 100%
 }
 
@@ -12,6 +11,6 @@
     height: 150px;
 }
 
-.btn-dark {
-    background-color: #000;
+.content-container {
+    min-height: 90vh;
 }
