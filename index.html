@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--Bootstrap CSS-->
@@ -37,7 +38,7 @@
 
 	<title>Horizon Photography</title>
 
-	<!--page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
+	<!--1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
 	<script src="vendors/jquery/jquery.min.js"></script>
 	<script src="vendors/js/modernizr.min.js"></script>
 	<script>
@@ -50,19 +51,19 @@
 
 <body>
 
-	<!--page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
+	<!-- 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
 	<div class="se-pre-con"></div>
 
-	<!-- 1. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+	<!-- 2. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
 	<div class="jumbotron jumbotron-fluid p-0 m-0">
 		<!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
-		<header class="container-fluid callout-container p-0 m-0">
+		<header class="container-fluid callout-container m-0 p-0">
 			<nav class="navbar navbar-expand-md navbar-dark p-0">
-				<!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+				<!-- 3. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
 				<a href="index.html" class="d-md-none">
 					<img src="resources/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                 </a>
-					<!-- 2. End -->
+					<!-- 3. End -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,13 +75,13 @@
 							<li class="nav-item m-md-auto">
 								<a class="nav-link p-0" href="gallery.html">Gallery</a>
 							</li>
-							<!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+							<!-- 4. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
 							<li class="d-none d-md-block m-md-auto">
 								<a href="index.html">
 									<img src="resources/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                             </a>
 							</li>
-							<!-- 3. End -->
+							<!-- 4. End -->
 							<li class="nav-item m-md-auto">
 								<a class="nav-link p-0" href="blog.html">Blog</a>
 							</li>
@@ -90,7 +91,7 @@
 						</ul>
 					</div>
 			</nav>
-			<!-- 1. Jumbotron container-->
+			<!-- 5. Jumbotron container-->
 			<div class="container-fluid" id="jumbotext">
 				<div class="row">
 					<div class="col-sm-8 px-2">
@@ -107,13 +108,13 @@
 					</div>
 				</div>
 			</div>
-			<!-- 1. End -->
+			<!-- 5. End -->
 		</header>
 	</div>
+	<!-- 2. End -->
 	<section class="container-fluid" id=aboutme>
 		<div class="row">
 			<div class="col-sm-4 d-flex p-3">
-				<!--Photo by Warren Wong on Unsplash: https://unsplash.com/photos/VVEwJJRRHgk-->
 				<img src="resources/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
             </div>
 				<div class="col-sm-8">
@@ -130,26 +131,25 @@
 				</div>
 			</div>
 			<!--To be peer-reviewed-->
+            <!-- 5. Animations created and used for impact-->
 			<div class="row" id=anim-overflow>
 				<div class="col-sm-4 p-0 div-hover" id="asialink">
-					<!--Photo by Paul-Vincent Roll on Unsplash https://unsplash.com/photos/c61jL_NpAn8-->
-					<a href="gallery.html#aspic" class="gallerylink link-hover">
+					<a href="gallery.html" class="gallerylink link-hover">
 						<h2 class="display-4 centered-link">Asia</h2>
 					</a>
 				</div>
-				<div class="col-sm-4 p-0 div-hover" id="europelink">
-					<!--Photo by Dario Veronesi on Unsplash https://unsplash.com/photos/lUO-BjCiZEA-->
-					<a href="gallery.html" class="gallerylink link-hover">
+				<div class="col-sm-4 p-0 div-hover" id="europelink"> 
+                    <a href="gallery.html" class="gallerylink link-hover">
 						<h2 class="display-4 centered-link">Europe</h2>
-					</a>
+				    </a>
 				</div>
 				<div class="col-sm-4 p-0 div-hover" id="africalink">
-					<!--Photo by Sergey Pesterev on Unsplash https://unsplash.com/photos/DWXR-nAbxCk-->
 					<a href="gallery.html" class="gallerylink link-hover">
 						<h2 class="display-4 centered-link">Africa</h2>
 					</a>
 				</div>
 			</div>
+            <!-- 5. End-->
 	</section>
 
 	<footer class="container-fluid">
@@ -166,7 +166,7 @@
 				<h2>Contact</h2>
 				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, culpa.</p>
 			</div>
-			<!--Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+			<!-- 6. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 			<div class="col-sm-4 mt-3">
 				<h2>Social</h2>
 				<ul class="list-inline social-links">
@@ -196,6 +196,7 @@
 					</li>
 				</ul>
 			</div>
+            <!-- 6. End-->
 		</div>
 	</footer>
 

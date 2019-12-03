@@ -1,4 +1,6 @@
-/*page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/*/
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/* 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/ */
 
 .no-js #loader {
     display: none;
@@ -20,11 +22,11 @@
     z-index: 9999;
     background: url(../images/loading.gif) center no-repeat #000;
 }
-
+/* 1. End */
 
 /*------------------------------------------------------Callout*/
 
-/*Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
+/* 2. Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
 
 .callout-container {
     height: 95vh;
@@ -42,6 +44,8 @@
     justify-content: center;
     position: relative;
 }
+
+/* 2. End */
 
 #aboutme {
     background-color: #00611C;
@@ -69,10 +73,8 @@
     overflow-x: hidden;
 }
 
-/* Needs Peer Review*/
 
-/* How to make a box a link: https://stackoverflow.com/a/8743920 */
-
+/* 3. How to make a box a link: https://stackoverflow.com/a/8743920 */
 .gallerylink {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,8 +89,9 @@
     text-align: center;
     color: #fff;
 }
+/* 3. End */
 
-
+/* The link boxes have borders around them if the similar values are not in seperate IDs*/ 
 #europelink {
     height: 250px;
     background: url("../images/europe-300.jpg") no-repeat;
@@ -142,7 +145,6 @@
 
 
 /*------------------------------------------------------Animations*/
-
 .div-hover {
     -webkit-animation: zoom-out 0.7s ease-in-out;
     animation: zoom-out 0.7s ease-in-out;
@@ -165,7 +167,7 @@
 }
 
 
-/* Code from https://stackoverflow.com/a/16516826*/
+/* 4. Code edited to purpose from https://stackoverflow.com/a/16516826 */
 
 @-webkit-keyframes zoom-out {
     from {
@@ -200,4 +202,4 @@
     }
 }
 
-/*End Peer Review*/
+/* 4. End */

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--Bootstrap CSS-->
@@ -83,6 +84,7 @@
 					<input type="search" name="blogsearch" placeholder="Search" class="blogsearch" />
                 </div>
 					<div class="col-md-3 d-flex justify-content-center my-3">
+                        <!--Tags datalist based on location-->
 						<input list="tag" name="tags" placeholder="Tag" class="blogsearch" />
 						<datalist id="tag">
 							<option value="China"></option>
@@ -95,6 +97,7 @@
 						</datalist>
 					</div>
 					<div class="col-md-3 d-flex justify-content-center my-auto">
+                        <!--Category datalist based on Types of photography-->
 						<input list="category" name="categories" placeholder="Category" class="blogsearch" />
 						<datalist id="category">
 							<option value="Abstract"></option>
@@ -130,6 +133,7 @@
 				</div>
 		</article>
 		<article class="row blogbox mx-3 mx-md-5 my-3 p-0">
+            <!--Classes used to reposition image on larger devices-->
 			<div class="col-md-6 p-0 order-first order-md-last px-md-3 my-auto">
 				<img src="resources/images/europew2.jpg" alt="Germany" class="blogimg">
             </div>
@@ -166,6 +170,7 @@
 				</div>
 		</article>
 		<article class="row blogbox mx-3 mx-md-5 my-3 p-0">
+            <!--Classes used to reposition image on larger devices-->
 			<div class="col-md-6 p-0 order-first order-md-last px-md-3 my-auto">
 				<img src="resources/images/europew3.jpg" alt="Ireland" class="blogimg">
             </div>
@@ -183,6 +188,7 @@
 					<h3 class="lead mt-1"><a href="#">Read more</a></h3>
 				</div>
 		</article>
+
 		<div class="container-fluid" id="archive">
 			<h2 class="lead text-center m-0 pt-2">Archive</h2>
 			<div class="row" id="accordion">
@@ -282,7 +288,7 @@
 				<h2>Contact</h2>
 				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, culpa.</p>
 			</div>
-			<!--Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+			<!-- 3. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 			<div class="col-sm-4 mt-3">
 				<h2>Social</h2>
 				<ul class="list-inline social-links">
@@ -312,6 +318,7 @@
 					</li>
 				</ul>
 			</div>
+            <!-- 3. End-->
 		</div>
 	</footer>
 
@@ -321,34 +328,5 @@
 	<script src="vendors/jquery/jquery-3.4.1.min.js"></script>
 	<script src="vendors/js/popper.min.js"></script>
 	<script src="vendors/bootstrap/bootstrap.min.js"></script>
-
-	<script>
-		// javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
-        window.addEventListener('load', function() {
-
-            setTimeout(lazyLoad, 1000);
-
-        });
-
-        function lazyLoad() {
-            var card_images = document.querySelectorAll('.card-image');
-
-            card_images.forEach(function(card_image) {
-                var image_url = card_image.getAttribute('data-image-full');
-                var content_image = card_image.querySelector('img');
-
-                content_image.src = image_url;
-
-                content_image.addEventListener('load', function() {
-                    card_image.style.backgroundImage = 'url(' + image_url + ')';
-                    card_image.className = card_image.className + ' is-loaded';
-                });
-
-            });
-
-        }
-	</script>
-
 </body>
-
 </html>

@@ -1,5 +1,7 @@
-/*------------------------------------------------------Basic*/
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
+/*------------------------------------------------------Basic*/
+/* Used for headings */
 @font-face {
     font-family: 'Julius Sans One';
     src: url('../fonts/juliussansone-regular-webfont.woff2') format('woff2'),
@@ -9,6 +11,7 @@
 
 }
 
+/* Used for general content */
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
@@ -31,11 +34,14 @@ h3 {
     font-size: 1.4rem;
 }
 
-a, a:hover {
+/* Links */
+a, 
+a:hover {
     text-decoration: none;
     color: #fff
 }
 
+/* Buttons */
 .signup {
     font-weight: 800;
 }
@@ -94,6 +100,7 @@ section {
     text-align: justify;
 }
 
+/* Photographer Image */
 #portrait {
     width: 100%;
     height: auto;
@@ -111,7 +118,7 @@ footer {
     font-size: 1.5rem;
 }
 
-/* Code used from: https://github.com/Ri-Dearg/resume-project/blob/master/assets/css/style.css (Correct link to COde Institute)*/
+/* 1. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
 
 .fab {
     color: #D3D3D3;
@@ -130,3 +137,4 @@ footer {
 .fab:hover {
     background-color: #00611C
 }
+/* 1. End */

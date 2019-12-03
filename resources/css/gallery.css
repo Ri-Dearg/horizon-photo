@@ -1,3 +1,6 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/*------------------------------------------------------Modal Styles*/
 .modal-body,
 .modal-header,
 .modal-content,
@@ -13,9 +16,13 @@ button.close:hover {
     color: #fff;
 }
 
+/*------------------------------------------------------Filter Switch Styles*/
 .g-filter {
-    flex: 1;
-    flex-basis: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
     text-align: center;
     cursor: pointer;
     color: #fff;
@@ -27,6 +34,8 @@ button.close:hover {
 .list-group-item.active {
     background-color: #6c757d;
     border-bottom: 1px solid #6c757d;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
 }
 
@@ -45,7 +54,10 @@ button.close:hover {
     border-top-right-radius: 0;
 }
 
+/*------------------------------------------------------Picture Spacing*/
 .pics {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -54,9 +66,7 @@ button.close:hover {
 }
 
 /*------------------------------------------------------Gallery Layout*/
-
-/*CSS utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/*/
-
+/* 1. CSS utilised and edited for purpose from https://mdbootstrap.com/plugins/jquery/gallery/ */
 .gallery {
 
     -webkit-column-count: 3;
@@ -69,6 +79,7 @@ button.close:hover {
 
 .gallery .pics {
     -webkit-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
     transition: all 350ms ease;
 }
 
@@ -95,17 +106,18 @@ button.close:hover {
         padding-right: 1.1rem;
     }
 }
-
+/* 1. End */
 
 /*------------------------------------------------------Gallery Blur*/
 
-/*CSS utilised and edited from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
+/* 2. CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
 
 .card-image {
     width: 30vw;
     background: #fff center center no-repeat;
     background-size: cover;
-    filter: blur(6px);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
 }
 
 .card-image>img {
@@ -114,6 +126,12 @@ button.close:hover {
 }
 
 .card-image.is-loaded {
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transition: -webkit-filter 1s;
+    transition: -webkit-filter 1s;
+    -o-transition: filter 1s;
     transition: filter 1s;
+    transition: filter 1s, -webkit-filter 1s;
 }
+/* 2. End */
