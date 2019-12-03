@@ -11,6 +11,7 @@
     height: 150px;
 }
 
+/*Used to push the footer to the bottom of the page as the content does not fill the page on some devices*/
 .content-container {
     min-height: 90vh;
 }

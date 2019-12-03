@@ -18,6 +18,7 @@
     color: #fff;
 }
 
+/*Following values used to ovverride bootstrap defaults*/
 .blogsearch-submit:hover {
     background-color: rgba(0, 97, 28, 0.8);
     -webkit-transition: all 0.2s ease-in-out;
@@ -79,10 +80,12 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
 }
 
+/*Help to clip blog post text to retain page layout in a responsive design*/
 .blogtxt {
     overflow: hidden;
 }
 
+/*Help to clip blog post text to retain page layout in a responsive design*/
 /* 2. Found at https://css-tricks.com/line-clampin/ */
 .txtover {
     display: -webkit-box;
@@ -91,6 +94,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 /* 2. End */
 
+/*Following values used to ovverride bootstrap defaults*/
 article a {
     background-color: #00611C;
     padding: 3px;
@@ -122,6 +126,7 @@ article a:focus: {
     white-space: nowrap;
 }
 
+/*Following values used to ovverride bootstrap defaults for a cleaner appearence*/
 .card {
     background-color: #00611C;
     border: none;

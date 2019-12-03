@@ -41,7 +41,7 @@ a:hover {
     color: #fff
 }
 
-/* Buttons */
+/* Buttons to override Bootstrap*/
 .signup {
     font-weight: 800;
 }
@@ -93,7 +93,6 @@ nav ul,
 }
 
 /*------------------------------------------------------Section*/
-
 section {
     background-color: #000;
     color: #fff;
@@ -108,7 +107,6 @@ section {
 }
 
 /*------------------------------------------------------Footer*/
-
 footer {
     background-color: #D3D3D3;
     color: #111111;
@@ -119,7 +117,6 @@ footer {
 }
 
 /* 1. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
-
 .fab {
     color: #D3D3D3;
     background: #111111;

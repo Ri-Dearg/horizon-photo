@@ -78,6 +78,7 @@
 	</header>
 
 	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
+    <!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
 	<section class="row m-3" id="gallery-sect">
 		<div class="col-md-12 d-flex justify-content-center mb-3 pb-2">
 			<ul class="list-group list-group-horizontal justify-content-center">
@@ -87,6 +88,8 @@
 				<li class="list-group-item g-filter filter active p-2" data-rel="all">All</li>
 			</ul>
 		</div>
+        <!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
+        <!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
 		<div class="gallery d-flex" id="gallery">
 			<div class="d-flex flex-column">
 				<div class="my-auto pics animation all af">
@@ -225,6 +228,7 @@
     <!-- 3. End -->
 
 	<!-- 4. Modal from http://jsfiddle.net/4p57wx8r/ -->
+    <!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
 	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="imagemodal" aria-hidden="true">
 		<div class="modal-dialog modal-lg mt-5">
 			<div class="modal-content">
@@ -349,7 +353,5 @@
         }
         // 7. End
 		</script>
-
 </body>
-
 </html>

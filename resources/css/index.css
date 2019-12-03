@@ -1,7 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
 /* 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/ */
-
+/* A pre-loader is necessary because the main image is a large file-size, necessary for quality on a photographer's site*/
 .no-js #loader {
     display: none;
 }
@@ -12,7 +12,7 @@
     left: 100px;
     top: 0;
 }
-
+/* loading.gif created by me*/
 .se-pre-con {
     position: fixed;
     left: 0px;
@@ -25,9 +25,8 @@
 /* 1. End */
 
 /*------------------------------------------------------Callout*/
-
 /* 2. Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
-
+/*Background image is my own*/
 .callout-container {
     height: 95vh;
     background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
@@ -91,7 +90,7 @@
 }
 /* 3. End */
 
-/* The link boxes have borders around them if the similar values are not in seperate IDs*/ 
+/* The link boxes do not have flush edges if the values are not in seperate IDs*/ 
 #europelink {
     height: 250px;
     background: url("../images/europe-300.jpg") no-repeat;
@@ -155,6 +154,7 @@
     animation: zoom-in 0.7s ease-in-out forwards;
 }
 
+/* The dark box overlay on the images */
 .link-hover {
     -webkit-transition: all 0.7s ease-in-out;
     -o-transition: all 0.7s ease-in-out;
@@ -168,7 +168,7 @@
 
 
 /* 4. Code edited to purpose from https://stackoverflow.com/a/16516826 */
-
+/* z-index values utilised so that when the scale increases, the image hovered overs does not have one side clipped behind the image next to it.*/
 @-webkit-keyframes zoom-out {
     from {
         -webkit-transform: scale(1.06);
