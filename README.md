@@ -6,7 +6,7 @@ The site is desgined as a portfolio for a travel Photographer. Its goal is to hi
 
 ### Outline
 
-The home page is desgined to have a big impact with a strong image upon loading. A pre-loader is used to ensure the page is loaded before seeing it. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline and a newsletter form are made immediately evident to acquire subscribers. Below is a short introduction to the photographer, followed by links to the gallery. Finally, there is the footer with basic details repeated.
+The home page is desgined to have a big impact with a strong image upon loading. A pre-loader is used to ensure the page is loaded before seeing it. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline and a newsletter form are made immediately evident to acquire subscribers. Below is a short introduction to the photographer, followed by links to the gallery. Finally, there is the footer with basic details repeated.  
 The flow is designed to first have an impact to create interest and highlight the work, then an option to interact with the newsletter, followed by basic necessary information about the photographer, and returning to highlight the work. The footer finishes with any crucial info repeated.
 
 ### User Stories
@@ -15,8 +15,8 @@ As a user interested in photography, or looking for a photgrapher to hire. The w
 As a user interested in travel, the Blog is highlighted in the navbar and the newsletter is immediately obvious, so I can look at details of travel. Scrolling down I can see different locations whose galleries I can explore. In the footer is another link for the newsletter if I am interested in following the blog.
 
 ### Colours
-The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. Transparent containers are used on top of the image so that the image remains visible throughout the site, without it taking up too much vertical space on mobile. This also means that the image does not shift around when opening and closing collapsable menus. A deep green is used as an accent to add color and create a thematic connection with nature. the dark colors highlight the colors of the photographs much better than a lighter color.
-The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings.
+The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. Transparent containers are used on top of the image so that the image remains visible throughout the site, without it taking up too much vertical space on mobile. This also means that the image does not shift around when opening and closing collapsable menus. A deep green is used as an accent to add color and create a thematic connection with nature. the dark colors highlight the colors of the photographs much better than a lighter color.  
+The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings.  
 The navbar collapses below medium devices as the spacing in the fonts becomes squahed on smaller devices. The logo shifts from the center on larger devices to the left side on smaller devices so it is always visible.
 
 ### Wireframes
@@ -32,7 +32,7 @@ The designs for each page changed quite a bit as worked progressed, so they do n
 - A simple contact page.
 
 ### Features to be implemented
--Form Validation
+- Form Validation
 
 #### Features Cancelled
 - ~~A map with location linked to photos~~
@@ -79,8 +79,7 @@ The main issues I encountered were:
 - The navbar toggle icon would shift position when opening the collapsable menu to the bottom left from the top right. There were also issues with the alignment of the text and width after adding the jumbotron. I used CSS to tidy things up.
 - The logo image would display in the middle of the collapsable menu when expanded duw to its central position on larger devices, interrupting the list and meaning the logo would not be displayed in the navbar on smaller form factors. I placed two logos in the code and used bootstrap classes to set their display to none depending on device size.
 - I was not happy with the way the image was displayed on smaller devices as the person in the photo was out of view and much of the image was being cut off. I mirrored the image and made some containers transparent, laying them on top of the image instead of above and below. Resolved.
-- The fluid jumbotron was not fluid on larger devices. I wrapped more elements within it for resolution.
-The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position.
+- The fluid jumbotron was not fluid on larger devices. I wrapped more elements within it for resolution. The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position.
 - Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
 - Had to stop the animation from expanding the page width on mobile devices. Set overflow-x to hidden on the body element.
 - Newsletter form had unusual positioning on small desktop sizes. Had to change style so it is a responsive inline form.
@@ -108,9 +107,9 @@ The "About" title aligned to the right loked ugly on smaller device forms. I use
 ## Credits
 
 ### Content
-To be added.
+To be added.  
 Any code utilised from a site is documented and credited within the code.
 
 ### Media
-All photographs, authors, license rights, copyright, etc. used in this project can be found [here.]( https://unsplash.com/collections/8825126/used-in-horizon-photo)
+All photographs, authors, license rights, copyright, etc. used in this project can be found [here.]( https://unsplash.com/collections/8825126/used-in-horizon-photo)  
 All other media used is my own.
