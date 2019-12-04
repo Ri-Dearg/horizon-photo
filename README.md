@@ -90,7 +90,8 @@ The main issues I encountered were:
 - I had a secondary branch when testing out different gallery layouts. I deleted that branch after it was no longer useful.
 - The blog layout with images on alternating sides on a larger screen was messy in a vertical view on smaller screens. I used to classes to ensure the order was always correct on smaller viewports.
 - The text for each blog post was overflowing and creating an ugly layout when changing the viewport responsively. I truncated the text at a set line to best maintain the layout and the peek into the blog post.
-- I found AWS to be a bit slow and my credit was disappearing. I switched to Gitpod
+- The content on the contact page wasn't long enough so the footer would float up the page on longer devices. I added a container for the main content with a minimum viewport height and a seperate container for the fotter, so it would be pushed down to the bottom of the page.
+- I found AWS to be a bit slow and my credit was disappearing. I switched to Gitpod.
 
 ## Deployment
 1. I set up a git hub repository for deployment and set up an SSH key.
