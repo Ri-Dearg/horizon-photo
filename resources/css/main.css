@@ -1,6 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
 /*------------------------------------------------------Basic*/
+/* 1. From fonts.google.com */
 /* Used for headings */
 @font-face {
     font-family: 'Julius Sans One';
@@ -18,8 +19,8 @@
          url('../fonts/montserrat-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+/* 1. End */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -116,7 +117,7 @@ footer {
     font-size: 1.5rem;
 }
 
-/* 1. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
+/* 2. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
 .fab {
     color: #D3D3D3;
     background: #111111;
@@ -134,4 +135,4 @@ footer {
 .fab:hover {
     background-color: #00611C
 }
-/* 1. End */
+/* 2. End */
