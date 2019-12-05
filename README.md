@@ -89,9 +89,13 @@ The main issues I encountered were:
 - I added a modal as it was impossible to zoom in on the images in the normal gallery layout.
 - I had a secondary branch when testing out different gallery layouts. I deleted that branch after it was no longer useful.
 - The blog layout with images on alternating sides on a larger screen was messy in a vertical view on smaller screens. I used to classes to ensure the order was always correct on smaller viewports.
-- The text for each blog post was overflowing and creating an ugly layout when changing the viewport responsively. I truncated the text at a set line to best maintain the layout and the peek into the blog post.
-- The content on the contact page wasn't long enough so the footer would float up the page on longer devices. I added a container for the main content with a minimum viewport height and a seperate container for the fotter, so it would be pushed down to the bottom of the page.
-- I found AWS to be a bit slow and my credit was disappearing. I switched to Gitpod.
+- The text for each blog post was overflowing and creating an ugly layout when changing the viewport responsively. I truncated the text at a fixed line to best maintain the layout and the peek into the blog post.
+- The content on the contact page wasn't long enough so the footer would float up the page on longer devices. I added a container for the main content with a minimum viewport height and a seperate container for the footer, so it would be pushed down to the bottom of the page.
+- The containers on the contact page didn't stretch from top to the bottom, creating a small box of color on larger devices so I had to use flexboxes to fix the issue.
+- The content within the containers would not vertically center without a fixed height, so I had to adjust CSS values, however that brought issues of overflow on smaller devices. I set a min-height value along with a percentage value to fix this.
+- The CSS file had become difficult to parse, so I seperated the CSS styles per page, with one main CSS. This made things easier to examine and change.
+- I moved the all the CDN files to local so updating frameworks wouldn't effect the page.
+- Once the framework files were local I had difficulty organising my website structure, so I reorganised my files into resources, for my onw changeable files for the website, and vendors, for framework files I won't be editing.
 
 ## Deployment
 1. I set up a git hub repository for deployment and set up an SSH key.
