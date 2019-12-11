@@ -76,7 +76,8 @@
 
 	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
     <!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
-	<section class="row my-3 mx-auto">
+	<section class="container-fluid p-0 my-3 content-container-gallery">
+    <div class="row mx-auto">
 		<div class="col-md-12 d-flex justify-content-center mb-3 pb-2">
 			<ul class="list-group list-group-horizontal justify-content-center">
                 <li class="list-group-item g-filter filter active p-2" data-rel="all">All</li>
@@ -221,6 +222,7 @@
 				</div>
 			</div>
 		</div>
+        </div>
 	</section>
     <!-- 3. End -->
 
@@ -239,7 +241,7 @@
     <!-- 4. End -->
 
 		<footer class="container-fluid">
-			<div class="row pb-1 pb-md-3"">
+			<div class="row pb-1 pb-md-3">
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
