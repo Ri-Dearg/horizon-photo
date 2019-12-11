@@ -114,6 +114,14 @@ footer {
     color: #111111;
 }
 
+.footlink {
+    color: #00611C;
+}
+
+.footlink:hover {
+    color: #28a745
+}
+
 .social-links {
     font-size: 1.5rem;
 }
