@@ -68,7 +68,7 @@ button.close:hover {
 
 /*------------------------------------------------------Gallery Layout*/
 /*Used to push the footer to the bottom of the page as the content does not fill the page on some devices*/
-/*The fixed height is necessary to vertically align the content in the center of the page on larger devices, the min-height is necessary to prevent content overflow and overlap on smaller devices with vertical columns*/
+/*The min-height is necessary to prevent content overflow and overlap on smaller devices with vertical columns*/
 .content-container-gallery {
     min-height: 83vh;
 }

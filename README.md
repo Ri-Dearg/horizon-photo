@@ -30,13 +30,12 @@ The designs for each page changed quite a bit as worked progressed, so they do n
 - The gallery highlight the locations visited with a filter tab for each location and a pop-up modal for the enlarged images. A blur before the image has loaded eases the loading time and maintains the layout.
 - The blog is a collection of stories or information about the locations with related images, giving a story to images seen.
 - A simple contact page.
-
-### Features to be implemented
 - Form Validation
 
 #### Features Cancelled
 - ~~A map with location linked to photos~~
 - ~~Clicking on a location in the gallery will bring up a link to a blog post.~~
+- ~~Filter tabs are auto selected in gallery from home page links~~
 
 
 ## Technologies Used

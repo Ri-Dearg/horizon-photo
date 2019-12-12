@@ -78,19 +78,19 @@
 	<!--Div used to push the footer to the bottom of the page as the content does not fill the page on some devices-->
 	<section class="container-fluid p-0 mt-3 content-container-contact">
 		<div class="row p-0 m-0 h-100">
-				<div class="col-md-6 d-flex p-3" id="contact-tag">
+				<div class="col-12 d-flex p-3" id="contact-tag">
 					<div class="row m-0 my-auto p-0">
                         <div class="col pb-3">
                             <img src="resources/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
                         </div>
                         <div class="w-100"></div>
                         <div class="col">
-                            <p class="text-center px-2">I'm always seeking new experiences, perspectives and opportunities. If you want to share something with me, please go ahead. I'm open to discussion. Please comment, share, or repost my work.  I'd love to know what you think.</p>
+                            <p class="text-center px-2">I'm always seeking new experiences, perspectives and opportunities. If you want to share something with me, please go ahead. I'm open to discussion. Please comment, share, or repost my work.  Feedback is always welcome!</p>
                         </div>
                     </div>
                 </div>
             
-				<div class="d-flex col-md-6 p-0">
+				<div class="d-flex col-12 p-0">
 					<div class="row p-1 m-auto" id="contact">
 						<div class="col d-flex justify-content-center">
 							<h1 class="heading-font heading-size">Contact me</h1>
@@ -100,20 +100,20 @@
 							<form action="action.php" method="post">
 								<div class="row contact-row">
 									<div class="col p-1">
-										<input type="text" name="name" placeholder="Name" class="form-control" />
+										<input type="text" name="name" placeholder="Name" class="form-control" required/>
                                     </div>
                                     <div class="col p-1">
-                                        <input type="number" name="number" placeholder="Number" class="form-control" />
+                                        <input type="number" name="number" placeholder="Number (Optional)" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="row contact-row">
                                     <div class="col mt-2 p-1">
-                                        <input type="email" name="email" placeholder="Email" class="form-control" />
+                                        <input type="email" name="email" placeholder="Email" class="form-control" required/>
                                     </div>
                                 </div>
                                 <div class="row contact-row">
                                     <div class="col mt-2 p-1">
-                                        <textarea name="message" placeholder="Let me know what you think." class="form-control" id="cmessage"></textarea>
+                                        <textarea name="message" placeholder="Send me a message." class="form-control" id="cmessage" required></textarea>
                                     </div>
                                 </div>
                                 <div class="row contact-row">
@@ -136,14 +136,14 @@
 					<h2 class="heading-font heading-size">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
 					<form class="form-group d-flex justify-content-center mb-1">
-						<input type="email" name="email" placeholder="Email" class="form-control" />
+						<input type="email" name="email" placeholder="Email" class="form-control" required/>
 						<input type="submit" value="Join" class="btn btn-success ml-2" />
                 </form>
 				</div>
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Contact</h2>
 					<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-                    <br>I'd love to know what you think.</p>
+                    I'd love to know what you think.</p>
 				</div>
 				<!-- 3. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 				<div class="col-sm-4 mt-3">
@@ -185,6 +185,10 @@
 	<script src="vendors/jquery/jquery-3.4.1.min.js"></script>
 	<script src="vendors/js/popper.min.js"></script>
 	<script src="vendors/bootstrap/bootstrap.min.js"></script>
+
+<!--Taken from https://getbootstrap.com/docs/4.3/components/forms/ -->
+
+
 </body>
 
 </html>
