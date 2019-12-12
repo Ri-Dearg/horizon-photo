@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
+	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--Bootstrap CSS-->
@@ -75,188 +75,191 @@
 	</header>
 
 	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
-    <!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
+	<!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
 	<section class="container-fluid p-0 my-3 content-container-gallery">
-    <div class="row mx-auto">
-		<div class="col-md-12 d-flex justify-content-center mb-3 pb-2">
-			<ul class="list-group list-group-horizontal justify-content-center">
-                <li class="list-group-item g-filter filter active p-2" data-rel="all">All</li>
-                <li class="list-group-item g-filter filter p-2" data-rel="af">Africa</li>
-                <li class="list-group-item g-filter filter p-2" id="aspic" data-rel="as">Asia</li>
-				<li class="list-group-item g-filter filter p-2" data-rel="eu">Europe</li>
-			</ul>
+		<h1 class="d-none">Gallery</h1>
+		<div class="row mx-auto">
+			<div class="col-md-12 d-flex justify-content-center mb-3 pb-2">
+				<ul class="list-group list-group-horizontal justify-content-center">
+					<li class="list-group-item g-filter filter active p-2" data-rel="all">All</li>
+					<li class="list-group-item g-filter filter p-2" data-rel="af">Africa</li>
+					<li class="list-group-item g-filter filter p-2" id="aspic" data-rel="as">Asia</li>
+					<li class="list-group-item g-filter filter p-2" data-rel="eu">Europe</li>
+				</ul>
+			</div>
+			<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
+			<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
+			<div class="gallery d-flex mx-auto" id="gallery">
+				<div class="d-flex flex-column">
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africa-800w.jpg);"
+							data-image-full="resources/images/africa-800w.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africa-800w.jpg" alt="Kilamanjaro" />
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europel1.jpg);"
+							data-image-full="resources/images/europel1.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europel1.jpg" alt="Church Steeple">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asial1.jpg)"
+							data-image-full="resources/images/asial1.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asial1.jpg" alt="Kimonos">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asiaw2.jpg);"
+							data-image-full="resources/images/asiaw2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asiaw2.jpg" alt="Pagoda">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europew2.jpg);"
+							data-image-full="resources/images/europew2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europew2.jpg" alt="Mountain Castle">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africal1.jpg);"
+							data-image-full="resources/images/africal1.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africal1.jpg" alt="Headwrap">
+                        </a>
+					</div>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africal2.jpg);"
+							data-image-full="resources/images/africal2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africal2.jpg" alt="Zebras">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europew3.jpg);"
+							data-image-full="resources/images/europew3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europew3.jpg" alt="Kerry">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asia-800w.jpg);"
+							data-image-full="resources/images/asia-800w.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asia-800w.jpg" alt="Rice Paddies">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asial2.jpg);"
+							data-image-full="resources/images/asial2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asial2.jpg" alt="Neon Nights">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europel2.jpg);"
+							data-image-full="resources/images/europel2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europel2.jpg" alt="Winter Palace">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africaw2.jpg);"
+							data-image-full="resources/images/africaw2.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africaw2.jpg" alt="Heat">
+                        </a>
+					</div>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africaw3.jpg);"
+							data-image-full="resources/images/africaw3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africaw3.jpg" alt="Fabrics">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europel3.jpg);"
+							data-image-full="resources/images/europel3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europel3.jpg" alt="Beach">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asial3.jpg);"
+							data-image-full="resources/images/asial3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asial3.jpg" alt="Cherry Blossoms">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all eu">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/europe-800w.jpg);"
+							data-image-full="resources/images/europe-800w.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/europe-800w.jpg" alt="Colosseum">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all as">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/asiaw3.jpg);"
+							data-image-full="resources/images/asiaw3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/asiaw3.jpg" alt="Buddha">
+                        </a>
+					</div>
+					<div class="my-auto pics animation all af">
+						<a class="card-image pop" href="#"
+							style="background-image: url(resources/images/thumbnails/africal3.jpg);"
+							data-image-full="resources/images/africal3.jpg">
+							<img class="img-fluid" src="resources/images/thumbnails/africal3.jpg" alt="Desert Sands">
+                        </a>
+					</div>
+				</div>
+			</div>
 		</div>
-        <!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
-        <!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
-		<div class="gallery d-flex mx-auto" id="gallery">
-			<div class="d-flex flex-column">
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africa-800w.jpg);"
-						data-image-full="resources/images/africa-800w.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africa-800w.jpg" alt="Kilamanjaro" />
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europel1.jpg);"
-						data-image-full="resources/images/europel1.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europel1.jpg" alt="Church Steeple">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asial1.jpg)"
-						data-image-full="resources/images/asial1.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asial1.jpg" alt="Kimonos">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asiaw2.jpg);"
-						data-image-full="resources/images/asiaw2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asiaw2.jpg" alt="Pagoda">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europew2.jpg);"
-						data-image-full="resources/images/europew2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europew2.jpg" alt="Mountain Castle">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africal1.jpg);"
-						data-image-full="resources/images/africal1.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africal1.jpg" alt="Headwrap">
-                    </a>
-				</div>
-			</div>
-			<div class="d-flex flex-column">
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africal2.jpg);"
-						data-image-full="resources/images/africal2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africal2.jpg" alt="Zebras">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europew3.jpg);"
-						data-image-full="resources/images/europew3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europew3.jpg" alt="Kerry">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asia-800w.jpg);"
-						data-image-full="resources/images/asia-800w.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asia-800w.jpg" alt="Rice Paddies">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asial2.jpg);"
-						data-image-full="resources/images/asial2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asial2.jpg" alt="Neon Nights">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europel2.jpg);"
-						data-image-full="resources/images/europel2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europel2.jpg" alt="Winter Palace">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africaw2.jpg);"
-						data-image-full="resources/images/africaw2.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africaw2.jpg" alt="Heat">
-                    </a>
-				</div>
-			</div>
-			<div class="d-flex flex-column">
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africaw3.jpg);"
-						data-image-full="resources/images/africaw3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africaw3.jpg" alt="Fabrics">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europel3.jpg);"
-						data-image-full="resources/images/europel3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europel3.jpg" alt="Beach">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asial3.jpg);"
-						data-image-full="resources/images/asial3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asial3.jpg" alt="Cherry Blossoms">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all eu">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/europe-800w.jpg);"
-						data-image-full="resources/images/europe-800w.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/europe-800w.jpg" alt="Colosseum">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all as">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/asiaw3.jpg);"
-						data-image-full="resources/images/asiaw3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/asiaw3.jpg" alt="Buddha">
-                    </a>
-				</div>
-				<div class="my-auto pics animation all af">
-					<a class="card-image pop" href="#"
-						style="background-image: url(resources/images/thumbnails/africal3.jpg);"
-						data-image-full="resources/images/africal3.jpg">
-						<img class="img-fluid" src="resources/images/thumbnails/africal3.jpg" alt="Desert Sands">
-                    </a>
-				</div>
-			</div>
-		</div>
-        </div>
 	</section>
-    <!-- 3. End -->
+	<!-- 3. End -->
 
 	<!-- 4. Modal from http://jsfiddle.net/4p57wx8r/ -->
-    <!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
+	<!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
 	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="imagemodal" aria-hidden="true">
 		<div class="modal-dialog modal-lg mt-5">
 			<div class="modal-content">
 				<div class="modal-body p-0">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<!--img src must be empty for the modal to function-->
 					<img src="" class="imagepreview" style="width: 100%;" alt="modal">
                 </div>
 				</div>
 			</div>
 		</div>
-    <!-- 4. End -->
+		<!-- 4. End -->
 
 		<footer class="container-fluid">
 			<div class="row pb-1 pb-md-3">
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
-					<form class="form-group d-flex justify-content-center mb-1" action="" method="post" onsubmit="return false;">
+					<form class="form-group d-flex justify-content-center mb-1" action="action.php" method="post"
+						onsubmit="return false;">
 						<input type="email" name="email" placeholder="Email" class="form-control" required/>
 						<input type="submit" value="Join" class="btn btn-success ml-2" />
-                </form>
+                    </form>
 				</div>
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Contact</h2>
 					<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-                    I'd love to know what you think.</p>
+						I'd love to know what you think.</p>
 				</div>
 
-			<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+				<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Social</h2>
 					<ul class="list-inline social-links">
@@ -286,7 +289,7 @@
 						</li>
 					</ul>
 				</div>
-                <!-- 5. End-->
+				<!-- 5. End-->
 			</div>
 		</footer>
 
@@ -298,60 +301,61 @@
 
 		<script>
 			// 5. Javascript utilised and edited from https://mdbootstrap.com/plugins/jquery/gallery/ for gallery layout
-        $(function() {
-            var selectedClass = "";
-            $(".filter").click(function() {
-                selectedClass = $(this).attr("data-rel");
-                $("#gallery").fadeTo(400, 0);
-                $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
-                setTimeout(function() {
-                    $("." + selectedClass).fadeIn().addClass('animation');
-                    $("#gallery").fadeTo(300, 1);
-                }, 300);
-            });
+    $(function() {
+        var selectedClass = "";
+        $(".filter").click(function() {
+            selectedClass = $(this).attr("data-rel");
+            $("#gallery").fadeTo(400, 0);
+            $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+            setTimeout(function() {
+                $("." + selectedClass).fadeIn().addClass('animation');
+                $("#gallery").fadeTo(300, 1);
+            }, 300);
         });
+    });
 
-        // Active switch for bootstrap
-        $(".list-group li").on("click", function() {
-            $(".list-group li").removeClass("active");
-            $(this).addClass("active");
+    // Active switch for bootstrap
+    $(".list-group li").on("click", function() {
+        $(".list-group li").removeClass("active");
+        $(this).addClass("active");
+    });
+    // 5. End
+
+    // 6. Modal image enlarge from http://jsfiddle.net/4p57wx8r/
+    $(function() {
+        $('.pop').on('click', function() {
+            $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+            $('#imagemodal').modal('show');
         });
-        // 5. End
+    });
+    // 6. End
 
-        // 6. Modal image enlarge from http://jsfiddle.net/4p57wx8r/
-        $(function() {
-            $('.pop').on('click', function() {
-                $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-                $('#imagemodal').modal('show');
-            });
-        });
-        // 6. End
+    // 7. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
+    window.addEventListener('load', function() {
 
-        // 7. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/
-        window.addEventListener('load', function() {
+        setTimeout(lazyLoad, 1000);
 
-            setTimeout(lazyLoad, 1000);
+    });
 
-        });
+    function lazyLoad() {
+        var card_images = document.querySelectorAll('.card-image');
 
-        function lazyLoad() {
-            var card_images = document.querySelectorAll('.card-image');
+        card_images.forEach(function(card_image) {
+            var image_url = card_image.getAttribute('data-image-full');
+            var content_image = card_image.querySelector('img');
 
-            card_images.forEach(function(card_image) {
-                var image_url = card_image.getAttribute('data-image-full');
-                var content_image = card_image.querySelector('img');
+            content_image.src = image_url;
 
-                content_image.src = image_url;
-
-                content_image.addEventListener('load', function() {
-                    card_image.style.backgroundImage = 'url(' + image_url + ')';
-                    card_image.className = card_image.className + ' is-loaded';
-                });
-
+            content_image.addEventListener('load', function() {
+                card_image.style.backgroundImage = 'url(' + image_url + ')';
+                card_image.className = card_image.className + ' is-loaded';
             });
 
-        }
-        // 7. End
+        });
+
+    }
+    // 7. End
 		</script>
 </body>
+
 </html>

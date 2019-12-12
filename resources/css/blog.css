@@ -107,7 +107,7 @@ article a:hover {
     transition: all 0.2s ease-in-out;
 }
 
-article a:focus: {
+article a:focus {
     background-color: #007b23;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
