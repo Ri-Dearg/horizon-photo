@@ -1,6 +1,7 @@
 # Horizon Photography
 
 The site is desgined as a portfolio for a travel Photographer. Its goal is to highlight the photographer and to create interest in their work.
+Link to deployed project [here](https://ri-dearg.github.io/horizon-photo/index.html)
 
 ## UX
 
