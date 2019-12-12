@@ -7,17 +7,22 @@ Link to deployed project [here](https://ri-dearg.github.io/horizon-photo/index.h
 
 ### Outline
 
-The home page is desgined to have a big impact with a strong image upon loading. A pre-loader is used to ensure the page is loaded before seeing it. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline and a newsletter form are made immediately evident to acquire subscribers. Below is a short introduction to the photographer, followed by links to the gallery. Finally, there is the footer with basic details repeated.  
-The flow is designed to first have an impact to create interest and highlight the work, then an option to interact with the newsletter, followed by basic necessary information about the photographer, and returning to highlight the work. The footer finishes with any crucial info repeated.
+The home page is desgined to have a big impact with a strong image upon loading. A pre-loader is used to ensure the page is loaded before seeing it. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline is made immediately evident to acquire give a indication of the theme. Below is a short introduction to the photographer, followed by links to the gallery. Finally, there is the footer with basic details repeated and an option to subscribe to the newsletter.  
+
+The flow is designed to first have an impact to create interest and highlight the work followed by basic necessary information about the photographer, and returning to highlight the work. The footer finishes with any crucial info repeated and the option to subscribe to a newsletter.
+
+Images used are of full quality as I felt it necessary for a photographer's website that the best quality is always utilised. Loading blur and a pre-loading ticker are used where appropriate to ensure that the images will be loaded at full quality without disruption to the user experience.
 
 ### User Stories
 As a user interested in photography, or looking for a photgrapher to hire. The work is highlighted front and center, also highlighting the type of photgrpaher they may be. I would want to examine the Gallery or Contact. Both links are immediately avaialable in the navbar to view more work. I may be interested in the photographer, whom I can learn about by scrolling down. Once I scroll down, links to the gallery are again available to me, along with contact info.
 
 As a user interested in travel, the Blog is highlighted in the navbar and the newsletter is immediately obvious, so I can look at details of travel. Scrolling down I can see different locations whose galleries I can explore. In the footer is another link for the newsletter if I am interested in following the blog.
 
-### Colours
-The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. Transparent containers are used on top of the image so that the image remains visible throughout the site, without it taking up too much vertical space on mobile. This also means that the image does not shift around when opening and closing collapsable menus. A deep green is used as an accent to add color and create a thematic connection with nature. the dark colors highlight the colors of the photographs much better than a lighter color.  
-The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings.  
+### Colours and Styles
+The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. Transparent containers are used on top of the image so that the image remains visible throughout the site, without it taking up too much vertical space on mobile. This also means that the image does not shift around when opening and closing collapsable menus. A deep green is used as an accent to add color and create a thematic connection with nature. the dark colors highlight the colors of the photographs much better than a lighter color. This theme is continued throughout the site to retain a minimalistic, clean design with a focus on the photographer's work.
+
+The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings. 
+
 The navbar collapses below medium devices as the spacing in the fonts becomes squahed on smaller devices. The logo shifts from the center on larger devices to the left side on smaller devices so it is always visible.
 
 ### Wireframes
