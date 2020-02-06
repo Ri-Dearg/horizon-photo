@@ -42,7 +42,7 @@
 
 .blogsearch:focus,
 .blogsearch-submit:focus {
-    outline: 0px;
+    outline: 0;
     -webkit-appearance: none;
     -webkit-box-shadow: none;
             box-shadow: none;
