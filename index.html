@@ -54,16 +54,14 @@
 	<!-- 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
 	<div class="se-pre-con"></div>
 
-	<!-- 2. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
-	<div class="jumbotron jumbotron-fluid p-0 m-0">
-		<!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
-		<header class="container-fluid callout-container m-0 p-0">
-			<nav class="navbar navbar-expand-md navbar-dark p-0">
-				<!-- 3. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+
+				<!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                 </a>
-					<!-- 3. End -->
+					<!-- 2. End -->
+
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -75,13 +73,15 @@
 							<li class="nav-item m-md-auto">
 								<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
 							</li>
-							<!-- 4. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+
+							<!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
 							<li class="d-none d-md-block m-md-auto">
 								<a href="index.html">
 									<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                             </a>
 							</li>
-							<!-- 4. End -->
+							<!-- 3. End -->
+
 							<li class="nav-item m-md-auto">
 								<a class="nav-link pr-2 py-0 p-md-0" href="blog.html">Blog</a>
 							</li>
@@ -91,7 +91,14 @@
 						</ul>
 					</div>
 			</nav>
-			<!-- 5. Jumbotron container-->
+
+	<!-- 4. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+	<div class="jumbotron jumbotron-fluid p-0 m-0">
+
+		<!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
+		<header class="container-fluid callout-container m-0 p-0">
+
+			<!-- 4. Jumbotron container-->
 			<div class="container-fluid" id="jumbotext">
 				<div class="row">
 					<div class="col px-2">
@@ -102,20 +109,24 @@
 				</div>
 			</div>
 			<!-- 5. End -->
+
 		</header>
 	</div>
 	<!-- 2. End -->
+
 	<section class="container-fluid" id=aboutme>
 		<div class="row">
 			<div class="col-sm-4 d-flex p-3">
 				<img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
             </div>
 				<div class="col-sm-8 my-auto">
+
 					<!-- 4. Class used to position the header to the right on medium and larger screens-->
 					<div class="d-md-flex flex-row-reverse">
 						<h1 class="display-4 heading-font heading-size pt-md-2">About</h1>
 					</div>
 					<!-- 4. End -->
+
 					<p>I am a travel photogrpaher who loves to take pictures of things from all angles, be it food,
 						cars, people, places and projects. I shot many outdoor projects in Africa, Asia and Europe
 						helping. I work with locals and travellers, often split my time between daily living and toruist
@@ -126,6 +137,7 @@
 				</div>
 			</div>
 			<!-- Animations created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
+
 			<div class="row">
 				<div class="col-sm-4 p-0 div-hover" id="africalink">
 					<a href="gallery.html" class="gallerylink link-hover">
@@ -162,6 +174,7 @@
 					I'd love to know what you think.</p>
 			</div>
 			<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+
 			<div class="col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Social</h2>
 				<ul class="list-inline social-links">
@@ -192,6 +205,7 @@
 				</ul>
 			</div>
 			<!-- 5. End-->
+            
 		</div>
 	</footer>
 
