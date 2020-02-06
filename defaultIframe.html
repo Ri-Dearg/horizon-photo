@@ -37,66 +37,19 @@
 	<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 
 	<!--Page Stylesheet-->
-	<link rel="stylesheet" href="assets/css/gallery.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/iframe.css" type="text/css" />
 
 	<title>Horizon Photography | Gallery</title>
 
 </head>
 
 <body>
-	<header class="container-fluid m-0 p-0">
-		<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
-
-			<!-- 1. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
-			<a href="index.html" class="d-md-none pl-3">
-				<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-                </a>
-				<!-- 1. End -->
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-				<div class="collapse navbar-collapse" id="collapseNavbar">
-					<ul class="navbar-nav justify-content-center">
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="index.html">Home</a>
-						</li>
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-						</li>
-
-						<!-- 2. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-						<li class="d-none d-md-block m-md-auto">
-							<a href="index.html">
-								<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-                            </a>
-						</li>
-						<!-- 2. End -->
-
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="blog.html">Blog</a>
-						</li>
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
-		</nav>
-	</header>
 
 	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
 	<!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
 	<section class="container-fluid p-0 my-3 content-container-gallery">
 		<h1 class="d-none">Gallery</h1>
 		<div class="row mx-auto">
-			<div class="col-md-12 d-flex justify-content-center mb-3 pb-2">
-				<ul class="list-group list-group-horizontal justify-content-center">
-					<li class="list-group-item g-filter filter active p-2" data-rel="all">All</li>
-					<li class="list-group-item g-filter filter p-2" data-rel="af">Africa</li>
-					<li class="list-group-item g-filter filter p-2" id="aspic" data-rel="as">Asia</li>
-					<li class="list-group-item g-filter filter p-2" data-rel="eu">Europe</li>
-				</ul>
-			</div>
 
 			<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
 			<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
@@ -252,57 +205,6 @@
 			</div>
 		</div>
 		<!-- 4. End -->
-
-		<footer class="container-fluid">
-			<div class="row pb-1 pb-md-3">
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Newsletter</h2>
-					<p class="mb-0">Sign up here!</p>
-					<form class="form-group d-flex justify-content-center mb-1" action="action.php" method="post"
-						onsubmit="return false;">
-						<input type="email" name="email" placeholder="Email" class="form-control" required/>
-						<input type="submit" value="Join" class="btn btn-success ml-2" />
-                    </form>
-				</div>
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Contact</h2>
-					<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-						I'd love to know what you think.</p>
-				</div>
-
-				<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Social</h2>
-					<ul class="list-inline social-links">
-						<li class="list-inline-item">
-							<a target="_blank" href="#">
-								<i class="fab fa-facebook" aria-hidden="true"></i>
-								<span class="sr-only">Facebook</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="#">
-								<i class="fab fa-instagram" aria-hidden="true"></i>
-								<span class="sr-only">Instagram</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="#">
-								<i class="fab fa-500px" aria-hidden="true"></i>
-								<span class="sr-only">500px</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="#">
-								<i class="fab fa-flickr" aria-hidden="true"></i>
-								<span class="sr-only">Flickr</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!-- 5. End-->
-			</div>
-		</footer>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
