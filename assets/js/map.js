@@ -1,13 +1,14 @@
+function iframeHeight() {
+    var mapGallery = document.getElementById('iframeGallery');
+    if (mapGallery) {
+        mapGallery.height = "";
+        mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
+    }
+}
+
 function toggleDisplay() {
-    $('#iframeGallery').toggleClass('d-none');
-    function iframeHeight() {
-      var mapGallery = document.getElementById('iframeGallery');
-      if(mapGallery) {
-            mapGallery.height = "";
-            mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
-      }   
-  }
-  iframeHeight();
+    $('#iframeGallery').slideToggle(1000);
+    iframeHeight();
 };
 
 var map;
