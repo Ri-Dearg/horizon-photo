@@ -1,8 +1,17 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-/*------------------------------------------------------Scrollbar Removal*/
+/*------------------------------------------------------Base*/
 html {
-    overflow: hidden;}
+    overflow: hidden;
+    }
+
+body {
+    padding-top: 0;
+}
+
+h4 {
+    background-color: #00611C;
+}
 
 /*------------------------------------------------------Modal Styles*/
 .modal-body,
@@ -72,12 +81,6 @@ button.close:hover {
     }
 }
 
-@media (max-width: 400px) {
-    .btn.filter {
-        padding-left: 1.1rem;
-        padding-right: 1.1rem;
-    }
-}
 /* 1. End */
 
 /*------------------------------------------------------Gallery Blur*/
