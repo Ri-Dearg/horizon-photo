@@ -8,51 +8,10 @@ function iframeHeight() {
 
 function resizeIframe(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
-
-var markerArr = [];
-
-$.getJSON("assets/js/markerArray.js", function (data) {
-    var length = data.locations.length
-    for (var i = 0; i < length; i++) {
-        var eachData = data.locations[i].attributes
-        var latLng = new google.maps.LatLng(eachData.Latitude, eachData.Longitude);
-        var marker = new google.maps.Marker({
-            position: latLng,
-            map: map,
-            animation: google.maps.Animation.DROP,
-
-        });
-
-        markerArr.push(marker);
-
-
-        /*http://jsfiddle.net/geocodezip/qmboxs2u/*/
-        google.maps.event.addListener(marker, 'click', function () {
-            for (var i = 0; i < markerArr.length; i++) {
-                markerArr[i].setAnimation(null);
-            }
-            toggleBounce(this);
-            toggleDisplay();
-        });
-    }
-});
-
-function toggleBounce(bouncer) {
-    if (bouncer.getAnimation() !== null) {
-        bouncer.setAnimation(null);
-    } else {
-        bouncer.setAnimation(google.maps.Animation.BOUNCE);
-    };
-}
-
-/*function galleryToggle() {
-    toggleBounce()
-    toggleDisplay()
-}*/
+  }
 
 function toggleDisplay() {
-    $('#iframeGallery').slideToggle(1100, 'linear');
+    $('#iframeGallery').slideToggle(1400, 'linear');
     iframeHeight();
 };
 
@@ -288,5 +247,38 @@ function initMap() {
             }
         ]
     });
-}
 
+    var irelandCoord = { lat: 53.305494, lng: -7.737649 };
+    var germanyCoord = { lat: 51.133481, lng: 10.018343 };
+    
+    var irelandMarker = new google.maps.Marker({
+        position: irelandCoord,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: 'Ireland'
+    });
+
+    var germanyMarker = new google.maps.Marker({
+        position: germanyCoord,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: 'Germany'
+    });
+
+
+irelandMarker.addListener('click', galleryToggle);
+
+    function toggleBounce() {
+        if (irelandMarker.getAnimation() !== null) {
+            irelandMarker.setAnimation(null);
+        } else {
+            irelandMarker.setAnimation(google.maps.Animation.BOUNCE);
+        };
+    }
+    
+
+    function galleryToggle() {
+        toggleBounce()
+        toggleDisplay()
+    }
+}

@@ -39,9 +39,9 @@
 	<!--Page Stylesheet-->
 	<link rel="stylesheet" href="assets/css/gallery.css" type="text/css" />
     
-    <!--Script placed in head tag because iframe does not always load correct height with script at the bottom, as it searches for an undefined function. async used-->
-    <script src="assets/js/map.js" async defer> </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap" async defer></script>
+    <!--Script placed in head tag because iframe does not always load correct height with script at the bottom, as it searches for an undefined function-->
+    <script src="assets/js/map.js" defer> </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap" defer></script>
 
 	<title>Horizon Photography | Gallery</title>
 
@@ -94,8 +94,7 @@
 		<h1 class="d-none">Gallery</h1>
 		<div id="map" class="container-fluid"></div>
 
-		<iframe src="defaultIframe.html" id="iframeGallery" class="container-fluid m-0 p-0"
-			onload="iframeHeight()"></iframe>
+		<iframe src="defaultIframe.html" id="iframeGallery" class="container-fluid m-0 p-0" onload="iframeHeight()"></iframe>
 
 		<footer class="container-fluid">
 			<div class="row pb-1 pb-md-3">
@@ -153,18 +152,6 @@
 		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
 		<script src="assets/libraries/js/popper.min.js"></script>
 		<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
-
-		<!-- Active switch for bootstrap -->
-		<script src="assets/js/activeSwitchBootstrap.js"></script>
-
-		<!-- 5. Modal image enlarge from http://jsfiddle.net/4p57wx8r/ -->
-		<script src="assets/js/modal.js"></script>
-		<!-- 5. End -->
-
-		<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
-		<script src="assets/js/imageLoadSwitch.js"></script>
-		<!--6. End -->
-
 		
 </body>
 
