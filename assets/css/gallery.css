@@ -16,6 +16,13 @@ button.close:hover {
     color: #fff;
 }
 
+
+/*------------------------------------------------------Map*/
+#map {
+    height: 500px;
+}
+
+
 /*------------------------------------------------------Filter Switch*/
 /*Following values used to ovverride bootstrap defaults*/
 .g-filter {
