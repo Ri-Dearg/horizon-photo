@@ -11,15 +11,14 @@ var markerArr = [];
 $.getJSON("assets/js/markerArray.js", function (data) {
     var length = data.locations.length
     for (var i = 0; i < length; i++) {
-        var eachData = data.locations[i].attributes
-        var latLng = new google.maps.LatLng(eachData.Latitude, eachData.Longitude);
-        var placeName = eachData.title
+        var eachItem = data.locations[i].attributes
+        var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
+        var placeName = eachItem.title
         var marker = new google.maps.Marker({
             position: latLng,
             title: placeName,
             map: map,
             animation: google.maps.Animation.DROP,
-
         });
 
         markerArr.push(marker);
@@ -35,8 +34,6 @@ $.getJSON("assets/js/markerArray.js", function (data) {
     }
 });
 
-console.log(markerArr)
-
 function toggleBounce(bouncer) {
     if (bouncer.getAnimation() !== null) {
         bouncer.setAnimation(null);
@@ -45,14 +42,19 @@ function toggleBounce(bouncer) {
     };
 }
 
-function toggleDisplay(localGallery) {
-    $('#iframeGallery').slideToggle(1200, 'linear');
+function pageSwitch(markerNum) {
+    var localTitle = markerNum.title;
+    $('#iframeGallery')
+        .fadeOut(1200, pageIn)
 
-    function pageSwitch(markerNum){
-        var localTitle = markerNum.title;
-            $('#iframeGallery').attr("src","").attr("src", `iframe${localTitle}.html`)
-        }
-    pageSwitch(localGallery);
+    function pageIn() {
+        $('#iframeGallery').fadeIn(1300);
+        $('#iframeGallery').attr("src", "").attr("src", `iframe${localTitle}.html`);
+    }
+}
+
+function toggleDisplay(localGallery) {
+    pageSwitch(localGallery)
     iframeHeight();
 };
 
