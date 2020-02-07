@@ -48,13 +48,11 @@ function toggleBounce(bouncer) {
 function toggleDisplay(localGallery) {
     $('#iframeGallery').slideToggle(1200, 'linear');
 
-    /*function pageSwitch(){
-        var localTitle = 
-        if (markerArr[i] = markerArr[1]) {
-                $('#iframeGallery').attr("src","iframeIreland.html")
-            }
+    function pageSwitch(markerNum){
+        var localTitle = markerNum.title;
+            $('#iframeGallery').attr("src","").attr("src", `iframe${localTitle}.html`)
         }
-    pageSwitch();*/
+    pageSwitch(localGallery);
     iframeHeight();
 };
 
