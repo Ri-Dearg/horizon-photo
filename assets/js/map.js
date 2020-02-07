@@ -6,10 +6,6 @@ function iframeHeight() {
     }
 }
 
-function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
-
 var markerArr = [];
 
 $.getJSON("assets/js/markerArray.js", function (data) {
@@ -17,8 +13,10 @@ $.getJSON("assets/js/markerArray.js", function (data) {
     for (var i = 0; i < length; i++) {
         var eachData = data.locations[i].attributes
         var latLng = new google.maps.LatLng(eachData.Latitude, eachData.Longitude);
+        var placeName = eachData.title
         var marker = new google.maps.Marker({
             position: latLng,
+            title: placeName,
             map: map,
             animation: google.maps.Animation.DROP,
 
@@ -26,17 +24,18 @@ $.getJSON("assets/js/markerArray.js", function (data) {
 
         markerArr.push(marker);
 
-
         /*http://jsfiddle.net/geocodezip/qmboxs2u/*/
         google.maps.event.addListener(marker, 'click', function () {
             for (var i = 0; i < markerArr.length; i++) {
                 markerArr[i].setAnimation(null);
             }
             toggleBounce(this);
-            toggleDisplay();
+            toggleDisplay(this);
         });
     }
 });
+
+console.log(markerArr)
 
 function toggleBounce(bouncer) {
     if (bouncer.getAnimation() !== null) {
@@ -46,13 +45,16 @@ function toggleBounce(bouncer) {
     };
 }
 
-/*function galleryToggle() {
-    toggleBounce()
-    toggleDisplay()
-}*/
+function toggleDisplay(localGallery) {
+    $('#iframeGallery').slideToggle(1200, 'linear');
 
-function toggleDisplay() {
-    $('#iframeGallery').slideToggle(1100, 'linear');
+    /*function pageSwitch(){
+        var localTitle = 
+        if (markerArr[i] = markerArr[1]) {
+                $('#iframeGallery').attr("src","iframeIreland.html")
+            }
+        }
+    pageSwitch();*/
     iframeHeight();
 };
 
@@ -289,4 +291,3 @@ function initMap() {
         ]
     });
 }
-
