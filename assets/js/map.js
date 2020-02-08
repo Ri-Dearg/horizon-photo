@@ -1,19 +1,11 @@
-function iframeHeight() {
-    var mapGallery = document.getElementById('iframeGallery');
-    if (mapGallery) {
-        mapGallery.height = "";
-        mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
-    }
-}
-
 var markerArr = [];
 
 $.getJSON("assets/js/markerArray.js", function (data) {
-    var length = data.locations.length
+    var length = data.locations.length;
     for (var i = 0; i < length; i++) {
-        var eachItem = data.locations[i].attributes
+        var eachItem = data.locations[i].attributes;
         var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
-        var placeName = eachItem.title
+        var placeName = eachItem.title;
         var marker = new google.maps.Marker({
             position: latLng,
             title: placeName,
@@ -39,30 +31,37 @@ function toggleBounce(bouncer) {
         bouncer.setAnimation(null);
     } else {
         bouncer.setAnimation(google.maps.Animation.BOUNCE);
-    };
-}
-
-function pageSwitch(markerNum) {
-    var localTitle = markerNum.title;
-    $('#iframeGallery')
-        .fadeOut(1200, pageIn)
-
-    function pageIn() {
-        $('#iframeGallery').fadeIn(1300);
-        $('#iframeGallery').attr("src", "").attr("src", `iframe${localTitle}.html`);
     }
 }
 
 function toggleDisplay(localGallery) {
-    pageSwitch(localGallery)
+    pageSwitch(localGallery);
     iframeHeight();
-};
+}
+
+function pageSwitch(markerNum) {
+    var localTitle = markerNum.title;
+    $('#iframeGallery').fadeOut(1200, pageIn);
+
+    function pageIn() {
+        $('#iframeGallery').attr("src", "").attr("src", `iframe${localTitle}.html`)
+        .fadeIn(1200);
+    }
+}
+
+function iframeHeight() {
+    var mapGallery = document.getElementById('iframeGallery');
+    if (mapGallery) {
+        mapGallery.height = "";
+        mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
+    }
+}
 
 var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 45.125298, lng: -6.148618 },
-        zoom: 3,
+        zoom: 2,
 
         // Styles Map for better consistency with the site theme, using https://mapstyle.withgoogle.com/
         styles: [
