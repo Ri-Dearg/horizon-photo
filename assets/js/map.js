@@ -45,7 +45,6 @@ function pageSwitch(markerNum) {
 
     function pageIn() {
         $('#iframeGallery').attr("src", "").attr("src", `iframe${localTitle}.html`)
-        .fadeIn(1200);
     }
 }
 
@@ -54,6 +53,7 @@ function iframeHeight() {
     if (mapGallery) {
         mapGallery.height = "";
         mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
+        $('#iframeGallery').fadeIn(1200)
     }
 }
 
