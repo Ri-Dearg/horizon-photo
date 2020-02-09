@@ -21,7 +21,7 @@ $.getJSON("assets/js/markerArray.js", function (data) {
                 markerArr[i].setAnimation(null);
             }
             toggleBounce(this);
-            toggleDisplay(this);
+            pageSwitch(this);
         });
     }
 });
@@ -34,28 +34,20 @@ function toggleBounce(bouncer) {
     }
 }
 
-function toggleDisplay(localGallery) {
-    pageSwitch(localGallery);
-    iframeHeight();
-}
-
 function pageSwitch(markerNum) {
     var localTitle = markerNum.title;
-    $('#iframeGallery').fadeOut(1200, pageIn);
-
-    function pageIn() {
-        $('#iframeGallery').attr("src", "").attr("src", `iframe${localTitle}.html`)
-    }
+    $('#iframeGallery').fadeOut(1200, function() {
+        $('#iframeGallery').attr("src", `gallery/iframe${localTitle}.html`)
+    }).fadeIn(2000);
 }
 
-function iframeHeight() {
+$('iframe').on('load', function() {
     var mapGallery = document.getElementById('iframeGallery');
     if (mapGallery) {
         mapGallery.height = "";
-        mapGallery.height = mapGallery.contentWindow.document.body.scrollHeight;
-        $('#iframeGallery').fadeIn(1200)
+        mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
     }
-}
+});
 
 var map;
 function initMap() {
