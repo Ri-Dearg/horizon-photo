@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--Bootstrap CSS-->
+	<link rel="stylesheet" href="../assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
+
+	<!--Fontawesome CSS-->
+	<link rel="stylesheet" href="../assets/libraries/fontawesome/css/all.min.css">
+
+	<!--favicon links from https://www.favicon-generator.org/-->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--Main Stylesheet-->
+	<link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+
+	<!--Page Stylesheet-->
+	<link rel="stylesheet" href="../assets/css/iframe.css" type="text/css" />
+
+	<title>Horizon Photography | Ireland Gallery</title>
+
+</head>
+
+<body>
+
+	<!-- 1. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
+	<!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
+	<section class="container-fluid p-0 my-0 content-container-gallery">
+		<h1 class="d-none">Ireland Gallery</h1>
+		<h4 class="text-center m-0">Ireland</h4>
+
+		<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
+		<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
+		<div class="gallery d-flex mx-auto" id="gallery">
+			<div class="d-flex flex-column">
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandw1.jpg)"
+						data-image-full="../assets/images/irelandw1.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandw1.jpg" alt="Kerry">
+                        </a>
+				</div>
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandl1.jpg);"
+						data-image-full="../assets/images/irelandl1.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandl1.jpg" alt="Pagoda">
+                        </a>
+				</div>
+			</div>
+			<div class="d-flex flex-column">
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandl2.jpg);"
+						data-image-full="../assets/images/irelandl2.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandl2.jpg" alt="Zebras">
+                        </a>
+				</div>
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandw2.jpg);"
+						data-image-full="../assets/images/irelandw2.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandw2.jpg" alt="Kerry">
+                        </a>
+				</div>
+			</div>
+			<div class="d-flex flex-column">
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandw3.jpg);"
+						data-image-full="../assets/images/irelandw3.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandw3.jpg" alt="Fabrics">
+                        </a>
+				</div>
+				<div class="my-auto pics animation all">
+					<a class="card-image pop" href="#"
+						style="background-image: url(../assets/images/thumbnails/irelandl3.jpg);"
+						data-image-full="../assets/images/irelandl3.jpg">
+						<img class="img-fluid" src="../assets/images/thumbnails/irelandl3.jpg" alt="Beach">
+                        </a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- 1. End -->
+
+	<!-- 2. Modal from http://jsfiddle.net/4p57wx8r/ -->
+	<!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
+	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="imagemodal" aria-hidden="true">
+		<div class="modal-dialog modal-lg mt-5">
+			<div class="modal-content">
+				<div class="modal-body p-0">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<!--img src must be empty for the modal to function-->
+					<img src="" class="imagepreview" style="width: 100%;" alt="modal">
+                </div>
+				</div>
+			</div>
+		</div>
+		<!-- 2. End -->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="../assets/libraries/jquery/jquery-3.4.1.min.js"></script>
+		<script src="../assets/libraries/js/popper.min.js"></script>
+		<script src="../assets/libraries/bootstrap/bootstrap.min.js"></script>
+
+		<!-- 3. Modal image enlarge from http://jsfiddle.net/4p57wx8r/ -->
+		<script src="../assets/js/modal.js"></script>
+		<!-- 3. End -->
+
+		<!--4. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
+		<script src="../assets/js/imageLoadSwitch.js"></script>
+		<!--4. End -->
+</body>
+
+</html>
