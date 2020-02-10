@@ -39,17 +39,16 @@
 	<!--Page Stylesheet-->
 	<link rel="stylesheet" href="../assets/css/iframe.css" type="text/css" />
 
-	<title>Horizon Photography | Default Gallery</title>
+	<title>Horizon Photography | Gallery Selector</title>
 
 </head>
 
 <body>
 
 	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
-	<!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
-	<section class="container-fluid p-0 my-0 content-container-gallery">
-        <h1 class="d-none">Default Gallery</h1>
-        <h4 class="text-center m-0">Explore the world through my photos.<br> 
+	<section class="container-fluid p-0 m-0 content-container-gallery">
+        <h1 class="d-none">Gallery Selector</h1>
+        <h4 class="text-center m-0 p-2" id="galleryTitle">Explore the world through my photos.<br> 
         Click on a marker to see its gallery and read about it.</h4>
 		<div class="row mx-auto mt-3">
 
@@ -57,134 +56,50 @@
 			<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
 			<div class="gallery d-flex mx-auto" id="gallery">
 				<div class="d-flex flex-column">
-					<div class="my-auto pics animation all af">
+					<div class="my-auto pics all" id="l1">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africa-800w.jpg);"
-							data-image-full="../assets/images/africa-800w.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africa-800w.jpg" alt="Kilamanjaro" />
+							style="background-image: url(../assets/images/default/defaultl1_tn.jpg);"
+							data-image-full="../assets/images/default/defaultl1.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultl1_tn.jpg" alt="Default 1" />
                         </a>
 					</div>
-					<div class="my-auto pics animation all eu">
+					<div class="my-auto pics all" id="w1">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/europel1.jpg);"
-							data-image-full="../assets/images/europel1.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/europel1.jpg" alt="Church Steeple">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asial1.jpg)"
-							data-image-full="../assets/images/asial1.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asial1.jpg" alt="Kimonos">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asiaw2.jpg);"
-							data-image-full="../assets/images/asiaw2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asiaw2.jpg" alt="Pagoda">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all eu">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/europew2.jpg);"
-							data-image-full="../assets/images/europew2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/europew2.jpg" alt="Mountain Castle">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all af">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africal1.jpg);"
-							data-image-full="../assets/images/africal1.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africal1.jpg" alt="Headwrap">
+							style="background-image: url(../assets/images/default/defaultw1_tn.jpg);"
+							data-image-full="../assets/images/default/defaultw1.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultw1_tn.jpg" alt="Default 2">
                         </a>
 					</div>
 				</div>
 				<div class="d-flex flex-column">
-					<div class="my-auto pics animation all af">
+					<div class="my-auto pics all" id="w2">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africal2.jpg);"
-							data-image-full="../assets/images/africal2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africal2.jpg" alt="Zebras">
+							style="background-image: url(../assets/images/default/defaultw2_tn.jpg);"
+							data-image-full="../assets/images/default/defaultw2.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultw2_tn.jpg" alt="Default 3">
                         </a>
 					</div>
-					<div class="my-auto pics animation all eu">
+					<div class="my-auto pics all" id="l2">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/irelandw1.jpg);"
-							data-image-full="../assets/images/irelandw1.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/irelandw1.jpg" alt="Kerry">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asia-800w.jpg);"
-							data-image-full="../assets/images/asia-800w.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asia-800w.jpg" alt="Rice Paddies">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asial2.jpg);"
-							data-image-full="../assets/images/asial2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asial2.jpg" alt="Neon Nights">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all eu">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/europel2.jpg);"
-							data-image-full="../assets/images/europel2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/europel2.jpg" alt="Winter Palace">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all af">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africaw2.jpg);"
-							data-image-full="../assets/images/africaw2.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africaw2.jpg" alt="Heat">
+							style="background-image: url(../assets/images/default/defaultl2_tn.jpg);"
+							data-image-full="../assets/images/default/defaultl2.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultl2_tn.jpg" alt="Default 4">
                         </a>
 					</div>
 				</div>
 				<div class="d-flex flex-column">
-					<div class="my-auto pics animation all af">
+					<div class="my-auto pics all" id="l3">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africaw3.jpg);"
-							data-image-full="../assets/images/africaw3.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africaw3.jpg" alt="Fabrics">
+							style="background-image: url(../assets/images/default/defaultl3_tn.jpg);"
+							data-image-full="../assets/images/default/defaultl3.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultl3_tn.jpg" alt="Default 5">
                         </a>
 					</div>
-					<div class="my-auto pics animation all eu">
+					<div class="my-auto pics all" id="w3">
 						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/europel3.jpg);"
-							data-image-full="../assets/images/europel3.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/europel3.jpg" alt="Beach">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asial3.jpg);"
-							data-image-full="../assets/images/asial3.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asial3.jpg" alt="Cherry Blossoms">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all eu">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/europe-800w.jpg);"
-							data-image-full="../assets/images/europe-800w.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/europe-800w.jpg" alt="Colosseum">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all as">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/asiaw3.jpg);"
-							data-image-full="../assets/images/asiaw3.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/asiaw3.jpg" alt="Buddha">
-                        </a>
-					</div>
-					<div class="my-auto pics animation all af">
-						<a class="card-image pop" href="#"
-							style="background-image: url(../assets/images/thumbnails/africal3.jpg);"
-							data-image-full="../assets/images/africal3.jpg">
-							<img class="img-fluid" src="../assets/images/thumbnails/africal3.jpg" alt="Desert Sands">
+						style="background-image: url(../assets/images/default/defaultw3_tn.jpg);"
+							data-image-full="../assets/images/default/defaultw3.jpg">
+							<img class="img-fluid" src="../assets/images/default/defaultw3_tn.jpg" alt="Default 6">
                         </a>
 					</div>
 				</div>

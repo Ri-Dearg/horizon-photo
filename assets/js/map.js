@@ -36,18 +36,41 @@ function toggleBounce(bouncer) {
 
 function pageSwitch(markerNum) {
     var localTitle = markerNum.title;
-    $('#iframeGallery').fadeOut(1200, function() {
-        $('#iframeGallery').attr("src", `gallery/iframe${localTitle}.html`)
-    }).fadeIn(2000);
+    $('#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(localTitle))
 }
 
-$('iframe').on('load', function() {
+const iframe = $("iframe#iframeGallery").contents();
+
+function galleryChoice(choice) {
+    setTimeout(function () {
+        iframe.find("#galleryTitle").html(`${choice}`)
+    }, 950);
+    setTimeout(stringChange(choice), 1000)
+    setTimeout(galleryHeight, 1000)
+}
+
+function stringChange(str) {
+    var lwr = str.toLowerCase();
+    ancSwap(iframe, 'l1', lwr);
+}
+
+function ancSwap(frame, id, lwrString) {
+    var findID = frame.find(`#${id} > a`);
+    findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
+    findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+}
+
+$(document).ready(function () {
+    $('iframe').on('load', galleryHeight);
+});
+
+function galleryHeight() {
     var mapGallery = document.getElementById('iframeGallery');
     if (mapGallery) {
         mapGallery.height = "";
         mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
     }
-});
+}
 
 var map;
 function initMap() {

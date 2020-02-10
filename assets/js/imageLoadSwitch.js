@@ -1,8 +1,16 @@
-window.addEventListener('load', function () {
-
+window.addEventListener('load', function () {    
     setTimeout(lazyLoad, 1000);
-
 });
+
+
+$("body").on('DOMSubtreeModified', "#galleryTitle", function() {
+    $('a').removeClass('is-loaded');
+    setTimeout(function() {
+        lazyLoad();
+    },
+         1200);
+});
+
 
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
