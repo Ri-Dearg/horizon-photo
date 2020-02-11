@@ -1,6 +1,8 @@
 $(document).ready(function () {
+    // adjusts iframe height based on device and photo length
     $('iframe').on('load', galleryHeight);
 
+    // Parses markerArray.js for details to give each marker on the map and pushes it to the array
     var markerArr = [];
     $.getJSON("assets/js/markerArray.js", function (data) {
         var length = data.locations.length;
@@ -17,18 +19,19 @@ $(document).ready(function () {
 
             markerArr.push(marker);
 
-            /*http://jsfiddle.net/geocodezip/qmboxs2u/*/
+            // Iterates through each marker on the map, sets the animation to null before pushing the marker through to the other functions
             google.maps.event.addListener(marker, 'click', function () {
                 for (var i = 0; i < markerArr.length; i++) {
                     markerArr[i].setAnimation(null);
                 }
-                toggleBounce(this);
+                bounce(this);
                 pageSwitch(this);
             });
         }
     });
 
-    function toggleBounce(bouncer) {
+    //  toggles the bounce animation for the selected marker
+    function bounce(bouncer) {
         if (bouncer.getAnimation() !== null) {
             bouncer.setAnimation(null);
         } else {
@@ -36,34 +39,39 @@ $(document).ready(function () {
         }
     }
 
-    function pageSwitch(markerNum) {
-        var localTitle = markerNum.title;
-        $('#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(localTitle))
-    }
-
     const iframe = $("iframe#iframeGallery").contents();
 
-    function galleryChoice(choice) {
-        setTimeout(function () {
-            iframe.find("#galleryTitle").html(`${choice}`)
-        }, 950);
-        setTimeout(stringChange(choice), 1000)
-        setTimeout(galleryHeight, 1000)
-    }
+    // Controls page animation, passing marker title to gallery change function
+    function pageSwitch(markerNum) {
+        var localTitle = markerNum.title;
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(localTitle))
 
-    function stringChange(str) {
-        var lwr = str.toLowerCase();
-        ancSwap(iframe, 'l1', lwr);
-    }
+        // Changes title in time with animations
+        function galleryChoice(choice) {
+            setTimeout(function () {
+                iframe.find("#galleryTitle").html(`${choice}`);
+                stringChange(choice);
+                galleryHeight();
+            }, 950);
 
-    function ancSwap(frame, id, lwrString) {
-        var findID = frame.find(`#${id} > a`);
-        findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
-        findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+            function stringChange(str) {
+                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
+                var lwr = str.toLowerCase();
+                for (i = 0; i < idArray.length; i++) {
+                    ancSwap(iframe, idArray[i], lwr);
+                }
+
+                function ancSwap(frameCont, id, lwrString) {
+                    var findID = frameCont.find(`#${id} > a`);
+                    findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                }
+            }
+        }
     }
 
     function galleryHeight() {
-        var mapGallery = document.getElementById('iframeGallery');
+        const mapGallery = document.getElementById('iframeGallery');
         if (mapGallery) {
             mapGallery.height = "";
             mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';

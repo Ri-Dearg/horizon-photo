@@ -8,7 +8,7 @@ $("body").on('DOMSubtreeModified', "#galleryTitle", function() {
     setTimeout(function() {
         lazyLoad();
     },
-         1200);
+         1000);
 });
 
 
