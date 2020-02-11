@@ -1,14 +1,13 @@
+// Starts function on window load for each image
 window.addEventListener('load', function () {    
     setTimeout(lazyLoad, 1000);
 });
 
-
+/* Resets the class of each loaded image when the anchors are modified
+This allows the lazyLoad function to correctly blur and swap images on url change*/
 $("body").on('DOMSubtreeModified', "#galleryTitle", function() {
     $('a').removeClass('is-loaded');
-    setTimeout(function() {
-        lazyLoad();
-    },
-         1000);
+    setTimeout(lazyLoad(), 1000);
 });
 
 

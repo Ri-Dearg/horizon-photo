@@ -39,37 +39,42 @@ $(document).ready(function () {
         }
     }
 
-    const iframe = $("iframe#iframeGallery").contents();
+    // Allows selection of elements within the iframe
+    const iframeC = $("iframe#iframeGallery").contents();
 
-    // Controls page animation, passing marker title to gallery change function
+    // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markerNum) {
         var localTitle = markerNum.title;
         $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(localTitle))
 
-        // Changes title in time with animations
+        // Changes title and swaps url in time with animations 
         function galleryChoice(choice) {
             setTimeout(function () {
-                iframe.find("#galleryTitle").html(`${choice}`);
-                stringChange(choice);
-                galleryHeight();
+                iframeC.find("#galleryTitle").html(`${choice}`);
+                urlChange(choice);
             }, 950);
 
-            function stringChange(str) {
+            // Iterates through each image id, passing through info to swap out each anchor url
+            function urlChange(str) {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
                 var lwr = str.toLowerCase();
                 for (i = 0; i < idArray.length; i++) {
-                    ancSwap(iframe, idArray[i], lwr);
+                    ancSwap(iframeC, idArray[i], lwr);
                 }
 
+                // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
                 function ancSwap(frameCont, id, lwrString) {
                     var findID = frameCont.find(`#${id} > a`);
                     findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
                     findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                    // adjusts the iframe height upon thumbnails loading
+                    iframeC.find(".img-fluid").on('load', galleryHeight)
                 }
             }
         }
     }
 
+    // Adjusts gallery height for varying picture formats and devices
     function galleryHeight() {
         const mapGallery = document.getElementById('iframeGallery');
         if (mapGallery) {
@@ -77,8 +82,8 @@ $(document).ready(function () {
             mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
         }
     }
-
 });
+
 
 var map;
 function initMap() {
