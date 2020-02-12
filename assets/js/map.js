@@ -1,53 +1,89 @@
-var markerArr = [];
+$(document).ready(function () {
+    // adjusts iframe height based on device and photo length
+    $('iframe').on('load', galleryHeight);
 
-$.getJSON("assets/js/markerArray.js", function (data) {
-    var length = data.locations.length;
-    for (var i = 0; i < length; i++) {
-        var eachItem = data.locations[i].attributes;
-        var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
-        var placeName = eachItem.title;
-        var marker = new google.maps.Marker({
-            position: latLng,
-            title: placeName,
-            map: map,
-            animation: google.maps.Animation.DROP,
-        });
+    // Parses markerArray.js for details to give each marker on the map and pushes it to the array
+    var markerArr = [];
+    $.getJSON("assets/js/markerArray.js", function (data) {
+        var length = data.locations.length;
+        for (var i = 0; i < length; i++) {
+            var eachItem = data.locations[i].attributes;
+            var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
+            var placeName = eachItem.title;
+            var marker = new google.maps.Marker({
+                position: latLng,
+                title: placeName,
+                map: map,
+                animation: google.maps.Animation.DROP,
+            });
 
-        markerArr.push(marker);
+            markerArr.push(marker);
 
-        /*http://jsfiddle.net/geocodezip/qmboxs2u/*/
-        google.maps.event.addListener(marker, 'click', function () {
-            for (var i = 0; i < markerArr.length; i++) {
-                markerArr[i].setAnimation(null);
+            // Iterates through each marker on the map, sets the animation to null before pushing the marker through to the other functions
+            google.maps.event.addListener(marker, 'click', function () {
+                for (var i = 0; i < markerArr.length; i++) {
+                    markerArr[i].setAnimation(null);
+                }
+                bounce(this);
+                pageSwitch(this);
+            });
+        }
+    });
+
+    // toggles the bounce animation for the selected marker
+    function bounce(bouncer) {
+        if (bouncer.getAnimation() !== null) {
+            bouncer.setAnimation(null);
+        } else {
+            bouncer.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+
+    // Allows selection of elements within the iframe
+    const iframeC = $("iframe#iframeGallery").contents();
+
+    // Controls page animation, passing marker title to gallery changing function
+    function pageSwitch(markerNum) {
+        var markTitle = markerNum.title;
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markTitle))
+
+        // Changes title and swaps url in time with animations 
+        function galleryChoice(choice) {
+            setTimeout(function () {
+                iframeC.find("#galleryTitle").html(`${choice}`);
+                urlChange(choice);
+            }, 950);
+
+            // Iterates through each image id, passing through info to swap out each anchor url
+            function urlChange(str) {
+                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
+                var lwr = str.toLowerCase();
+                for (i = 0; i < idArray.length; i++) {
+                    ancSwap(idArray[i], lwr);
+                }
+
+                // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
+                function ancSwap(id, lwrString) {
+                    var findID = iframeC.find(`#${id} > a`);
+                    findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                    // adjusts the iframe height upon thumbnails loading
+                    iframeC.find(".img-fluid").on('load', galleryHeight)
+                }
             }
-            toggleBounce(this);
-            pageSwitch(this);
-        });
+        }
+    }
+
+    // Adjusts gallery height for varying picture formats and devices
+    function galleryHeight() {
+        const mapGallery = document.getElementById('iframeGallery');
+        if (mapGallery) {
+            mapGallery.height = "";
+            mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
+        }
     }
 });
 
-function toggleBounce(bouncer) {
-    if (bouncer.getAnimation() !== null) {
-        bouncer.setAnimation(null);
-    } else {
-        bouncer.setAnimation(google.maps.Animation.BOUNCE);
-    }
-}
-
-function pageSwitch(markerNum) {
-    var localTitle = markerNum.title;
-    $('#iframeGallery').fadeOut(1200, function() {
-        $('#iframeGallery').attr("src", `gallery/iframe${localTitle}.html`)
-    }).fadeIn(2000);
-}
-
-$('iframe').on('load', function() {
-    var mapGallery = document.getElementById('iframeGallery');
-    if (mapGallery) {
-        mapGallery.height = "";
-        mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
-    }
-});
 
 var map;
 function initMap() {

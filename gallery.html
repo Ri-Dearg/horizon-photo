@@ -88,13 +88,15 @@
 		</nav>
 	</header>
 
-	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
-	<!--The "data-rel" attribute helps sort and filter the photo content by location, classes are: eu=Europe, af=Africa, as=Africa-->
-	<section class="container-fluid p-0 my-3 content-container-gallery">
+	<section class="container-fluid p-0 m-0">
 		<h1 class="d-none">Gallery</h1>
 		<div id="map" class="container-fluid"></div>
+	
 
-		<iframe src="gallery/iframeDefault.html" id="iframeGallery" class="container-fluid m-0 p -0"></iframe>
+        <!-- The iframe contains the basic gallery page layout and is modified with the script files to change photos based on location -->
+		<iframe src="iframeDefault.html" id="iframeGallery" class="container-fluid m-0 p-0"></iframe>
+    
+    </section>
 
 		<footer class="container-fluid">
 			<div class="row pb-1 pb-md-3">

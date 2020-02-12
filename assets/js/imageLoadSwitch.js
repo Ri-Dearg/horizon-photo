@@ -1,8 +1,15 @@
-window.addEventListener('load', function () {
-
+// Starts function on window load for each image
+window.addEventListener('load', function () {    
     setTimeout(lazyLoad, 1000);
-
 });
+
+/* Resets the class of each loaded image when the anchors are modified
+This allows the lazyLoad function to correctly blur and swap images on url change*/
+$("body").on('DOMSubtreeModified', "#galleryTitle", function() {
+    $('a').removeClass('is-loaded');
+    setTimeout(lazyLoad, 1000);
+});
+
 
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
