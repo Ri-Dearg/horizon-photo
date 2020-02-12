@@ -29,7 +29,7 @@
 /*Background image is my own*/
 .callout-container {
     height: 95vh;
-    background: url("../images/IMG_2680_1.jpg") no-repeat bottom right fixed;
+    background: url("../images/callout.jpg") no-repeat bottom right fixed;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
