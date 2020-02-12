@@ -10,3 +10,19 @@ iframe {
     border: 0;
     overflow: hidden;
 }
+
+/*------------------------------------------------------Modal Styles*/
+.modal-body,
+.modal-header,
+.modal-content,
+.modal-dialog {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button.close {
+    color: #D3D3D3;
+}
+
+button.close:hover {
+    color: #fff;
+}

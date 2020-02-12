@@ -1,6 +1,18 @@
+// Adjusts gallery height for varying picture formats and devices
+function galleryHeight() {
+    const mapGallery = document.getElementById('iframeGallery');
+    if (mapGallery) {
+        mapGallery.height = "";
+        mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
+    }
+}
+
 $(document).ready(function () {
     // adjusts iframe height based on device and photo length
     $('iframe').on('load', galleryHeight);
+})
+
+$(window).on('load', function () {
 
     // Parses markerArray.js for details to give each marker on the map and pushes it to the array
     var markerArr = [];
@@ -74,14 +86,10 @@ $(document).ready(function () {
         }
     }
 
-    // Adjusts gallery height for varying picture formats and devices
-    function galleryHeight() {
-        const mapGallery = document.getElementById('iframeGallery');
-        if (mapGallery) {
-            mapGallery.height = "";
-            mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
-        }
-    }
+    iframeC.find('.pop').on('click', function () {
+        $('.imagepreview').attr('src', $(this).attr('data-image-full'));
+        $('#imagemodal').modal('show');
+    });
 });
 
 
