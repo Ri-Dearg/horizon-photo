@@ -10,7 +10,6 @@ $("body").on('DOMSubtreeModified', "#galleryTitle", function() {
     setTimeout(lazyLoad, 1000);
 });
 
-
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
 
@@ -22,9 +21,7 @@ function lazyLoad() {
 
         content_image.addEventListener('load', function () {
             card_image.style.backgroundImage = 'url(' + image_url + ')';
-            card_image.className = card_image.className + ' is-loaded';
+            $('a').addClass('is-loaded');
         });
-
     });
-
 }
