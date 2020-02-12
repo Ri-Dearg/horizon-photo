@@ -65,8 +65,8 @@ $(document).ready(function () {
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
                 function ancSwap(id, lwrString) {
                     var findID = iframeC.find(`#${id} > a`);
-                    findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
-                    findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                    findID.css('background-image', `url(assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwrString}/${lwrString}${id}.jpg`);
                     // adjusts the iframe height upon thumbnails loading
                     iframeC.find(".img-fluid").on('load', galleryHeight)
                 }
