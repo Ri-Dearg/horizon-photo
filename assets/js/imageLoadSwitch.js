@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 This allows the lazyLoad function to correctly blur and swap images on url change*/
 $("body").on('DOMSubtreeModified', "#galleryTitle", function() {
     $('a').removeClass('is-loaded');
-    setTimeout(lazyLoad(), 1000);
+    setTimeout(lazyLoad, 1000);
 });
 
 

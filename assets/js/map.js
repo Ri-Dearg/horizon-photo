@@ -30,7 +30,7 @@ $(document).ready(function () {
         }
     });
 
-    //  toggles the bounce animation for the selected marker
+    // toggles the bounce animation for the selected marker
     function bounce(bouncer) {
         if (bouncer.getAnimation() !== null) {
             bouncer.setAnimation(null);
@@ -44,8 +44,8 @@ $(document).ready(function () {
 
     // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markerNum) {
-        var localTitle = markerNum.title;
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(localTitle))
+        var markTitle = markerNum.title;
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markTitle))
 
         // Changes title and swaps url in time with animations 
         function galleryChoice(choice) {
@@ -59,12 +59,12 @@ $(document).ready(function () {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
                 var lwr = str.toLowerCase();
                 for (i = 0; i < idArray.length; i++) {
-                    ancSwap(iframeC, idArray[i], lwr);
+                    ancSwap(idArray[i], lwr);
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(frameCont, id, lwrString) {
-                    var findID = frameCont.find(`#${id} > a`);
+                function ancSwap(id, lwrString) {
+                    var findID = iframeC.find(`#${id} > a`);
                     findID.css('background-image', `url(../assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
                     findID.attr('data-image-full', `../assets/images/${lwrString}/${lwrString}${id}.jpg`);
                     // adjusts the iframe height upon thumbnails loading
