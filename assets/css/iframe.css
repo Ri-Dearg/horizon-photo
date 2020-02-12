@@ -13,23 +13,6 @@ h4 {
     background-color: #00611C;
 }
 
-/*------------------------------------------------------Modal Styles*/
-.modal-body,
-.modal-header,
-.modal-content,
-.modal-dialog {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-button.close {
-    color: #D3D3D3;
-}
-
-button.close:hover {
-    color: #fff;
-}
-
-
 /*------------------------------------------------------Picture Spacing*/
 .pics {
     display: -webkit-box;
