@@ -31,7 +31,7 @@ $(window).on('load', function () {
     });
 
     // Searches for country info on API
-    xhr.open("GET", `https://restcountries.eu/rest/v2/al`);
+    xhr.open("GET", `https://restcountries.eu/rest/v2/all`);
     xhr.send();
 
     // iterates through the array for matching country names and pushes them to the Countrydata variable
