@@ -14,14 +14,50 @@ $(document).ready(function () {
 
 $(window).on('load', function () {
 
-    // Parses markerArray.js for details to give each marker on the map and pushes it to the array
+    // selects countries to search for in API
+    const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America']
+
+    var xhr = new XMLHttpRequest();
+
+    // Fires off function for creating the needed country info arrays
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState == 4 && this.status == 200) {
+            data = JSON.parse(this.responseText);
+            getData(data);
+        // Prevents backupMap from running multiple times, set to use local info if conditions are bad
+        } else if (this.readyState == 4 && this.status !== 200) {
+            backupMap();
+        }
+    });
+
+    // Searches for country info on API
+    xhr.open("GET", `https://restcountries.eu/rest/v2/al`);
+    xhr.send();
+
+    // iterates through the array for matching country names and pushes them to the Countrydata variable
+    function getData(data) {
+        data.forEach(function (item) {
+            for (var i = 0; i < countryName.length; i++) {
+                if (item.name === countryName[i]) {
+                    countryData.push(item);
+                }
+            }
+        });
+        makeMarkers(countryData);
+    }
+
+    // variable containing country info
+    var countryData = []
+
+    // variabe containing marker info
     var markerArr = [];
-    $.getJSON("assets/js/markerArray.js", function (data) {
-        var length = data.locations.length;
+
+    function makeMarkers(markerData) {
+        var length = markerData.length;
         for (var i = 0; i < length; i++) {
-            var eachItem = data.locations[i].attributes;
-            var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
-            var placeName = eachItem.title;
+            var location = markerData[i].latlng;
+            var latLng = new google.maps.LatLng(location[0], location[1]);
+            var placeName = markerData[i].name;
             var marker = new google.maps.Marker({
                 position: latLng,
                 title: placeName,
@@ -36,49 +72,95 @@ $(window).on('load', function () {
                 for (var i = 0; i < markerArr.length; i++) {
                     markerArr[i].setAnimation(null);
                 }
+                var markTitle = this.title;
                 bounce(this);
-                pageSwitch(this);
+                pageSwitch(markTitle)
+                infoContent(this, markTitle)
             });
         }
-    });
+    };
+
+
+    // Parses markerArray.js for details to give each marker on the map and pushes it to the array in case the API fails
+    // Does not run infoContent function at the end, preventing empty infowindow content from popping up
+    function backupMap() {
+
+        $.getJSON("assets/js/markerArray.js", function (data) {
+            var length = data.locations.length;
+            for (var i = 0; i < length; i++) {
+                var eachItem = data.locations[i].attributes;
+                var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
+                var placeName = eachItem.title;
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    title: placeName,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                });
+
+                markerArr.push(marker);
+
+                // Iterates through each marker on the map, sets the animation to null before pushing the marker through to the other functions
+                google.maps.event.addListener(marker, 'click', function () {
+                    for (var i = 0; i < markerArr.length; i++) {
+                        markerArr[i].setAnimation(null);
+                    }
+                    var markTitle = this.title;
+                    bounce(this);
+                    pageSwitch(markTitle)
+                });
+            }
+        });
+    }
 
     // toggles the bounce animation for the selected marker
-    function bounce(bouncer) {
-        if (bouncer.getAnimation() !== null) {
-            bouncer.setAnimation(null);
+    function bounce(markNum) {
+        if (markNum.getAnimation() !== null) {
+            markNum.setAnimation(null);
         } else {
-            bouncer.setAnimation(google.maps.Animation.BOUNCE);
+            markNum.setAnimation(google.maps.Animation.BOUNCE);
         }
+    }
+
+
+    function infoContent(markNum, markTitle) {
+        //changes the string to be suitable to the directory by removing uppercase letters and spaces
+        var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
+        var markContent = $(`#${lwr0}content`).html()
+        var infowindow = new google.maps.InfoWindow({
+            content: markContent
+        });
+        infowindow.open(map, markNum)
     }
 
     // Allows selection of elements within the iframe
     const iframeC = $("iframe#iframeGallery").contents();
 
     // Controls page animation, passing marker title to gallery changing function
-    function pageSwitch(markerNum) {
-        var markTitle = markerNum.title;
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markTitle))
+    function pageSwitch(markName) {
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
 
         // Changes title and swaps url in time with animations 
-        function galleryChoice(choice) {
+        function galleryChoice(markName) {
             setTimeout(function () {
-                iframeC.find("#galleryTitle").html(`${choice}`);
-                urlChange(choice);
+                iframeC.find("#galleryTitle").html(`${markName}`);
+                urlChange(markName);
             }, 950);
 
             // Iterates through each image id, passing through info to swap out each anchor url
-            function urlChange(str) {
+            function urlChange(markName) {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
-                var lwr = str.toLowerCase();
+                var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
                 for (i = 0; i < idArray.length; i++) {
-                    ancSwap(idArray[i], lwr);
+                    ancSwap(idArray[i], lwr1);
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(id, lwrString) {
+                function ancSwap(id, lwr2) {
                     var findID = iframeC.find(`#${id} > a`);
-                    findID.css('background-image', `url(assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
-                    findID.attr('data-image-full', `assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+
                     // adjusts the iframe height upon thumbnails loading
                     iframeC.find(".img-fluid").on('load', galleryHeight)
                 }
@@ -325,4 +407,9 @@ function initMap() {
             }
         ]
     });
+
+    var mq = window.matchMedia("(max-width: 700px)");
+    if (mq.matches) {
+        map.setZoom(1);
+    }
 }
