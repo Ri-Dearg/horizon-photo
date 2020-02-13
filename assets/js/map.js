@@ -54,6 +54,8 @@ $(window).on('load', function () {
         }
     }
 
+
+    
     function infoContent(markNum, markTitle) {
         var lwr1 = markTitle.toLowerCase();
         var markContent = $(`#${lwr1}content`).html()
@@ -337,7 +339,6 @@ function initMap() {
             }
         ]
     });
-
 
     var mq = window.matchMedia("(max-width: 700px)");
     if (mq.matches) {

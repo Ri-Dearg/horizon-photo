@@ -1,6 +1,11 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
 /*------------------------------------------------------Map*/
+.heading-font {
+    font-size: 1.4rem;
+}
+
+/*------------------------------------------------------Map*/
 #map {
     height: 500px;
 }
@@ -26,3 +31,41 @@ button.close {
 button.close:hover {
     color: #fff;
 }
+
+/*------------------------------------------------------infoWindow*/
+
+/*Box that holds the window*/  
+.gm-style {
+    font: inherit; 
+}
+
+/* style the base characteristics of the window */
+.gm-style .gm-style-iw {
+    font: inherit;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #252525;
+    top: 0;
+    left: 0;
+    padding-right: 10px !important;
+    display: block;
+
+}    
+
+
+/* style the marker arrow */
+
+.gm-style .gm-style-iw-t::after {
+    background: #252525;
+}
+
+/* gets rid of the scrollbars */
+.gm-style-iw-d {
+    overflow: hidden !important;
+}
+
+        /*style the link
+        .gm-style div div div div div div div div a {
+            color: #f1f1f1;
+            font-weight: bold;
+        }*/

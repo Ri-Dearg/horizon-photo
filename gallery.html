@@ -38,10 +38,11 @@
 
 	<!--Page Stylesheet-->
 	<link rel="stylesheet" href="assets/css/gallery.css" type="text/css" />
-    
-    <!--Script placed in head tag because iframe does not always load correct height with script at the bottom, as it searches for an undefined function-->
-    <script src="assets/js/map.js" defer> </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap" defer></script>
+
+	<!--Script placed in head tag because iframe does not always load correct height with script at the bottom, as it searches for an undefined function-->
+	<script src="assets/js/map.js" defer> </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap"
+		defer></script>
 
 	<title>Horizon Photography | Gallery</title>
 
@@ -89,36 +90,66 @@
 	</header>
 
 	<section class="container-fluid p-0 m-0">
-		<h1 class="d-none">Gallery</h1>
-		<div id="map" class="container-fluid"></div>
-	
+		<article>
+			<h1 class="d-none">Gallery</h1>
 
-        <!-- The iframe contains the basic gallery page layout and is modified with the script files to change photos based on location -->
-		<iframe src="iframeDefault.html" id="iframeGallery" class="container-fluid m-0 p-0"></iframe>
-    
-    <div class="d-none" id="chinacontent">
-    <div id="content">
-      <div id="siteNotice">
-      </div>
-      <h1 id="firstHeading" class="firstHeading">Uluru</h1>
-      <div id="bodyContent">
-      <p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large
-      sandstone rock formation in the southern part of the
-      Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi)
-      south west of the nearest large town, Alice Springs; 450&#160;km
-      (280&#160;mi) by road. Kata Tjuta and Uluru are the two major
-      features of the Uluru - Kata Tjuta National Park. Uluru is
-      sacred to the Pitjantjatjara and Yankunytjatjara, the
-      Aboriginal people of the area. It has many springs, waterholes,
-      rock caves and ancient paintings. Uluru is listed as a World
-      Heritage Site.</p>
-      <p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      https://en.wikipedia.org/w/index.php?title=Uluru</a> 
-      (last visited June 22, 2009).</p>
-      </div>
-      </div>
-      </div>
-    </section>
+			<div id="map" class="container-fluid"></div>
+
+			<!-- The iframe contains the basic gallery page layout and is modified with the script files to change photos based on location -->
+			<iframe src="iframeDefault.html" id="iframeGallery" class="container-fluid m-0 p-0"></iframe>
+		</article>
+
+		<article class="d-none" id="canadacontent">
+			<h1 class="heading-font">Canada</h1>
+			<div>
+				<p>An unexplored wilderness of majestic beauty and diverse wildlife.
+					Wander through this very magical place and witness its rich natural beauty.
+					Discover the mountains, the rivers, the valleys, and find out the secrets of flora
+					and fauna in breathtaking natural surroundings. Stunning vistas of lakes and bays will
+					leave you in admiration.
+				</p>
+			</div>
+		</article>
+
+		<article class="d-none" id="chinacontent">
+			<h1 class="heading-font">China</h1>
+			<div>
+				<p>A land of sprawling cities and wild nature, rolling hills,
+					towering mountains, tall trees, rumbling rivers and sunny skies.
+					A land where there are myriad types of rice cakes and mugs of baijiu to be had,
+					where scenic walkways are tucked away. Where the mountains and the ancient landscapes
+					complement each other with a flawless harmony.
+					Where you can escape your world for days on end with a simple trip to visit the Kyaiktang Waterfall
+					or the Ligu Cliffs.</p>
+			</div>
+		</article>
+
+		<article class="d-none" id="egyptcontent">
+			<h1 class="heading-font">Canada</h1>
+			<div>
+				<p>An ancient land of mysteries, Sphinxes, pyramids and a great fallen
+					civilisation. A civilisation that we are still trying to understand but could never fully
+					comprehend. Not just its extraordinary natural beauty but the legends
+					of its great pharaohs, the wonders of its monuments. To
+					discover its myths, legends, and hidden treasures would hold more fascination
+					for than even the most elaborate of modern discovery sites.
+				</p>
+			</div>
+		</article>
+
+        <article class="d-none" id="germanycontent">
+			<h1 class="heading-font">Canada</h1>
+			<div>
+				<p>An ancient land of mysteries, Sphinxes, pyramids and a great fallen
+					civilisation. A civilisation that we are still trying to understand but could never fully
+					comprehend. Not just its extraordinary natural beauty but the legends
+					of its great pharaohs, the wonders of its monuments. To
+					discover its myths, legends, and hidden treasures would hold more fascination
+					for than even the most elaborate of modern discovery sites.
+				</p>
+			</div>
+		</article>
+	</section>
 
 	<!-- 4. Modal from http://jsfiddle.net/4p57wx8r/ -->
 	<!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
@@ -191,7 +222,7 @@
 		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
 		<script src="assets/libraries/js/popper.min.js"></script>
 		<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
-		
+
 </body>
 
 </html>
