@@ -16,6 +16,34 @@ $(window).on('load', function () {
 
     // Parses markerArray.js for details to give each marker on the map and pushes it to the array
     var markerArr = [];
+
+    const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America']
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            data = JSON.parse(this.responseText);
+            getData(data);
+        }
+    });
+
+    xhr.open("GET", `https://restcountries.eu/rest/v2/all`);
+    xhr.send();
+
+    function getData(data) {
+        data.forEach(function (item) {
+            for (var i = 0; i < countryName.length; i++) {
+                if (item.name === countryName[i]) {
+                    countryData.push(item);
+                }
+            }
+        }
+        )
+    }
+
+    var countryData = []
+
     $.getJSON("assets/js/markerArray.js", function (data) {
         var length = data.locations.length;
         for (var i = 0; i < length; i++) {
@@ -55,7 +83,7 @@ $(window).on('load', function () {
     }
 
 
-    
+
     function infoContent(markNum, markTitle) {
         var lwr1 = markTitle.toLowerCase();
         var markContent = $(`#${lwr1}content`).html()
