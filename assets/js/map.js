@@ -36,49 +36,61 @@ $(window).on('load', function () {
                 for (var i = 0; i < markerArr.length; i++) {
                     markerArr[i].setAnimation(null);
                 }
+                var markTitle = this.title;
                 bounce(this);
-                pageSwitch(this);
+                pageSwitch(markTitle)
+                infoContent(this, markTitle)
             });
         }
     });
 
+
     // toggles the bounce animation for the selected marker
-    function bounce(bouncer) {
-        if (bouncer.getAnimation() !== null) {
-            bouncer.setAnimation(null);
+    function bounce(markNum) {
+        if (markNum.getAnimation() !== null) {
+            markNum.setAnimation(null);
         } else {
-            bouncer.setAnimation(google.maps.Animation.BOUNCE);
+            markNum.setAnimation(google.maps.Animation.BOUNCE);
         }
+    }
+
+    function infoContent(markNum, markTitle) {
+        var lwr1 = markTitle.toLowerCase();
+        var markContent = $(`#${lwr1}content`).html()
+        var infowindow = new google.maps.InfoWindow({
+            content: markContent
+        });
+        infowindow.open(map, markNum)
     }
 
     // Allows selection of elements within the iframe
     const iframeC = $("iframe#iframeGallery").contents();
 
     // Controls page animation, passing marker title to gallery changing function
-    function pageSwitch(markerNum) {
-        var markTitle = markerNum.title;
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markTitle))
+    function pageSwitch(markName) {
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
 
         // Changes title and swaps url in time with animations 
-        function galleryChoice(choice) {
+        function galleryChoice(markName) {
             setTimeout(function () {
-                iframeC.find("#galleryTitle").html(`${choice}`);
-                urlChange(choice);
+                iframeC.find("#galleryTitle").html(`${markName}`);
+                urlChange(markName);
             }, 950);
 
             // Iterates through each image id, passing through info to swap out each anchor url
-            function urlChange(str) {
+            function urlChange(markName) {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
-                var lwr = str.toLowerCase();
+                var lwr = markName.toLowerCase()
                 for (i = 0; i < idArray.length; i++) {
                     ancSwap(idArray[i], lwr);
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(id, lwrString) {
+                function ancSwap(id, lwr2) {
                     var findID = iframeC.find(`#${id} > a`);
-                    findID.css('background-image', `url(assets/images/${lwrString}/${lwrString}${id}_tn.jpg)`);
-                    findID.attr('data-image-full', `assets/images/${lwrString}/${lwrString}${id}.jpg`);
+                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+
                     // adjusts the iframe height upon thumbnails loading
                     iframeC.find(".img-fluid").on('load', galleryHeight)
                 }
@@ -325,4 +337,10 @@ function initMap() {
             }
         ]
     });
+
+
+    var mq = window.matchMedia("(max-width: 700px)");
+    if (mq.matches) {
+        map.setZoom(1);
+    }
 }
