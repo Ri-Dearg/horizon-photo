@@ -11,6 +11,6 @@
     {"attributes": {"title": "India", "Latitude": 20.5936832, "Longitude": 78.962883}},
     {"attributes": {"title": "Canada", "Latitude": 55.585901, "Longitude": -105.750596}},
     {"attributes": {"title": "Mexico", "Latitude": 23.6260333, "Longitude": -102.5375005}},
-    {"attributes": {"title": "USA", "Latitude": 39.381266, "Longitude": -97.922211}}
+    {"attributes": {"title": "United States of America", "Latitude": 39.381266, "Longitude": -97.922211}}
 ]
 }
