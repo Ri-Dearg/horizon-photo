@@ -23,14 +23,12 @@ $(window).on('load', function () {
 
 
     var xhr = new XMLHttpRequest();
-
+    
     // Fires off function for creating the needed country info arrays
     xhr.addEventListener("readystatechange", function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === this.DONE) {
             data = JSON.parse(this.responseText);
             getData(data);
-        } else {
-            backupMap();
         }
     });
 
@@ -46,19 +44,19 @@ $(window).on('load', function () {
                     countryData.push(item);
                 }
             }
-        });
-        makeMarkers(countryData);
+        }
+        )
     }
 
     // variable containing country info
     var countryData = []
 
-    function makeMarkers(countryData) {
-        var length = countryData.length;
+    $.getJSON("assets/js/markerArray.js", function (data) {
+        var length = data.locations.length;
         for (var i = 0; i < length; i++) {
-            var location = countryData[i].latlng;
-            var latLng = new google.maps.LatLng(location[0], location[1]);
-            var placeName = countryData[i].name;
+            var eachItem = data.locations[i].attributes;
+            var latLng = new google.maps.LatLng(eachItem.Latitude, eachItem.Longitude);
+            var placeName = eachItem.title;
             var marker = new google.maps.Marker({
                 position: latLng,
                 title: placeName,
@@ -79,69 +77,68 @@ $(window).on('load', function () {
                 infoContent(this, markTitle)
             });
         }
-    };
-
-
-// toggles the bounce animation for the selected marker
-function bounce(markNum) {
-    if (markNum.getAnimation() !== null) {
-        markNum.setAnimation(null);
-    } else {
-        markNum.setAnimation(google.maps.Animation.BOUNCE);
-    }
-}
-
-
-
-function infoContent(markNum, markTitle) {
-    //changes the string to be suitable to the directory by removing uppercase letters and spaces
-    var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
-    var markContent = $(`#${lwr0}content`).html()
-    var infowindow = new google.maps.InfoWindow({
-        content: markContent
     });
-    infowindow.open(map, markNum)
-}
 
-// Allows selection of elements within the iframe
-const iframeC = $("iframe#iframeGallery").contents();
 
-// Controls page animation, passing marker title to gallery changing function
-function pageSwitch(markName) {
-    $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
+    // toggles the bounce animation for the selected marker
+    function bounce(markNum) {
+        if (markNum.getAnimation() !== null) {
+            markNum.setAnimation(null);
+        } else {
+            markNum.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
 
-    // Changes title and swaps url in time with animations 
-    function galleryChoice(markName) {
-        setTimeout(function () {
-            iframeC.find("#galleryTitle").html(`${markName}`);
-            urlChange(markName);
-        }, 950);
 
-        // Iterates through each image id, passing through info to swap out each anchor url
-        function urlChange(markName) {
-            const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
-            var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
-            for (i = 0; i < idArray.length; i++) {
-                ancSwap(idArray[i], lwr1);
-            }
 
-            // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-            function ancSwap(id, lwr2) {
-                var findID = iframeC.find(`#${id} > a`);
-                findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
-                findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+    function infoContent(markNum, markTitle) {
+        var lwr1 = markTitle.toLowerCase();
+        var markContent = $(`#${lwr1}content`).html()
+        var infowindow = new google.maps.InfoWindow({
+            content: markContent
+        });
+        infowindow.open(map, markNum)
+    }
 
-                // adjusts the iframe height upon thumbnails loading
-                iframeC.find(".img-fluid").on('load', galleryHeight)
+    // Allows selection of elements within the iframe
+    const iframeC = $("iframe#iframeGallery").contents();
+
+    // Controls page animation, passing marker title to gallery changing function
+    function pageSwitch(markName) {
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
+
+        // Changes title and swaps url in time with animations 
+        function galleryChoice(markName) {
+            setTimeout(function () {
+                iframeC.find("#galleryTitle").html(`${markName}`);
+                urlChange(markName);
+            }, 950);
+
+            // Iterates through each image id, passing through info to swap out each anchor url
+            function urlChange(markName) {
+                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
+                var lwr = markName.toLowerCase()
+                for (i = 0; i < idArray.length; i++) {
+                    ancSwap(idArray[i], lwr);
+                }
+
+                // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
+                function ancSwap(id, lwr2) {
+                    var findID = iframeC.find(`#${id} > a`);
+                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+
+                    // adjusts the iframe height upon thumbnails loading
+                    iframeC.find(".img-fluid").on('load', galleryHeight)
+                }
             }
         }
     }
-}
 
-iframeC.find('.pop').on('click', function () {
-    $('.imagepreview').attr('src', $(this).attr('data-image-full'));
-    $('#imagemodal').modal('show');
-});
+    iframeC.find('.pop').on('click', function () {
+        $('.imagepreview').attr('src', $(this).attr('data-image-full'));
+        $('#imagemodal').modal('show');
+    });
 });
 
 
