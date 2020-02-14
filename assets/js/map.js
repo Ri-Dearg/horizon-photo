@@ -109,13 +109,16 @@ $(window).on('load', function () {
 
             for (var i = 0; i < countryData.length; i++) {
                 if (item.name === markTitle) {
-                    markContent = `<h1 class="heading-font">${item.name}</h1>
-			<div>
-                <ul>
-                    <li>Native Name: ${item.nativeName}</li>
-                    <li>Languages: ${langData.join(', ')}</li>
-                    <li>Capital: ${item.capital}</li>
-            </div>`;
+                    markContent =   `<h1 class="heading-font">${item.name}</h1>
+                                    <div>
+                                        <ul id="infowindowlist" class="m-0 p-0 pb-2">
+                                            <li>Native Name: ${item.nativeName}</li>
+                                            <li>Languages: ${langData.join(', ')}</li>
+                                            <li>Capital: ${item.capital}</li>
+                                            <li>Population: ${item.population.toLocaleString('en-US')} people</li>
+                                            <li>Area: ${item.area.toLocaleString('en-US')} km</li>
+                                        </ul>
+                                    </div>`;
                 }
             }
             function langGet(item) {

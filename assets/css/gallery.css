@@ -34,6 +34,10 @@ button.close:hover {
 
 /*------------------------------------------------------infoWindow*/
 
+#infowindowlist {
+    list-style-type: none;
+}
+
 /*Box that holds the window*/  
 .gm-style {
     font: inherit; 
