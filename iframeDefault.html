@@ -45,12 +45,18 @@
 
 <body>
 
-	<!-- 3. Layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
+	<!-- 3. General layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
 	<section class="container-fluid p-0 m-0 content-container-gallery">
         <h1 class="d-none">Gallery Selector</h1>
+
+        <!-- Changes title based on country selected in the gallery map-->
         <h4 class="text-center m-0 p-2" id="galleryTitle">Explore the world through my photos.<br> 
         Click on a marker to see its gallery and read about it.</h4>
-		<div class="row mx-auto mt-3">
+        
+        <!-- Is injected with content from the gallery page after location is selected -->
+        <div id="countryBlurb" class="text-center m-1 p-2"></div>
+		
+        <div class="row mx-auto mt-1">
 
 			<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
 			<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->

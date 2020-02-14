@@ -100,7 +100,6 @@ $(window).on('load', function () {
 
     function infoContent(markNum, markTitle) {
         //changes the string to be suitable to the directory by removing uppercase letters and spaces
-        var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
         var markContent = ``
         var langData = [];
 
@@ -138,19 +137,21 @@ $(window).on('load', function () {
 
     // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markName) {
+    var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
         $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
 
         // Changes title and swaps url in time with animations 
         function galleryChoice(markName) {
+            var blurbContent = $(`#${lwr1}content`).html()
             setTimeout(function () {
                 iframeC.find("#galleryTitle").html(`${markName}`);
+                iframeC.find("#countryBlurb").html(`${blurbContent}`);
                 urlChange(markName);
             }, 900);
 
             // Iterates through each image id, passing through info to swap out each anchor url
             function urlChange(markName) {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
-                var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
                 for (i = 0; i < idArray.length; i++) {
                     ancSwap(idArray[i], lwr1);
                 }
