@@ -52,6 +52,8 @@ $(window).on('load', function () {
     // variabe containing marker info
     var markerArr = [];
 
+    var infowindow = new google.maps.InfoWindow();
+
     function makeMarkers(markerData) {
         var length = markerData.length;
         for (var i = 0; i < length; i++) {
@@ -64,6 +66,7 @@ $(window).on('load', function () {
                 map: map,
                 animation: google.maps.Animation.DROP,
             });
+
 
             markerArr.push(marker);
 
@@ -127,9 +130,7 @@ $(window).on('load', function () {
         //changes the string to be suitable to the directory by removing uppercase letters and spaces
         var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
         var markContent = $(`#${lwr0}content`).html()
-        var infowindow = new google.maps.InfoWindow({
-            content: markContent
-        });
+        infowindow.setContent(markContent)
         infowindow.open(map, markNum)
     }
 
