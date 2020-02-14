@@ -140,7 +140,7 @@ $(window).on('load', function () {
     var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
         $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
 
-        // Changes title and swaps url in time with animations 
+        // Changes title and swaps url in time with animations, places blurb content into gallery
         function galleryChoice(markName) {
             var blurbContent = $(`#${lwr1}content`).html()
             setTimeout(function () {
