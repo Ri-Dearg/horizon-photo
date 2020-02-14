@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    // adjusts iframe height based on device and photo length
+    $('iframe').on('load', galleryHeight);
+})
+
 // Adjusts gallery height for varying picture formats and devices
 function galleryHeight() {
     const mapGallery = document.getElementById('iframeGallery');
@@ -7,17 +12,17 @@ function galleryHeight() {
     }
 }
 
-$(document).ready(function () {
-    // adjusts iframe height based on device and photo length
-    $('iframe').on('load', galleryHeight);
-})
-
 $(window).on('load', function () {
 
     // selects countries to search for in API
     const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America']
 
     var xhr = new XMLHttpRequest();
+
+    // Searches for country info on API
+    xhr.open("GET", `https://restcountries.eu/rest/v2/all`);
+    xhr.send();
+
 
     // Fires off function for creating the needed country info arrays
     xhr.addEventListener("readystatechange", function () {
@@ -30,10 +35,6 @@ $(window).on('load', function () {
         }
     });
 
-    // Searches for country info on API
-    xhr.open("GET", `https://restcountries.eu/rest/v2/all`);
-    xhr.send();
-
     // iterates through the array for matching country names and pushes them to the Countrydata variable
     function getData(data) {
         data.forEach(function (item) {
@@ -44,18 +45,22 @@ $(window).on('load', function () {
             }
         });
         makeMarkers(countryData);
+        console.dir(countryData)
     }
 
     // variable containing country info
     var countryData = []
 
-    // variabe containing marker info
+    // array containing marker info
     var markerArr = [];
 
+    // Variable creating a single window for the mapp
     var infowindow = new google.maps.InfoWindow();
 
+    // Function compiling array data into markers
     function makeMarkers(markerData) {
         var length = markerData.length;
+        // iterates through array info
         for (var i = 0; i < length; i++) {
             var location = markerData[i].latlng;
             var latLng = new google.maps.LatLng(location[0], location[1]);
@@ -83,8 +88,90 @@ $(window).on('load', function () {
         }
     };
 
+    // toggles the bounce animation for the selected marker
+    function bounce(markNum) {
+        if (markNum.getAnimation() !== null) {
+            markNum.setAnimation(null);
+        } else {
+            markNum.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
 
-    // Parses markerArray.js for details to give each marker on the map and pushes it to the array in case the API fails
+
+    function infoContent(markNum, markTitle) {
+        //changes the string to be suitable to the directory by removing uppercase letters and spaces
+        var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
+        var markContent = ``
+        var langData = [];
+
+        countryData.forEach(function (item) {
+                            langGet(item)
+
+            for (var i = 0; i < countryData.length; i++) {
+                if (item.name === markTitle) {
+                    markContent = `<h1 class="heading-font">${item.name}</h1>
+			<div>
+                <ul>
+                    <li>Native Name: ${item.nativeName}</li>
+                    <li>Languages: ${langData.join(', ')}</li>
+                    <li>Capital: ${item.capital}</li>
+            </div>`;
+                }
+            }
+            function langGet(item) {
+                var lang = item.languages;
+                langData = [];
+                for (var x = 0; x < lang.length; x++) {
+                    langData.push(item.languages[x].name);
+                }
+            }
+            infowindow.setContent(markContent)
+        });
+        infowindow.open(map, markNum)
+    }
+
+    // Allows selection of elements within the iframe
+    const iframeC = $("iframe#iframeGallery").contents();
+
+    // Controls page animation, passing marker title to gallery changing function
+    function pageSwitch(markName) {
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
+
+        // Changes title and swaps url in time with animations 
+        function galleryChoice(markName) {
+            setTimeout(function () {
+                iframeC.find("#galleryTitle").html(`${markName}`);
+                urlChange(markName);
+            }, 900);
+
+            // Iterates through each image id, passing through info to swap out each anchor url
+            function urlChange(markName) {
+                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
+                var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
+                for (i = 0; i < idArray.length; i++) {
+                    ancSwap(idArray[i], lwr1);
+                }
+
+                // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
+                function ancSwap(id, lwr2) {
+                    var findID = iframeC.find(`#${id} > a`);
+                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+
+                    // adjusts the iframe height upon thumbnails loading
+                    iframeC.find(".img-fluid").on('load', galleryHeight)
+                }
+            }
+        }
+    }
+
+    // Opens a modal in gallery.html when an image in the iframe is clicked
+    iframeC.find('.pop').on('click', function () {
+        $('.imagepreview').attr('src', $(this).attr('data-image-full'));
+        $('#imagemodal').modal('show');
+    });
+
+     // Parses markerArray.js for details to give each marker on the map and pushes it to the array in case the API fails
     // Does not run infoContent function at the end, preventing empty infowindow content from popping up
     function backupMap() {
 
@@ -115,64 +202,6 @@ $(window).on('load', function () {
             }
         });
     }
-
-    // toggles the bounce animation for the selected marker
-    function bounce(markNum) {
-        if (markNum.getAnimation() !== null) {
-            markNum.setAnimation(null);
-        } else {
-            markNum.setAnimation(google.maps.Animation.BOUNCE);
-        }
-    }
-
-
-    function infoContent(markNum, markTitle) {
-        //changes the string to be suitable to the directory by removing uppercase letters and spaces
-        var lwr0 = markTitle.toLowerCase().replace(/\s+/g, '');
-        var markContent = $(`#${lwr0}content`).html()
-        infowindow.setContent(markContent)
-        infowindow.open(map, markNum)
-    }
-
-    // Allows selection of elements within the iframe
-    const iframeC = $("iframe#iframeGallery").contents();
-
-    // Controls page animation, passing marker title to gallery changing function
-    function pageSwitch(markName) {
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
-
-        // Changes title and swaps url in time with animations 
-        function galleryChoice(markName) {
-            setTimeout(function () {
-                iframeC.find("#galleryTitle").html(`${markName}`);
-                urlChange(markName);
-            }, 950);
-
-            // Iterates through each image id, passing through info to swap out each anchor url
-            function urlChange(markName) {
-                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
-                var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
-                for (i = 0; i < idArray.length; i++) {
-                    ancSwap(idArray[i], lwr1);
-                }
-
-                // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(id, lwr2) {
-                    var findID = iframeC.find(`#${id} > a`);
-                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
-                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
-
-                    // adjusts the iframe height upon thumbnails loading
-                    iframeC.find(".img-fluid").on('load', galleryHeight)
-                }
-            }
-        }
-    }
-
-    iframeC.find('.pop').on('click', function () {
-        $('.imagepreview').attr('src', $(this).attr('data-image-full'));
-        $('#imagemodal').modal('show');
-    });
 });
 
 
@@ -409,6 +438,7 @@ function initMap() {
         ]
     });
 
+    // Sets zoom level further out if device screen is smaller than 700px
     var mq = window.matchMedia("(max-width: 700px)");
     if (mq.matches) {
         map.setZoom(1);
