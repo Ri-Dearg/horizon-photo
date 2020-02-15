@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // adjusts iframe height based on device and photo length
     $('iframe').on('load', galleryHeight);
-})
+});
 
 // Adjusts gallery height for varying picture formats and devices
 function galleryHeight() {
@@ -15,7 +15,7 @@ function galleryHeight() {
 $(window).on('load', function () {
 
     // selects countries to search for in API
-    const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America']
+    const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America'];
 
     var xhr = new XMLHttpRequest();
 
@@ -29,7 +29,7 @@ $(window).on('load', function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
             getData(data);
-        // Prevents backupMap from running multiple times, set to use local info if conditions are bad
+            // Prevents backupMap from running multiple times, set to use local info if conditions are bad
         } else if (this.readyState == 4 && this.status !== 200) {
             backupMap();
         }
@@ -44,17 +44,17 @@ $(window).on('load', function () {
                 }
             }
         });
+
         makeMarkers(countryData);
-        console.dir(countryData)
     }
 
     // variable containing country info
-    var countryData = []
+    var countryData = [];
 
     // array containing marker info
     var markerArr = [];
 
-    // Variable creating a single window for the mapp
+    // Variable creating a single infowindow for the mapp
     var infowindow = new google.maps.InfoWindow();
 
     // Function compiling array data into markers
@@ -82,11 +82,11 @@ $(window).on('load', function () {
                 }
                 var markTitle = this.title;
                 bounce(this);
-                pageSwitch(markTitle)
-                infoContent(this, markTitle)
+                pageSwitch(markTitle);
+                infoContent(this, markTitle);
             });
         }
-    };
+    }
 
     // toggles the bounce animation for the selected marker
     function bounce(markNum) {
@@ -97,18 +97,20 @@ $(window).on('load', function () {
         }
     }
 
-
     function infoContent(markNum, markTitle) {
-        //changes the string to be suitable to the directory by removing uppercase letters and spaces
-        var markContent = ``
+        // changes the string to be suitable to the directory by removing uppercase letters and spaces
+        // Sets blurb content for each location in the iframe
+        var markContent = ``;
         var langData = [];
 
         countryData.forEach(function (item) {
-                            langGet(item)
+            // function to parse through language arrays
+            langGet(item);
 
+            // Sets blurb content for selected country
             for (var i = 0; i < countryData.length; i++) {
                 if (item.name === markTitle) {
-                    markContent =   `<h1 class="heading-font">${item.name}</h1>
+                    markContent = `<h1 class="heading-font">${item.name}</h1>
                                     <div>
                                         <ul id="infowindowlist" class="m-0 p-0 pb-2">
                                             <li>Native Name: ${item.nativeName}</li>
@@ -120,6 +122,9 @@ $(window).on('load', function () {
                                     </div>`;
                 }
             }
+
+            // Parses language array from countryData, clears the langData array before pushing the 
+            // relevant country info back into the array for display
             function langGet(item) {
                 var lang = item.languages;
                 langData = [];
@@ -127,9 +132,13 @@ $(window).on('load', function () {
                     langData.push(item.languages[x].name);
                 }
             }
-            infowindow.setContent(markContent)
+
+            // Sets the content for the infowindow
+            infowindow.setContent(markContent);
         });
-        infowindow.open(map, markNum)
+
+        // Opens infowindow on clcik
+        infowindow.open(map, markNum);
     }
 
     // Allows selection of elements within the iframe
@@ -137,12 +146,12 @@ $(window).on('load', function () {
 
     // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markName) {
-    var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName))
+        var lwr1 = markName.toLowerCase().replace(/\s+/g, '');
+        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName));
 
         // Changes title and swaps url in time with animations, places blurb content into gallery
         function galleryChoice(markName) {
-            var blurbContent = $(`#${lwr1}content`).html()
+            var blurbContent = $(`#${lwr1}content`).html();
             setTimeout(function () {
                 iframeC.find("#galleryTitle").html(`${markName}`);
                 iframeC.find("#countryBlurb").html(`${blurbContent}`);
@@ -157,13 +166,13 @@ $(window).on('load', function () {
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(id, lwr2) {
-                    var findID = iframeC.find(`#${id} > a`);
-                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${id}_tn.jpg)`);
-                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${id}.jpg`);
+                function ancSwap(idNUm, lwr2) {
+                    var findID = iframeC.find(`#${idNum} > a`);
+                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${idNum}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${idNum}.jpg`);
 
                     // adjusts the iframe height upon thumbnails loading
-                    iframeC.find(".img-fluid").on('load', galleryHeight)
+                    iframeC.find(".img-fluid").on('load', galleryHeight);
                 }
             }
         }
@@ -175,7 +184,7 @@ $(window).on('load', function () {
         $('#imagemodal').modal('show');
     });
 
-     // Parses markerArray.js for details to give each marker on the map and pushes it to the array in case the API fails
+    // Parses markerArray.js for details to give each marker on the map and pushes it to the array in case the API fails
     // Does not run infoContent function at the end, preventing empty infowindow content from popping up
     function backupMap() {
 
@@ -201,7 +210,7 @@ $(window).on('load', function () {
                     }
                     var markTitle = this.title;
                     bounce(this);
-                    pageSwitch(markTitle)
+                    pageSwitch(markTitle);
                 });
             }
         });

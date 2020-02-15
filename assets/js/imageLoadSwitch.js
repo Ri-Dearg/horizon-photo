@@ -8,7 +8,7 @@ This allows the lazyLoad function to correctly blur and swap images on url chang
 $("body").on('DOMSubtreeModified', "#galleryTitle", function() {
     $("#galleryTitle").addClass('heading-font')
     $('a').removeClass('is-loaded');
-    setTimeout(lazyLoad, 1000);
+    setTimeout(lazyLoad, 950);
 });
 
 function lazyLoad() {
