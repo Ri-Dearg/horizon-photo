@@ -463,3 +463,17 @@ function initMap() {
         map.setZoom(1);
     }
 }
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) { 
+        $('.fa-arrow-up').fadeIn(600); 
+    } else {
+        $('.fa-arrow-up').fadeOut(600);
+    }
+});
+
+$('.fa-arrow-up').click(function() { 
+    $('body,html').animate({
+        scrollTop : 0                      
+    }, 1200);
+});
