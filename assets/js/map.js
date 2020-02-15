@@ -1,22 +1,3 @@
-$(document).ready(function () {
-    // adjusts iframe height based on device and photo length
-    $('iframe').on('load', galleryHeight);
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() >= 50) {
-            $('.fa-arrow-up').fadeIn(600);
-        } else {
-            $('.fa-arrow-up').fadeOut(600);
-        }
-    });
-
-    $('.fa-arrow-up').click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 1200);
-    });
-});
-
 // Adjusts gallery height for varying picture formats and devices
 function galleryHeight() {
     const mapGallery = document.getElementById('iframeGallery');
@@ -25,6 +6,27 @@ function galleryHeight() {
         mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
     }
 }
+
+$(document).ready(function () {
+    // adjusts iframe height based on device and photo length
+    $('iframe').on('load', galleryHeight);
+
+    // Makes the scroll arrow disappear if the bar is at the top
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 50) {
+            $('.fa-arrow-up').fadeIn(600);
+        } else {
+            $('.fa-arrow-up').fadeOut(600);
+        }
+    });
+
+    // Scrolls to top on clicking the arrow
+    $('.fa-arrow-up').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1200);
+    });
+});
 
 $(window).on('load', function () {
     // selects countries to search for in API
@@ -47,7 +49,6 @@ $(window).on('load', function () {
     // Searches for country info on API
     xhr.open('GET', `https://restcountries.eu/rest/v2/all`);
     xhr.send();
-
 
     // Fires off function for creating the needed country info arrays
     xhr.addEventListener('readystatechange', function () {
@@ -97,9 +98,9 @@ $(window).on('load', function () {
         const length = markerData.length;
         // iterates through array info
         for (let i = 0; i < length; i++) {
-            let location = markerData[i].latlng;
-            let latLng = new google.maps.LatLng(location[0], location[1]);
-            let placeName = markerData[i].name;
+            const location = markerData[i].latlng;
+            const latLng = new google.maps.LatLng(location[0], location[1]);
+            const placeName = markerData[i].name;
             const marker = new google.maps.Marker({
                 position: latLng,
                 title: placeName,
@@ -227,6 +228,9 @@ $(window).on('load', function () {
                     for (let i = 0; i < markerArr.length; i++) {
                         markerArr[i].setAnimation(null);
                     }
+
+                    setTimeout(galleryScroll, 2000);
+
                     const markTitle = this.title;
                     bounce(this);
                     pageSwitch(markTitle);
