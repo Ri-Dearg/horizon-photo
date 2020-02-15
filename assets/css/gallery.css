@@ -16,6 +16,13 @@ iframe {
     overflow: hidden;
 }
 
+#scrollPoint {
+    display: block;
+    position: relative;
+    top: -55px;
+    visibility: hidden;
+}
+
 /*------------------------------------------------------Modal Styles*/
 .modal-body,
 .modal-header,

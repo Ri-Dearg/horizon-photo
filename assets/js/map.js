@@ -7,7 +7,7 @@ $(document).ready(function () {
 function galleryHeight() {
     const mapGallery = document.getElementById('iframeGallery');
     if (mapGallery) {
-        mapGallery.height = "";
+        mapGallery.height = '';
         mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
     }
 }
@@ -20,12 +20,12 @@ $(window).on('load', function () {
     var xhr = new XMLHttpRequest();
 
     // Searches for country info on API
-    xhr.open("GET", `https://restcountries.eu/rest/v2/all`);
+    xhr.open('GET', `https://restcountries.eu/rest/v2/all`);
     xhr.send();
 
 
     // Fires off function for creating the needed country info arrays
-    xhr.addEventListener("readystatechange", function () {
+    xhr.addEventListener('readystatechange', function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
             getData(data);
@@ -72,7 +72,6 @@ $(window).on('load', function () {
                 animation: google.maps.Animation.DROP,
             });
 
-
             markerArr.push(marker);
 
             // Iterates through each marker on the map, sets the animation to null before pushing the marker through to the other functions
@@ -80,6 +79,13 @@ $(window).on('load', function () {
                 for (var i = 0; i < markerArr.length; i++) {
                     markerArr[i].setAnimation(null);
                 }
+
+                // Scrolls down to gallery window 
+                // smooth behaviour does not work on Edge or Safari
+                var iframeScroll = document.getElementById('scrollPoint')
+                setTimeout(function() {iframeScroll.scrollIntoView({behavior: 'smooth'});
+                }, 2000);
+
                 var markTitle = this.title;
                 bounce(this);
                 pageSwitch(markTitle);
@@ -142,7 +148,7 @@ $(window).on('load', function () {
     }
 
     // Allows selection of elements within the iframe
-    const iframeC = $("iframe#iframeGallery").contents();
+    const iframeC = $('iframe#iframeGallery').contents();
 
     // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markName) {
@@ -153,8 +159,8 @@ $(window).on('load', function () {
         function galleryChoice(markName) {
             var blurbContent = $(`#${lwr1}content`).html();
             setTimeout(function () {
-                iframeC.find("#galleryTitle").html(`${markName}`);
-                iframeC.find("#countryBlurb").html(`${blurbContent}`);
+                iframeC.find('#galleryTitle').html(`${markName}`);
+                iframeC.find('#countryBlurb').html(`${blurbContent}`);
                 urlChange(markName);
             }, 900);
 
@@ -166,13 +172,13 @@ $(window).on('load', function () {
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(idNUm, lwr2) {
+                function ancSwap(idNum, lwr2) {
                     var findID = iframeC.find(`#${idNum} > a`);
                     findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${idNum}_tn.jpg)`);
                     findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${idNum}.jpg`);
 
                     // adjusts the iframe height upon thumbnails loading
-                    iframeC.find(".img-fluid").on('load', galleryHeight);
+                    iframeC.find('.img-fluid').on('load', galleryHeight);
                 }
             }
         }
@@ -188,7 +194,7 @@ $(window).on('load', function () {
     // Does not run infoContent function at the end, preventing empty infowindow content from popping up
     function backupMap() {
 
-        $.getJSON("assets/js/markerArray.js", function (data) {
+        $.getJSON('assets/js/markerArray.js', function (data) {
             var length = data.locations.length;
             for (var i = 0; i < length; i++) {
                 var eachItem = data.locations[i].attributes;
@@ -452,7 +458,7 @@ function initMap() {
     });
 
     // Sets zoom level further out if device screen is smaller than 700px
-    var mq = window.matchMedia("(max-width: 700px)");
+    var mq = window.matchMedia('(max-width: 700px)');
     if (mq.matches) {
         map.setZoom(1);
     }
