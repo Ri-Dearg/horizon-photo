@@ -139,13 +139,33 @@
 												<div class="col my-2 p-1 d-flex justify-content-center">
 													<input type="submit" class="btn btn-success" />
                                     </div>
-                                </div>
+												</div>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 	</section>
+
+	<!-- Modal for contact form after popup-->
+	<div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg mt-5">
+			<div class="modal-content">
+				<div class="header-wrapper d-flex">
+					<div class="modal-header mx-auto p-0">
+						<h4 class="my-3" id="contactheader"></h4>
+					</div>
+				</div>
+				<div class="modal-body text-center">
+					<p class="my-0" id="contactbody"></p>
+				</div>
+				<div class="modal-footer mx-auto">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+    </div>
 
 	<!--Seperate container for the footer to keep it pushed down to the bottom of the page-->
 	<div class="footer-container">
@@ -202,7 +222,7 @@
 		</footer>
 	</div>
 
-    <script src="assets/js/sendMail.js"></script>
+	<script src="assets/js/sendMail.js"></script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

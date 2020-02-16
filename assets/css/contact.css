@@ -1,4 +1,4 @@
-/*------------------------------------------------------Contact*/
+/*------------------------------------------------------Basic*/
 html,body {
   height: 100%;
 }
@@ -24,4 +24,33 @@ html,body {
 .content-container-contact {
     height: 86%;
     min-height: 850px;
+}
+
+/*------------------------------------------------------Modal Styles*/
+
+.modal-content,
+.modal-header,
+.modal-dialog {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+.modal-content {
+    border: 2px solid rgba(0, 97, 28, 0.8)
+}
+
+
+.modal-header,
+.header-wrapper {
+    color: #fff;
+    background-color: #00611C;
+    border: none;
+}
+
+button.close {
+    color: #D3D3D3;
+}
+
+button.close:hover {
+    color: #fff;
 }

@@ -1,7 +1,28 @@
-// Prevents form refresh
-var form = document.getElementById("contactform");
-function stopRefresh(event) { event.preventDefault(); } 
-form.addEventListener('submit', stopRefresh);
+const contactF = document.getElementById("contactform");
+
+contactF.addEventListener('submit', submitAct);
+
+// Prevents form refreshing the page
+function submitAct(event) {
+    event.preventDefault();
+}
+
+
+// Posts thank you message into modal
+function okResponse() {
+    $('#contactheader').html(`Thank You`);
+    $('#contactbody').html(`Your email has been sent. You will receive a response shortly.`);
+    $('#contactmodal').modal('show');;
+}
+
+// Posts failure message into modal
+function errorResponse(error) {
+    $('#contactheader').html(`Sorry!`);
+    $('#contactbody').html(`There appears to be a problem sending your email. <br>
+                            Error Info: <br>
+                            ${error.status}${error.text}`);
+    $('#contactmodal').modal('show');;
+}
 
 // Sends email with all parameters
 function sendMail(contactForm) {
@@ -12,8 +33,10 @@ function sendMail(contactForm) {
         'user_message': contactForm.message.value,
     })
         .then(function (response) {
+            okResponse();
             console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
             console.log('FAILED...', error);
+            errorResponse(error);
         });
 }

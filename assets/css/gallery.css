@@ -25,10 +25,13 @@ iframe {
 
 /*------------------------------------------------------Modal Styles*/
 .modal-body,
-.modal-header,
 .modal-content,
 .modal-dialog {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
 }
 
 button.close {
@@ -74,7 +77,8 @@ button.close:hover {
     overflow: hidden !important;
 }
 
-/*------------------------------------------------------Top Arrow*/
+/*------------------------------------------------------Scroll to Top Arrow*/
+
 .fa-arrow-up {
     color:rgba(255, 255, 255, 0.6);        
     background: rgba(0, 97, 28, 0.6);   
