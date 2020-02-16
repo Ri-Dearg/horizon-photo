@@ -96,7 +96,9 @@ button.close:hover {
     -o-transition: all 0.35s ease-in-out;
 }
 
+
 .fa-arrow-up:hover {
     background: rgb(0, 97, 28);
     bottom: 2rem;
+    box-shadow: 3px 3px 1px rgba(25, 41, 30, 0.8);
 }
