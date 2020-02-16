@@ -16,6 +16,13 @@ iframe {
     overflow: hidden;
 }
 
+#scrollPoint {
+    display: block;
+    position: relative;
+    top: -55px;
+    visibility: hidden;
+}
+
 /*------------------------------------------------------Modal Styles*/
 .modal-body,
 .modal-header,
@@ -56,7 +63,6 @@ button.close:hover {
 
 }    
 
-
 /* style the marker arrow */
 
 .gm-style .gm-style-iw-t::after {
@@ -68,8 +74,31 @@ button.close:hover {
     overflow: hidden !important;
 }
 
-        /*style the link
-        .gm-style div div div div div div div div a {
-            color: #f1f1f1;
-            font-weight: bold;
-        }*/
+/*------------------------------------------------------Top Arrow*/
+.fa-arrow-up {
+    color:rgba(255, 255, 255, 0.6);        
+    background: rgba(0, 97, 28, 0.6);   
+    width: 3rem;    
+    height: 3rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+
+.fa-arrow-up:hover {
+    background: rgb(0, 97, 28);
+    bottom: 2rem;
+    box-shadow: 3px 3px 1px rgba(25, 41, 30, 0.8);
+}
