@@ -7,12 +7,19 @@ function submitAct(event) {
     event.preventDefault();
 }
 
+function clearInput() {
+    setTimeout( function() {
+    $('.clear').val('');
+    $('textarea').val('')
+    }, 1000)
+}
 
 // Posts thank you message into modal
 function okResponse() {
     $('#contactheader').html(`Thank You`);
     $('#contactbody').html(`Your email has been sent. You will receive a response shortly.`);
-    $('#contactmodal').modal('show');;
+    $('#contactmodal').modal('show');
+    clearInput();
 }
 
 // Posts failure message into modal
