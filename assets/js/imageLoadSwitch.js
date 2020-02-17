@@ -22,7 +22,11 @@ function lazyLoad() {
 
         content_image.addEventListener('load', function () {
             card_image.style.backgroundImage = 'url(' + image_url + ')';
-            card_image.className = card_image.className = 'card-image pop is-loaded';
+            if (card_image.className = 'card-image pop') {
+            card_image.className = 'card-image pop is-loaded';
+            } if (card_image.className = 'container-fluid callout-container m-0 p-0 card-image') {
+                card_image.className = 'container-fluid callout-container m-0 p-0 card-image is-loaded';
+            }
         });
     });
 }
