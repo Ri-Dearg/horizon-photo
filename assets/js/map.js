@@ -9,7 +9,7 @@ function galleryHeight() {
 
 $(document).ready(function () {
     // adjusts iframe height based on device and photo length
-    $('iframe').on('load', galleryHeight);
+   $('iframe').on('load', galleryHeight);
 
     // Makes the scroll arrow disappear if the bar is at the top
     $(window).scroll(function () {
@@ -60,6 +60,9 @@ $(window).on('load', function () {
             backupMap();
         }
     });
+
+    // resizes Gallery on window size change, otherwise window is incorrectly sized.
+    $(window).resize(galleryHeight)
 
     // iterates through the array for matching country names and pushes them to the Countrydata variable
     function getData(data) {
@@ -137,28 +140,30 @@ $(window).on('load', function () {
             setTimeout(function () {
                 iframeC.find('#galleryTitle').html(`${markName}`);
                 iframeC.find('#countryBlurb').html(`${blurbContent}`);
-                urlChange(markName);
+                urlChange();
             }, 900);
 
             // Iterates through each image id, passing through info to swap out each anchor url
-            function urlChange(markName) {
+            function urlChange() {
                 const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
                 for (i = 0; i < idArray.length; i++) {
                     ancSwap(idArray[i], lwr1);
                 }
 
                 // Swaps the anchor urls to change images adjusts the height upon thumbnails loading
-                function ancSwap(idNum, lwr2) {
-                    const findID = iframeC.find(`#${idNum} > a`);
-                    findID.css('background-image', `url(assets/images/${lwr2}/${lwr2}${idNum}_tn.jpg)`);
-                    findID.attr('data-image-full', `assets/images/${lwr2}/${lwr2}${idNum}.jpg`);
-
-                    // adjusts the iframe height upon thumbnails loading
-                    iframeC.find('.img-fluid').on('load', galleryHeight);
+                function ancSwap(idNum, lwr1) {
+                    const findID = iframeC.find(`#${idNum}`);
+                    findID.css('background-image', `url(assets/images/${lwr1}/${lwr1}${idNum}_tn.jpg)`);
+                    findID.attr('data-image-full', `assets/images/${lwr1}/${lwr1}${idNum}.jpg`);
                 }
+
+                // adjusts the iframe height upon image
+                iframeC.find('#l1 > img', '#l2 > img', '#l3 > img', '#w1 > img', '#w2 > img', '#w3 > img').on('load', galleryHeight);
             }
         }
     }
+
+
 
     function infoContent(markNum, markTitle) {
         // changes the string to be suitable to the directory by removing uppercase letters and spaces
