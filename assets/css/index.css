@@ -83,44 +83,10 @@
 }
 /* 3. End */
 
-/* The link boxes do not have flush edges if the values are not in seperate IDs*/ 
-#europelink {
-    height: 250px;
-    background: url("../images/italyw1-300.jpg") no-repeat;
-    background-color: #000;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: relative;
-}
 
-#asialink {
+#maplink {
     height: 250px;
-    background: url("../images/asia-300.jpg") no-repeat;
-    background-color: #000;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: relative;
-}
-
-#africalink {
-    height: 250px;
-    background: url("../images/africa-300.jpg") no-repeat;
+    background: url("../images/mapimage.png") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
