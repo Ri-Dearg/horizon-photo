@@ -31,7 +31,7 @@ iframe {
 }
 
 .modal-backdrop.show {
-    opacity: 0.9;
+    opacity: 0.96;
 }
 
 button.close {

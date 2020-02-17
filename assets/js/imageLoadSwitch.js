@@ -8,7 +8,7 @@ This allows the lazyLoad function to correctly blur and swap images on url chang
 $('body').on('DOMSubtreeModified', '#galleryTitle', function() {
     $('#galleryTitle').addClass('heading-font')
     $('a').removeClass('is-loaded');
-    setTimeout(lazyLoad, 950);
+    setTimeout(lazyLoad, 1000);
 });
 
 function lazyLoad() {
@@ -22,7 +22,7 @@ function lazyLoad() {
 
         content_image.addEventListener('load', function () {
             card_image.style.backgroundImage = 'url(' + image_url + ')';
-            $('a').addClass('is-loaded');
+            card_image.className = card_image.className = 'card-image pop is-loaded';
         });
     });
 }
