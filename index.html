@@ -41,62 +41,57 @@
 
 	<title>Horizon Photography | Home</title>
 
-	<!--1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/ It must be included in the head tag to function-->
-	<!--The loader is used as the splash image is quite large and may take some time to load. As it is a photography site, I thought it necessary to have high quality-->
-	<script src="assets/libraries/jquery/jquery.min.js"></script>
-	<script src="assets/libraries/js/modernizr.min.js"></script>
-    <script src="assets/js/loadingTicker.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+            emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
+        })();
+	</script>
 
 </head>
 
 <body>
 
 	<!-- 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
-	<div class="se-pre-con"></div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
 
-				<!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
-				<a href="index.html" class="d-md-none pl-3">
-					<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+		<!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+		<a href="index.html" class="d-md-none pl-3">
+			<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
                 </a>
-					<!-- 2. End -->
+			<!-- 2. End -->
 
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-					<div class="collapse navbar-collapse" id="collapseNavbar">
-						<ul class="navbar-nav justify-content-center">
-							<li class="nav-item m-md-auto">
-								<a class="nav-link pr-2 py-0 p-md-0" href="index.html">Home</a>
-							</li>
-							<li class="nav-item m-md-auto">
-								<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-							</li>
+			<div class="collapse navbar-collapse" id="collapseNavbar">
+				<ul class="navbar-nav justify-content-center">
+					<li class="nav-item m-md-auto">
+						<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
+					</li>
 
-							<!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-							<li class="d-none d-md-block m-md-auto">
-								<a href="index.html">
-									<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+					<!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+					<li class="d-none d-md-block mx-md-3">
+						<a href="index.html">
+							<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
                             </a>
-							</li>
-							<!-- 3. End -->
+					</li>
+					<!-- 3. End -->
 
-							<li class="nav-item m-md-auto">
-								<a class="nav-link pr-2 py-0 p-md-0" href="blog.html">Blog</a>
-							</li>
-							<li class="nav-item m-md-auto">
-								<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-							</li>
-						</ul>
-					</div>
-			</nav>
+					<li class="nav-item m-md-auto">
+						<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
 
 	<!-- 4. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
 	<div class="jumbotron jumbotron-fluid p-0 m-0">
-
 		<!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
-		<header class="container-fluid callout-container m-0 p-0">
+		<header class="container-fluid callout-container m-0 p-0 card-image"
+			style="background-image: url(assets/images/callout_tn.jpg);" data-image-full="assets/images/callout.jpg">
+			<img class="d-none" src="assets/images/callout_tn.jpg" alt="splash image">
 
 			<!-- 4. Jumbotron container-->
 			<div class="container-fluid" id="jumbotext">
@@ -128,8 +123,8 @@
 					<!-- 4. End -->
 
 					<p>I am a travel photogrpaher who loves to take pictures of things from all angles, be it food,
-						cars, people, places and projects. I shot many outdoor projects in Africa, Asia and Europe
-						helping. I work with locals and travellers, often split my time between daily living and toruist
+						cars, people, places and projects. I shot many outdoor projects accross continents. I work with
+						locals and travellers, often split my time between daily living and toruist
 						sights. I want to become a travel blogger, photographer and guide with my own personal style,
 						developing a knowledge of my subject matter. I love authentic travel to absorb its richness and
 						experience its nooks and crannies. The world is its own special place and I want to show this to
@@ -139,19 +134,10 @@
 			<!-- Animations created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
 
 			<div class="row">
-				<div class="col-sm-4 p-0 div-hover" id="africalink">
+				<div id="maplink" class="col p-0 div-hover">
 					<a href="gallery.html" class="gallerylink link-hover">
-						<h2 class="display-4 centered-link heading-font heading-size">Africa</h2>
-					</a>
-				</div>
-				<div class="col-sm-4 p-0 div-hover" id="asialink">
-					<a href="gallery.html" class="gallerylink link-hover">
-						<h2 class="display-4 centered-link heading-font heading-size">Asia</h2>
-					</a>
-				</div>
-				<div class="col-sm-4 p-0 div-hover" id="europelink">
-					<a href="gallery.html" class="gallerylink link-hover">
-						<h2 class="display-4 centered-link heading-font heading-size">Europe</h2>
+						<h2 class="display-4 centered-link heading-font heading-size">Travel <br>
+                        Gallery</h2>
 					</a>
 				</div>
 			</div>
@@ -162,8 +148,8 @@
 			<div class=" col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Newsletter</h2>
 				<p class="mb-0">Sign up here!</p>
-				<form class="form-group d-flex justify-content-center mb-1" action="action.php" method="post"
-					onsubmit="return false;">
+				<form id="emailform" class="form-group d-flex justify-content-center mb-1"
+					onsubmit="return sendMailNews(this);">
 					<input type="email" name="email" placeholder="Email" class="form-control" required/>
 					<input type="submit" value="Join" class="btn btn-success ml-2" />
                 </form>
@@ -179,25 +165,25 @@
 				<h2 class="heading-font heading-size">Social</h2>
 				<ul class="list-inline social-links">
 					<li class="list-inline-item">
-						<a target="_blank" href="#">
+						<a target="_blank" href="https://www.facebook.com/ridearg-411885722878522/">
 							<i class="fab fa-facebook" aria-hidden="true"></i>
 							<span class="sr-only">Facebook</span>
 						</a>
 					</li>
 					<li class="list-inline-item">
-						<a target="_blank" href="#">
+						<a target="_blank" href="https://www.instagram.com/ri.dearg/">
 							<i class="fab fa-instagram" aria-hidden="true"></i>
 							<span class="sr-only">Instagram</span>
 						</a>
 					</li>
 					<li class="list-inline-item">
-						<a target="_blank" href="#">
+						<a target="_blank" href="https://500px.com/horizonrecordblog">
 							<i class="fab fa-500px" aria-hidden="true"></i>
 							<span class="sr-only">500px</span>
 						</a>
 					</li>
 					<li class="list-inline-item">
-						<a target="_blank" href="#">
+						<a target="_blank" href="https://www.flickr.com/photos/horizon_photo/">
 							<i class="fab fa-flickr" aria-hidden="true"></i>
 							<span class="sr-only">Flickr</span>
 						</a>
@@ -205,15 +191,41 @@
 				</ul>
 			</div>
 			<!-- 5. End-->
-            
+
 		</div>
 	</footer>
+
+	<!-- Modal for contact form popup-->
+	<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg mt-5">
+			<div class="modal-content">
+				<div class="header-wrapper d-flex">
+					<div class="modal-header mx-auto p-0">
+						<h4 class="my-3 heading-font" id="emailmodalheader"></h4>
+					</div>
+				</div>
+				<div class="modal-body text-center">
+					<p class="my-0" id="emailmodalbody"></p>
+				</div>
+				<div class="modal-footer mx-auto">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
 	<script src="assets/libraries/js/popper.min.js"></script>
 	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
+
+	<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
+	<script src="assets/js/imageLoadSwitch.js"></script>
+	<!--6. End -->
+
+	<script src="assets/js/sendMail.js"></script>
 
 </body>
 

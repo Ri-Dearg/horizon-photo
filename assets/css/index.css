@@ -1,35 +1,12 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-/* 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/ */
-/* A pre-loader is necessary because the main image is a large file-size, necessary for quality on a photographer's site*/
-.no-js #loader {
-    display: none;
-}
-
-.js #loader {
-    display: block;
-    position: absolute;
-    left: 100px;
-    top: 0;
-}
-/* loading.gif created by me*/
-.se-pre-con {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url(../images/loading.gif) center no-repeat #000;
-}
-/* 1. End */
-
 /*------------------------------------------------------Callout*/
 /* 2. Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
 /*Background image is my own*/
+
 .callout-container {
     height: 95vh;
-    background: url("../images/callout.jpg") no-repeat bottom right fixed;
+    background: no-repeat bottom right fixed;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -83,44 +60,10 @@
 }
 /* 3. End */
 
-/* The link boxes do not have flush edges if the values are not in seperate IDs*/ 
-#europelink {
-    height: 250px;
-    background: url("../images/italyw1-300.jpg") no-repeat;
-    background-color: #000;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: relative;
-}
 
-#asialink {
+#maplink {
     height: 250px;
-    background: url("../images/asia-300.jpg") no-repeat;
-    background-color: #000;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    position: relative;
-}
-
-#africalink {
-    height: 250px;
-    background: url("../images/africa-300.jpg") no-repeat;
+    background: url("../images/mapimage.png") no-repeat;
     background-color: #000;
     background-size: cover;
     display: -webkit-box;
@@ -196,3 +139,24 @@
 }
 
 /* 4. End */
+
+/* 2. CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
+/*Blur effects are necessary so the thumbnail are not seen to be pixelated*/
+/* The same classes exist in iframe.css but necessitate different values, so they are saved in seperate files*/
+
+.card-image {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+}
+
+/* Removes the blur on load*/
+.card-image.is-loaded {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transition: -webkit-filter 2s;
+    transition: -webkit-filter 2s;
+    -o-transition: filter 2s;
+    transition: filter 2s;
+    transition: filter 2s, -webkit-filter 2s;
+}
+/* 2. End */
