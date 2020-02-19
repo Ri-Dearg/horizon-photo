@@ -127,6 +127,36 @@ footer {
     font-size: 1.5rem;
 }
 
+/*------------------------------------------------------Modal Styles*/
+
+#emailmodal .modal-content,
+#emailmodal .modal-header,
+#emailmodal .modal-dialog {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+#emailmodal .modal-content {
+    border: 2px solid rgba(0, 97, 28, 0.8)
+}
+
+
+#emailmodal .modal-header,
+#emailmodal .header-wrapper {
+    color: #fff;
+    background-color: #00611C;
+    border: none;
+}
+
+#emailmodal button.close {
+    color: #D3D3D3;
+}
+
+#emailmodal button.close:hover {
+    color: #fff;
+}
+
+
 /* 2. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
 .fab {
     color: #D3D3D3;

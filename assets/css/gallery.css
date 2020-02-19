@@ -23,10 +23,10 @@ iframe {
     visibility: hidden;
 }
 
-/*------------------------------------------------------Modal Styles*/
-.modal-body,
-.modal-content,
-.modal-dialog {
+/*------------------------------------------------------Gallery Modal*/
+#imagemodal .modal-body,
+#imagemodal .modal-content,
+#imagemodal .modal-dialog {
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -34,11 +34,11 @@ iframe {
     opacity: 0.96;
 }
 
-button.close {
+#imagemodal button.close {
     color: #D3D3D3;
 }
 
-button.close:hover {
+#imagemodal button.close:hover {
     color: #fff;
 }
 

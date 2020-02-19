@@ -111,7 +111,7 @@
 						</div>
 						<div class="w-100"></div>
 						<div class="col d-flex justify-content-center">
-							<form id="contactform" onsubmit="return sendMail(this);">
+							<form id="emailform" onsubmit="return sendMailContact(this);">
 								<div class="row contact-row">
 									<div class="col p-1">
 										<input type="text" name="name" placeholder="Name" class="form-control clear" required/>
@@ -142,26 +142,6 @@
 			</div>
 	</section>
 
-	<!-- Modal for contact form after popup-->
-	<div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg mt-5">
-			<div class="modal-content">
-				<div class="header-wrapper d-flex">
-					<div class="modal-header mx-auto p-0">
-						<h4 class="my-3 heading-font" id="contactheader"></h4>
-					</div>
-				</div>
-				<div class="modal-body text-center">
-					<p class="my-0" id="contactbody"></p>
-				</div>
-				<div class="modal-footer mx-auto">
-					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-    </div>
-
 	<!--Seperate container for the footer to keep it pushed down to the bottom of the page-->
 	<div class="footer-container">
 		<footer class="container-fluid">
@@ -169,8 +149,8 @@
 				<div class="col-sm-4 mt-3">
 					<h2 class="heading-font heading-size">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
-					<form class="form-group d-flex justify-content-center mb-1" action="action.php" method="post"
-						onsubmit="return false;">
+					<form id="emailform" class="form-group d-flex justify-content-center mb-1"
+						onsubmit="return sendMailNews(this);">
 						<input type="email" name="email" placeholder="Email" class="form-control" required/>
 						<input type="submit" value="Join" class="btn btn-success ml-2" />
                 </form>
@@ -215,6 +195,27 @@
 
 			</div>
 		</footer>
+
+		<!-- Modal for contact form popup-->
+		<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg mt-5">
+				<div class="modal-content">
+					<div class="header-wrapper d-flex">
+						<div class="modal-header mx-auto p-0">
+							<h4 class="my-3 heading-font" id="emailmodalheader"></h4>
+						</div>
+					</div>
+					<div class="modal-body text-center">
+						<p class="my-0" id="emailmodalbody"></p>
+					</div>
+					<div class="modal-footer mx-auto">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 	<script src="assets/js/sendMail.js"></script>

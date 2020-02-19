@@ -47,82 +47,82 @@
 
 	<!-- 3. General layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
 	<section class="container-fluid p-0 m-0 content-container-gallery">
-        <h1 class="d-none">Gallery Selector</h1>
+		<h1 class="d-none">Gallery Selector</h1>
 
-        <!-- Changes title based on country selected in the gallery map-->
-        <h4 class="text-center m-0 p-2" id="galleryTitle">Explore the world through my photos.<br> 
+		<!-- Changes title based on country selected in the gallery map-->
+		<h4 class="text-center m-0 p-2" id="galleryTitle">Explore the world through my photos.<br>
         Click on a marker to see its gallery and read about it.</h4>
-        
-        <!-- Is injected with content from the gallery page after location is selected -->
-        <div id="countryBlurb" class="text-center m-1 p-2"></div>
-		
-        <div class="row mx-auto mt-1">
 
-			<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
-			<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
-			<div class="gallery d-flex mx-auto" id="gallery">
-				<div class="d-flex flex-column">
-					<div class="my-auto pics" >
-						<a id="l1" class="card-image pop" href="#"
-							style="background-image: url(assets/images/default/defaultl1_tn.jpg);"
-							data-image-full="assets/images/default/defaultl1.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultl1_tn.jpg" alt="Default 1" />
+			<!-- Is injected with content from the gallery page after location is selected -->
+			<div id="countryBlurb" class="text-center m-1 p-2"></div>
+
+			<div class="row mx-auto mt-1">
+
+				<!--The gallery layout was edited and wrapped in a flexbox to give imaes of different pixel heights even vertical spacing-->
+				<!--The combination of the pop and card-image classes firstly load a thumbnail image of a small filesize and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger filesize and may take a while to load-->
+				<div class="gallery d-flex mx-auto" id="gallery">
+					<div class="d-flex flex-column">
+						<div class="my-auto pics">
+							<a id="l1" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultl1_tn.jpg);"
+								data-image-full="assets/images/default/defaultl1.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultl1_tn.jpg" alt="Default 1" />
                         </a>
+						</div>
+						<div class="my-auto pics">
+							<a id="w1" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultw1_tn.jpg);"
+								data-image-full="assets/images/default/defaultw1.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultw1_tn.jpg" alt="Default 2">
+                        </a>
+						</div>
 					</div>
-					<div class="my-auto pics" >
-						<a id="w1" class="card-image pop" href="#"
-							style="background-image: url(assets/images/default/defaultw1_tn.jpg);"
-							data-image-full="assets/images/default/defaultw1.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultw1_tn.jpg" alt="Default 2">
+					<div class="d-flex flex-column">
+						<div class="my-auto pics">
+							<a id="w2" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultw2_tn.jpg);"
+								data-image-full="assets/images/default/defaultw2.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultw2_tn.jpg" alt="Default 3">
                         </a>
+						</div>
+						<div class="my-auto pics">
+							<a id="l2" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultl2_tn.jpg);"
+								data-image-full="assets/images/default/defaultl2.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultl2_tn.jpg" alt="Default 4">
+                        </a>
+						</div>
 					</div>
-				</div>
-				<div class="d-flex flex-column">
-					<div class="my-auto pics" >
-						<a id="w2" class="card-image pop" href="#"
-							style="background-image: url(assets/images/default/defaultw2_tn.jpg);"
-							data-image-full="assets/images/default/defaultw2.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultw2_tn.jpg" alt="Default 3">
+					<div class="d-flex flex-column">
+						<div class="my-auto pics">
+							<a id="l3" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultl3_tn.jpg);"
+								data-image-full="assets/images/default/defaultl3.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultl3_tn.jpg" alt="Default 5">
                         </a>
-					</div>
-					<div class="my-auto pics">
-						<a id="l2" class="card-image pop" href="#"
-							style="background-image: url(assets/images/default/defaultl2_tn.jpg);"
-							data-image-full="assets/images/default/defaultl2.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultl2_tn.jpg" alt="Default 4">
+						</div>
+						<div class="my-auto pics">
+							<a id="w3" class="card-image pop" href="#"
+								style="background-image: url(assets/images/default/defaultw3_tn.jpg);"
+								data-image-full="assets/images/default/defaultw3.jpg">
+								<img class="img-fluid" src="assets/images/default/defaultw3_tn.jpg" alt="Default 6">
                         </a>
-					</div>
-				</div>
-				<div class="d-flex flex-column">
-					<div class="my-auto pics">
-						<a id="l3" class="card-image pop" href="#"
-							style="background-image: url(assets/images/default/defaultl3_tn.jpg);"
-							data-image-full="assets/images/default/defaultl3.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultl3_tn.jpg" alt="Default 5">
-                        </a>
-					</div>
-					<div class="my-auto pics">
-						<a id="w3" class="card-image pop" href="#"
-						style="background-image: url(assets/images/default/defaultw3_tn.jpg);"
-							data-image-full="assets/images/default/defaultw3.jpg">
-							<img class="img-fluid" src="assets/images/default/defaultw3_tn.jpg" alt="Default 6">
-                        </a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 	<!-- 3. End -->
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
-		<script src="assets/libraries/js/popper.min.js"></script>
-		<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
+	<script src="assets/libraries/js/popper.min.js"></script>
+	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 
-		<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
-		<script src="assets/js/imageLoadSwitch.js"></script>
-		<!--6. End -->
+	<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
+	<script src="assets/js/imageLoadSwitch.js"></script>
+	<!--6. End -->
 </body>
 
 </html>
