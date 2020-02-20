@@ -1,4 +1,4 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 /*------------------------------------------------------Map*/
 .heading-font {
@@ -11,15 +11,17 @@
 }
 
 /*------------------------------------------------------iFrame*/
+/* Removes Scrollbars */
 iframe {
     border: 0;
     overflow: hidden;
 }
 
-#scrollPoint {
+/* Styles scrollpoint so the fixed nav doesn't cover the iframe heading*/
+#scroll-point {
     display: block;
     position: relative;
-    top: -55px;
+    top: -56px;
     visibility: hidden;
 }
 
@@ -30,10 +32,12 @@ iframe {
     background-color: rgba(0, 0, 0, 0);
 }
 
+/* Makes the modal backdrop darker so the image can stand out */
 .modal-backdrop.show {
     opacity: 0.96;
 }
 
+/* Styles the corner cross */
 #image-modal button.close {
     color: #D3D3D3;
 }
@@ -42,8 +46,7 @@ iframe {
     color: #fff;
 }
 
-/*------------------------------------------------------infoWindow*/
-
+/*------------------------------------------------------Google Mpas infoWindow*/
 #infowindowlist {
     list-style-type: none;
 }
@@ -63,22 +66,19 @@ iframe {
     left: 0;
     padding-right: 10px !important;
     display: block;
-
 }    
 
-/* style the marker arrow */
-
+/* style the little box point */
 .gm-style .gm-style-iw-t::after {
     background: #252525;
 }
 
-/* gets rid of the scrollbars */
+/* remove the scrollbars */
 .gm-style-iw-d {
     overflow: hidden !important;
 }
 
 /*------------------------------------------------------Scroll to Top Arrow*/
-
 .fa-arrow-up {
     color:rgba(255, 255, 255, 0.6);        
     background: rgba(0, 97, 28, 0.6);   
@@ -91,8 +91,6 @@ iframe {
     font-size: 1.2rem;
     text-align: center;
     display: none;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -100,9 +98,9 @@ iframe {
     -o-transition: all 0.35s ease-in-out;
 }
 
-
 .fa-arrow-up:hover {
     background: rgb(0, 97, 28);
     bottom: 2rem;
-    box-shadow: 3px 3px 1px rgba(25, 41, 30, 0.8);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0.0625rem rgba(25, 41, 30, 0.8);
+            box-shadow: 0.1875rem 0.1875rem 0.0625rem rgba(25, 41, 30, 0.8);
 }

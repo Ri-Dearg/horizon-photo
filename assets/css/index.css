@@ -1,9 +1,8 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 /*------------------------------------------------------Callout*/
-/* 2. Code utilised and edited from: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/css/style.css */
-/*Background image is my own*/
 
+/*Background image is my own*/
 .callout-container {
     height: 95vh;
     background: no-repeat bottom right fixed;
@@ -21,15 +20,11 @@
     position: relative;
 }
 
-/* 2. End */
-
 #about-me {
     background-color: #00611C;
 }
 
-
 /*------------------------------------------------------Jumbotron*/
-
 #jumbo-text {
     background-color: rgba(0, 0, 0, 0.7);
     color: #D3D3D3;
@@ -38,12 +33,8 @@
     left: 0;
 }
 
-.newsletter-box {
-    overflow-x: hidden;
-}
-
-
-/* 3. How to make a box a link: https://stackoverflow.com/a/8743920 */
+/*------------------------------------------------------Section*/
+/* How to make a box a link: https://stackoverflow.com/a/8743920 */
 #gallery-link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -52,14 +43,11 @@
     width: 100%;
 }
 
-
 .centered-link {
     margin: auto;
     text-align: center;
     color: #fff;
 }
-/* 3. End */
-
 
 #map-link {
     height: 250px;
@@ -77,7 +65,6 @@
     justify-content: center;
     position: relative;
 }
-
 
 /*------------------------------------------------------Animations*/
 .div-hover {
@@ -102,8 +89,7 @@
     text-decoration: none;
 }
 
-
-/* 4. Code edited to purpose from https://stackoverflow.com/a/16516826 */
+/* Code edited to purpose from https://stackoverflow.com/a/16516826 */
 /* z-index values utilised so that when the scale increases, the image hovered overs does not have one side clipped behind the image next to it.*/
 @-webkit-keyframes zoom-out {
     from {
@@ -138,12 +124,9 @@
     }
 }
 
-/* 4. End */
-
-/* 2. CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
-/*Blur effects are necessary so the thumbnail are not seen to be pixelated*/
+/* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
+/* Blur effects are necessary so the thumbnail is not seen to be pixelated*/
 /* The same classes exist in iframe.css but necessitate different values, so they are saved in seperate files*/
-
 .card-image {
     -webkit-filter: blur(6px);
             filter: blur(6px);
@@ -159,4 +142,3 @@
     transition: filter 2s;
     transition: filter 2s, -webkit-filter 2s;
 }
-/* 2. End */
