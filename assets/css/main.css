@@ -69,7 +69,7 @@ nav {
 }
 
 nav ul,
-#collapseNavbar {
+#collapse-navbar {
     width: 100%
 }
 
@@ -115,11 +115,11 @@ footer {
     color: #111111;
 }
 
-.footlink {
+.foot-link {
     color: #00611C;
 }
 
-.footlink:hover {
+.foot-link:hover {
     color: #28a745
 }
 
@@ -129,30 +129,30 @@ footer {
 
 /*------------------------------------------------------Modal Styles*/
 
-#emailmodal .modal-content,
-#emailmodal .modal-header,
-#emailmodal .modal-dialog {
+#email-modal .modal-content,
+#email-modal .modal-header,
+#email-modal .modal-dialog {
     color: #fff;
     background-color: rgb(0, 0, 0);
 }
 
-#emailmodal .modal-content {
+#email-modal .modal-content {
     border: 2px solid rgba(0, 97, 28, 0.8)
 }
 
 
-#emailmodal .modal-header,
-#emailmodal .header-wrapper {
+#email-modal .modal-header,
+#email-modal .header-wrapper {
     color: #fff;
     background-color: #00611C;
     border: none;
 }
 
-#emailmodal button.close {
+#email-modal button.close {
     color: #D3D3D3;
 }
 
-#emailmodal button.close:hover {
+#email-modal button.close:hover {
     color: #fff;
 }
 

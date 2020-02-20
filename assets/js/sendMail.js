@@ -1,6 +1,11 @@
-const contactF = document.getElementById("emailform");
+const contactF = document.getElementById("contact-form");
+const newsF = document.getElementById("news-form");
 
-contactF.addEventListener('submit', submitAct);
+
+if (contactF) {
+contactF.addEventListener('submit', submitAct);}
+newsF.addEventListener('submit', submitAct);
+
 
 // Prevents form refreshing the page
 function submitAct(event) {
@@ -16,19 +21,19 @@ function clearInput() {
 
 // Posts thank you message into modal
 function okResponse() {
-    $('#emailmodalheader').html(`Thank You`);
-    $('#emailmodalbody').html(`You will receive a response shortly.`);
-    $('#emailmodal').modal('show');
+    $('#email-modal-header').html(`Thank You`);
+    $('#email-modal-body').html(`You will receive a response shortly.`);
+    $('#email-modal').modal('show');
     clearInput();
 }
 
 // Posts failure message into modal
 function errorResponse(error) {
-    $('#emailmodalheader').html(`Sorry!`);
-    $('#emailmodalbody').html(`There appears to be a problem! <br>
+    $('#email-modal-header').html(`Sorry!`);
+    $('#email-modal-body').html(`There appears to be a problem! <br>
                             Error Info: <br>
                             ${error.status}${error.text}`);
-    $('#emailmodal').modal('show');;
+    $('#email-modal').modal('show');;
 }
 
 // Sends email with all parameters

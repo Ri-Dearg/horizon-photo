@@ -4,7 +4,10 @@
 <head>
 	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,">
+    <meta name="description" content="Explore the world through my photos">
+    <meta name="author" content="Rory Sheridan">
 
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
@@ -39,15 +42,11 @@
 	<!--Page Stylesheet-->
 	<link rel="stylesheet" href="assets/css/gallery.css" type="text/css" />
 
-	<!--Script placed in head tag because iframe does not always load correct height with script at the bottom, as it searches for an undefined function-->
-	<script src="assets/js/map.js" defer> </script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap"
-		defer></script>
-
 	<title>Horizon Photography | Gallery</title>
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-	<script type="text/javascript">
+    <!-- EmailJS Script for contact / newsletter form -->
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script>
 		(function(){
             emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
         })();
@@ -56,62 +55,71 @@
 </head>
 
 <body>
-	<header class="container-fluid m-0 p-0">
-		<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+    <header>
 
-			<!-- 1. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+        <!-- Sticky Navbar with collapsable hamburger menu for smaller screens-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+
+			<!-- Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
 			<a href="index.html" class="d-md-none pl-3">
 				<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-                </a>
-				<!-- 1. End -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapse-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-navbar">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
+                    </li>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-				<div class="collapse navbar-collapse" id="collapseNavbar">
-					<ul class="navbar-nav justify-content-center">
-
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-						</li>
-
-						<!-- 2. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-						<li class="d-none d-md-block mx-md-3">
-							<a href="index.html">
-								<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
-                            </a>
-						</li>
-						<!-- 2. End -->
-
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
+                    <!-- Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+                    <li class="d-none d-md-block mx-md-3">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
+                        </a>
+                    </li>
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
 		</nav>
 	</header>
 
+
+    <!-- Heading included for validation, set to display: none as it is not necessary to see -->
+    <h1 class="d-none">Gallery</h1>
+
 	<section class="container-fluid p-0 m-0">
+
+        <!-- Heading included for validation, set to display: none as it is not necessary to see -->
+        <h2 class="d-none">Travel Gallery</h2>
 		<article>
-			<h1 class="d-none">Gallery</h1>
 
+            <!-- Heading included for validation, set to display: none as it is not necessary to see -->
+            <h3 class="d-none">Map Gallery</h3>
+
+            <!-- Google Maps API map div-->
 			<div id="map" class="container-fluid"></div>
-			<div id=scrollPoint></div>
 
-			<!-- The iframe contains the basic gallery page layout and is modified with the script files to change photos based on location -->
-			<iframe src="iframeDefault.html" id="iframeGallery" class="container-fluid m-0 p-0"></iframe>
+            <!-- A div used for scrolling down to the iframe heading-->
+			<div id=scroll-point></div>
+
+			<!-- The iframe contains the basic gallery page layout and is modified with the script files to change content based on location -->
+			<iframe src="iframeDefault.html" id="iframe-gallery" class="container-fluid m-0 p-0"></iframe>
 		</article>
 
-
-		<!-- List of hidden article content placed here for info trawling purposes-->
-		<article class="d-none" id="canadacontent">
+		<!-- List of hidden article content placed here within the section containing the iframe for info trawling purposes-->
+        <!-- These are set to display: none for this page, and are their text is set to content within the iframe when a location is selected-->
+		<article class="d-none" id="canada-content">
 			<h2 class="heading-font d-none">Canada</h2>
 			<p>An unexplored wilderness of majestic beauty and diverse wildlife.
 				Wander through this very magical place and witness its rich natural beauty.
 				Discover stunning vistas of mountains, rivers and valleys. </p>
 		</article>
 
-		<article class="d-none" id="chinacontent">
+		<article class="d-none" id="china-content">
 			<h2 class="heading-font d-none">China</h2>
 			<p class="m-0">A land of sprawling cities and wild nature, rolling hills,
 				towering mountains, rumbling rivers and sunny skies, with scenic walkways tucked
@@ -119,7 +127,7 @@
 				flawless harmony.</p>
 		</article>
 
-		<article class="d-none" id="egyptcontent">
+		<article class="d-none" id="egypt-content">
 			<h2 class="heading-font d-none">Egypt</h2>
 			<p>An ancient land of mysteries, Sphinxes, pyramids and a great fallen
 				civilisation. A civilisation that we are still trying to understand. Not just a
@@ -127,7 +135,7 @@
 				monuments. </p>
 		</article>
 
-		<article class="d-none" id="germanycontent">
+		<article class="d-none" id="germany-content">
 			<h2 class="heading-font d-none">Germany</h2>
 			<p>From the modern metropolitan hubs to the traditions of the old-time
 				towns. Scale the Bavarian mountains for the renowned beauty of the Bavarian
@@ -135,56 +143,56 @@
 			</p>
 		</article>
 
-		<article class="d-none" id="indiacontent">
+		<article class="d-none" id="india-content">
 			<h2 class="heading-font d-none">India</h2>
 			<p>India, a sprawling land of many cultures, deep spirituality and abundant
 				flavourful food. Experience every corner of this country, across different terrains
 				and through changing cuisines. embracing the bright colors and brighter people.</p>
 		</article>
 
-		<article class="d-none" id="irelandcontent">
+		<article class="d-none" id="ireland-content">
 			<h2 class="heading-font d-none">Ireland</h2>
 			<p>A lush green land with dramatic vistas of gloomy clouds, rolling mountains, sand and
 				sea, a gem.It is a marvel to see the brilliant sunset as it blazes below the western
 				horizon. There is the verdant countryside and relaxed, peaceful feeling of Ireland. </p>
 		</article>
 
-		<article class="d-none" id="italycontent">
+		<article class="d-none" id="italy-content">
 			<h2 class="heading-font d-none">Italy</h2>
 			<p>A center of food and fashion. Tuscany's beauty, richness and diversity remain rooted
 				in tradition. In regions like Calabria,, Rimini and Massa Speranza, Roman ruins are
 				still found. Imagine a world of once rich, vibrant Roman civilization. </p>
 		</article>
 
-		<article class="d-none" id="japancontent">
+		<article class="d-none" id="japan-content">
 			<h2 class="heading-font d-none">Japan</h2>
 			<p>The same scenes changing, season by season, year after year. The famous snowing day
 				in winter,the changing of the seasons or the beautiful, delicate sea of cherry blossom
 				trees, symbolize the sacred, mystical and universal beauty that is truly Japanese. </p>
 		</article>
 
-		<article class="d-none" id="kenyacontent">
+		<article class="d-none" id="kenya-content">
 			<h2 class="heading-font d-none">Kenya</h2>
 			<p>In the rare moments that it rains, large stretches of the savannah come alive. In the
 				early morning, when the sun hits the shadows of trees and the sky glows with the
 				brightest yellow and green. brings deep contentment, tranquility and peace.</p>
 		</article>
 
-		<article class="d-none" id="mexicocontent">
+		<article class="d-none" id="mexico-content">
 			<h2 class="heading-font d-none">Mexico</h2>
 			<p>Vivid colors and vibrant people, the splendor will charm you. With beautiful dancers,
 				theatrical entertainment and authentic traditional folk dances, there is nothing more to
 				do here other than relax and enjoy your time here. Take in this mesmerizing culture</p>
 		</article>
 
-		<article class="d-none" id="moroccocontent">
+		<article class="d-none" id="morocco-content">
 			<h2 class="heading-font d-none">Morocco</h2>
 			<p>Pungent spices and trinkets line the market stalls of Marrakesh. The desert oasis sands blow with
 				seductive currents of musk, vanilla and aromatic herbs. Between desert heat and the expanse of wild
 				flowers, experience a little bit of paradise in the desert.</p>
 		</article>
 
-		<article class="d-none" id="unitedstatesofamericacontent">
+		<article class="d-none" id="unitedstatesofamerica-content">
 			<h2 class="heading-font d-none">United States of America</h2>
 			<p>Towering skyscrapers cover entire skylines. Get lost in the wilderness of the
 				north-west or the frontier towns of the south. Ffrom sea to shining sea, a labyrinth of
@@ -192,25 +200,31 @@
 		</article>
 	</section>
 
-
+	<!-- Three section footer-->
 	<footer class="container-fluid">
 		<div class="row pb-1 pb-md-3">
-			<div class="col-sm-4 mt-3">
+
+            <!-- Newsletter sign up -->
+			<div class=" col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Newsletter</h2>
 				<p class="mb-0">Sign up here!</p>
-				<form id="emailform" class="form-group d-flex justify-content-center mb-1"
+
+                <!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+				<form id="news-form" class="form-group d-flex justify-content-center mb-1"
 					onsubmit="return sendMailNews(this);">
 					<input type="email" name="email" placeholder="Email" class="form-control" required/>
 					<input type="submit" value="Join" class="btn btn-success ml-2" />
-                    </form>
-			</div>
-			<div class="col-sm-4 mt-3">
-				<h2 class="heading-font heading-size">Contact</h2>
-				<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-					I'd love to know what you think.</p>
+                </form>
 			</div>
 
-			<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+            <!-- Links to contact page -->
+			<div class="col-sm-4 mt-3">
+				<h2 class="heading-font heading-size">Contact</h2>
+				<p class="mb-0">Send me a message at the <a href="contact.html" class="foot-link">Contact</a> page! I'd love to know what you think.</p>
+			</div>
+            
+            <!-- Social Link section -->
+			<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 			<div class="col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Social</h2>
 				<ul class="list-inline social-links">
@@ -240,56 +254,62 @@
 					</li>
 				</ul>
 			</div>
-			<!-- 5. End-->
 		</div>
 	</footer>
 
-	<!-- 4. Modal from http://jsfiddle.net/4p57wx8r/ -->
+    <!-- Modal utilised for the gallery, with styles set from gallery.css for a different impact than the email modal-->
 	<!--The modal is useful for both large and small devices as it opens a larger version of that image for viewing-->
-	<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="imagemodal" aria-hidden="true">
+	<div class="modal fade" id="image-modal" tabindex="-1" role="dialog" aria-labelledby="image-modal" aria-hidden="true">
 		<div class="modal-dialog modal-lg mt-5">
 			<div class="modal-content">
 				<div class="modal-body p-0">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<!--img src must be empty for the modal to function-->
-					<img src="" class="imagepreview" style="width: 100%;" alt="modal">
+					
+                    <!--img src must be empty for the modal to function, content is set by the image clicked -->
+					<img src="#" class="imagepreview" style="width: 100%;" alt="modal">
                 </div>
-				</div>
-			</div>
-		</div>
-		<!-- 4. End -->
+            </div>
+        </div>
+    </div>
 
-		<!-- Modal for email dialog-->
-		<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg mt-5">
-				<div class="modal-content">
-					<div class="header-wrapper d-flex">
-						<div class="modal-header mx-auto p-0">
-							<h4 class="my-3 heading-font" id="emailmodalheader"></h4>
-						</div>
-					</div>
-					<div class="modal-body text-center">
-						<p class="my-0" id="emailmodalbody"></p>
-					</div>
-					<div class="modal-footer mx-auto">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on succes or error-->
+    <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="email-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-5">
+            <div class="modal-content">
+                <div class="header-wrapper d-flex">
+                    <div class="modal-header mx-auto p-0">
+                        <!-- Heading is set by sendMail.js -->
+                        <h4 class="my-3 heading-font" id="email-modal-header"></h4>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Content is set by sendMail.js -->
+                    <p class="my-0" id="email-modal-body"></p>
+                </div>
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<!-- Arrow to scroll to top-->
-		<a href="#"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    <!-- Arrow used to scroll back to the top of the page after viewing gallery images-->
+    <a href="#"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
-		<script src="assets/libraries/js/popper.min.js"></script>
-		<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
+    <script src="assets/libraries/js/popper.min.js"></script>
+    <script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 
-		<script src="assets/js/sendMail.js"></script>
+    <!-- Script for sending email -->
+    <script src="assets/js/sendMail.js"></script>
 
+    <!-- Script for all map functionality: loading the map, all map markers, RESTCountry API info and swapping iframe content on marker click-->
+    <script src="assets/js/map.js" async defer> </script>
+
+    <!-- Google Maps API script-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfRL5agzUpnE7LSXM0yET77gB448-4vA&callback=initMap" async defer></script>
 
 </body>
 

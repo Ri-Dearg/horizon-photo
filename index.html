@@ -5,6 +5,9 @@
 	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,">
+	<meta name="description" content="Explore the world through my photos">
+	<meta name="author" content="Rory Sheridan">
 
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
@@ -41,8 +44,9 @@
 
 	<title>Horizon Photography | Home</title>
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-	<script type="text/javascript">
+	<!-- EmailJS Script for contact / newsletter form -->
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script>
 		(function(){
             emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
         })();
@@ -52,115 +56,118 @@
 
 <body>
 
-	<!-- 1. page loader from https://smallenvelop.com/display-loading-icon-page-loads-completely/-->
+	<header>
 
-	<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+        <!-- Sticky Navbar with collapsable hamburger menu for smaller screens-->
+		<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
 
-		<!-- 2. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
-		<a href="index.html" class="d-md-none pl-3">
-			<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-                </a>
-			<!-- 2. End -->
+			<!-- Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+			<a href="index.html" class="d-md-none pl-3">
+				<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapse-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-navbar">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
+                    </li>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-			<div class="collapse navbar-collapse" id="collapseNavbar">
-				<ul class="navbar-nav justify-content-center">
-					<li class="nav-item m-md-auto">
-						<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-					</li>
-
-					<!-- 3. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-					<li class="d-none d-md-block mx-md-3">
-						<a href="index.html">
-							<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
-                            </a>
-					</li>
-					<!-- 3. End -->
-
-					<li class="nav-item m-md-auto">
-						<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</div>
-	</nav>
-
-	<!-- 4. Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
-	<div class="jumbotron jumbotron-fluid p-0 m-0">
-		<!--Code utilised and edited from Whiskey drop: https://github.com/Code-Institute-Solutions/BootstrappingYourNextBigIdea-BS4/blob/master/04-BeyondBootstrap/03-cleaning_up_our_content/index.html-->
-		<header class="container-fluid callout-container m-0 p-0 card-image"
-			style="background-image: url(assets/images/callout_tn.jpg);" data-image-full="assets/images/callout.jpg">
-			<img class="d-none" src="assets/images/callout_tn.jpg" alt="splash image">
-
-			<!-- 4. Jumbotron container-->
-			<div class="container-fluid" id="jumbotext">
-				<div class="row">
-					<div class="col px-2">
-						<h2 class="display-4 m-0 heading-font heading-size pt-2">Explore</h2>
-						<p class="lead mt-0 mb-2 ml-1">Join us in our travels around the world. See the beauty through
-							our eyes.</p>
-					</div>
-				</div>
-			</div>
-			<!-- 5. End -->
-
-		</header>
-	</div>
-	<!-- 2. End -->
-
-	<section class="container-fluid" id=aboutme>
-		<div class="row">
-			<div class="col-sm-4 d-flex p-3">
-				<img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
+                    <!-- Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+                    <li class="d-none d-md-block mx-md-3">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
+                        </a>
+                    </li>
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-				<div class="col-sm-8 my-auto">
+		</nav>
+	</header>
 
-					<!-- 4. Class used to position the header to the right on medium and larger screens-->
-					<div class="d-md-flex flex-row-reverse">
-						<h1 class="display-4 heading-font heading-size pt-md-2">About</h1>
+	<section>
+		<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+		<div class="jumbotron jumbotron-fluid p-0 m-0">
+
+            <!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
+			<div class="container-fluid callout-container m-0 p-0 card-image"
+				style="background-image: url(assets/images/callout_tn.jpg);"
+				data-image-full="assets/images/callout.jpg">
+				<img class="d-none" src="assets/images/callout_tn.jpg" alt="splash image">
+
+				<!-- Jumbotron container-->
+				<div class="container-fluid" id="jumbo-text">
+					<div class="row">
+						<div class="col px-2">
+							<h2 class="display-4 m-0 heading-font heading-size pt-2">Explore</h2>
+							<p class="lead mt-0 mb-2 ml-1">Join us in our travels around the world. See the beauty through our eyes.</p>
+						</div>
 					</div>
-					<!-- 4. End -->
-
-					<p>I am a travel photogrpaher who loves to take pictures of things from all angles, be it food,
-						cars, people, places and projects. I shot many outdoor projects accross continents. I work with
-						locals and travellers, often split my time between daily living and toruist
-						sights. I want to become a travel blogger, photographer and guide with my own personal style,
-						developing a knowledge of my subject matter. I love authentic travel to absorb its richness and
-						experience its nooks and crannies. The world is its own special place and I want to show this to
-						everyone.</p>
 				</div>
 			</div>
-			<!-- Animations created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
+		</div>
 
+        <!-- Small info section on photographer-->
+		<div class="container-fluid" id=about-me>
 			<div class="row">
-				<div id="maplink" class="col p-0 div-hover">
-					<a href="gallery.html" class="gallerylink link-hover">
-						<h2 class="display-4 centered-link heading-font heading-size">Travel <br>
-                        Gallery</h2>
-					</a>
+				<div class="col-md-4 d-flex p-3">
+					<img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
+                </div>
+                <div class="col-md-8 my-auto">
+
+                    <!-- Class used to position the header to the right on medium and larger screens-->
+                    <div class="d-md-flex flex-row-reverse">
+                        <h1 class="display-4 heading-font heading-size pt-md-2">About</h1>
+                    </div>
+                    <p>I am a travel photogrpaher who loves to take pictures of things from all angles, be it food,
+                        cars, people, places and projects. I shot many outdoor projects accross continents. I work
+                        with locals and travellers, often split my time between daily living and toruist
+                        sights. I want to become a travel blogger, photographer and guide with my own personal style,
+                        developing a knowledge of my subject matter. I love authentic travel to absorb its richness and
+                        experience its nooks and crannies. The world is its own special place and I want to show this to everyone.</p>
+                </div>
+            </div>
+				
+                <!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
+				<div class="row">
+					<div id="map-link" class="col p-0 div-hover">
+						<a href="gallery.html" id="gallery-link" class="link-hover">
+							<h2 class="display-4 centered-link heading-font heading-size">Travel <br>
+                            Gallery</h2>
+						</a>
+					</div>
 				</div>
-			</div>
+        </div>
 	</section>
 
+    <!-- Three section footer-->
 	<footer class="container-fluid">
 		<div class="row pb-1 pb-md-3">
+
+            <!-- Newsletter sign up -->
 			<div class=" col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Newsletter</h2>
 				<p class="mb-0">Sign up here!</p>
-				<form id="emailform" class="form-group d-flex justify-content-center mb-1"
+
+                <!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+				<form id="news-form" class="form-group d-flex justify-content-center mb-1"
 					onsubmit="return sendMailNews(this);">
 					<input type="email" name="email" placeholder="Email" class="form-control" required/>
 					<input type="submit" value="Join" class="btn btn-success ml-2" />
                 </form>
 			</div>
+
+            <!-- Links to contact page -->
 			<div class="col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Contact</h2>
-				<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-					I'd love to know what you think.</p>
+				<p class="mb-0">Send me a message at the <a href="contact.html" class="foot-link">Contact</a> page! I'd love to know what you think.</p>
 			</div>
-			<!-- 5. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
-
+            
+            <!-- Social Link section -->
+			<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 			<div class="col-sm-4 mt-3">
 				<h2 class="heading-font heading-size">Social</h2>
 				<ul class="list-inline social-links">
@@ -190,30 +197,29 @@
 					</li>
 				</ul>
 			</div>
-			<!-- 5. End-->
-
 		</div>
 	</footer>
 
-	<!-- Modal for contact form popup-->
-	<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg mt-5">
-			<div class="modal-content">
-				<div class="header-wrapper d-flex">
-					<div class="modal-header mx-auto p-0">
-						<h4 class="my-3 heading-font" id="emailmodalheader"></h4>
-					</div>
-				</div>
-				<div class="modal-body text-center">
-					<p class="my-0" id="emailmodalbody"></p>
-				</div>
-				<div class="modal-footer mx-auto">
-					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on succes or error-->
+    <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="email-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-5">
+            <div class="modal-content">
+                <div class="header-wrapper d-flex">
+                    <div class="modal-header mx-auto p-0">
+                        <!-- Heading is set by sendMail.js -->
+                        <h4 class="my-3 heading-font" id="email-modal-header"></h4>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Content is set by sendMail.js -->
+                    <p class="my-0" id="email-modal-body"></p>
+                </div>
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -221,10 +227,10 @@
 	<script src="assets/libraries/js/popper.min.js"></script>
 	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 
-	<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
+    <!-- Script for image loading blur -->
 	<script src="assets/js/imageLoadSwitch.js"></script>
-	<!--6. End -->
 
+    <!-- Script for sending email -->
 	<script src="assets/js/sendMail.js"></script>
 
 </body>

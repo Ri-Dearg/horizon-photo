@@ -1,6 +1,6 @@
 // Adjusts gallery height for varying picture formats and devices
 function galleryHeight() {
-    const mapGallery = document.getElementById('iframeGallery');
+    const mapGallery = document.getElementById('iframe-gallery');
     if (mapGallery) {
         mapGallery.height = '';
         mapGallery.height = mapGallery.contentWindow.document.body.offsetHeight + 'px';
@@ -33,7 +33,7 @@ $(window).on('load', function () {
     const countryName = ['Canada', 'China', 'Egypt', 'Germany', 'India', 'Ireland', 'Italy', 'Japan', 'Kenya', 'Mexico', 'Morocco', 'United States of America'];
 
     // Allows selection of elements within the iframe
-    const iframeC = $('iframe#iframeGallery').contents();
+    const iframeC = $('iframe#iframe-gallery').contents();
 
     // variable containing country info
     let countryData = [];
@@ -86,14 +86,14 @@ $(window).on('load', function () {
     }
 
     function galleryScroll() {
-        const ancTag = $('#scrollPoint');
+        const ancTag = $('#scroll-point');
         $('html,body').animate({ scrollTop: ancTag.offset().top }, 1200);
     }
 
     // Opens a modal in gallery.html when an image in the iframe is clicked
     iframeC.find('.pop').on('click', function () {
         $('.imagepreview').attr('src', $(this).attr('data-image-full'));
-        $('#imagemodal').modal('show');
+        $('#image-modal').modal('show');
     });
 
     // Function compiling array data into markers
@@ -132,14 +132,14 @@ $(window).on('load', function () {
     // Controls page animation, passing marker title to gallery changing function
     function pageSwitch(markName) {
         const lwr1 = markName.toLowerCase().replace(/\s+/g, '');
-        $('iframe#iframeGallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName));
+        $('iframe#iframe-gallery').fadeOut(1000).fadeIn(1000, galleryChoice(markName));
 
         // Changes title and swaps url in time with animations, places blurb content into gallery
         function galleryChoice(markName) {
-            const blurbContent = $(`#${lwr1}content`).html();
+            const blurbContent = $(`#${lwr1}-content`).html();
             setTimeout(function () {
-                iframeC.find('#galleryTitle').html(`${markName}`);
-                iframeC.find('#countryBlurb').html(`${blurbContent}`);
+                iframeC.find('#gallery-title').html(`${markName}`);
+                iframeC.find('#country-blurb').html(`${blurbContent}`);
                 urlChange();
             }, 900);
 

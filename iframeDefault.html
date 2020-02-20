@@ -4,7 +4,10 @@
 <head>
 	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,">
+    <meta name="description" content="Explore the world through my photos">
+    <meta name="author" content="Rory Sheridan">
 
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
@@ -50,11 +53,11 @@
 		<h1 class="d-none">Gallery Selector</h1>
 
 		<!-- Changes title based on country selected in the gallery map-->
-		<h4 class="text-center m-0 p-2" id="galleryTitle">Explore the world through my photos.<br>
+		<h4 class="text-center m-0 p-2" id="gallery-title">Explore the world through my photos.<br>
         Click on a marker to see its gallery and read about it.</h4>
 
 			<!-- Is injected with content from the gallery page after location is selected -->
-			<div id="countryBlurb" class="text-center m-1 p-2"></div>
+			<div id="country-blurb" class="text-center m-1 p-2"></div>
 
 			<div class="row mx-auto mt-1">
 
@@ -120,9 +123,8 @@
 	<script src="assets/libraries/js/popper.min.js"></script>
 	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 
-	<!--6. javascript for blur utilised from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/*/ -->
+    <!-- Script for image loading blur -->
 	<script src="assets/js/imageLoadSwitch.js"></script>
-	<!--6. End -->
 </body>
 
 </html>

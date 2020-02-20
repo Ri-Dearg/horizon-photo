@@ -5,7 +5,10 @@
 
 	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,">
+    <meta name="description" content="Explore the world through my photos">
+    <meta name="author" content="Rory Sheridan">
 
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
@@ -42,9 +45,9 @@
 
 	<title>Horizon Photography | Contact</title>
 
-	<!-- email script function -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-	<script type="text/javascript">
+    <!-- EmailJS Script for contact / newsletter form -->
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script>
 		(function(){
             emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
         })();
@@ -53,178 +56,185 @@
 </head>
 
 <body>
-	<header class="container-fluid p-0 m-0">
-		<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
-			<!-- 1. Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
+    <header>
+
+        <!-- Sticky Navbar with collapsable hamburger menu for smaller screens-->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+
+			<!-- Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
 			<a href="index.html" class="d-md-none pl-3">
 				<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
             </a>
-				<!-- 1. End -->
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar" aria-controls="collapse-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-				<div class="collapse navbar-collapse" id="collapseNavbar">
-					<ul class="navbar-nav justify-content-center">
+            <div class="collapse navbar-collapse" id="collapse-navbar">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
+                    </li>
 
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-						</li>
-
-						<!-- 2. Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-						<li class="d-none d-md-block mx-md-3">
-							<a href="index.html">
-								<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
+                    <!-- Classes used to remove Logo's display on smaller devices for the collapsable menu-->
+                    <li class="d-none d-md-block mx-md-3">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
                         </a>
-						</li>
-						<!-- 2. End -->
-
-						<li class="nav-item m-md-auto">
-							<a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
+                    </li>
+                    <li class="nav-item m-md-auto">
+                        <a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
 		</nav>
 	</header>
 
-	<!--Div used to push the footer to the bottom of the page as the content does not fill the page on some devices-->
+	<!--Div used to keep the footer at the bottom of the page, as the page content does not fill the page on some devices-->
 	<section class="container-fluid p-0 mt-3 content-container-contact">
 		<div class="row p-0 m-0 h-100">
 			<div class="col-12 d-flex p-3" id="contact-tag">
 				<div class="row m-0 my-auto p-0">
 					<div class="col pb-3">
 						<img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid mx-auto d-block" id="portrait" alt="Photographer portrait">
-                        </div>
-						<div class="w-100"></div>
-						<div class="col">
-							<p class="text-center px-2">I'm always seeking new experiences, perspectives and
-								opportunities. If you want to share something with me, please go ahead. I'm open to
-								discussion. Please comment, share, or repost my work. Feedback is always welcome!</p>
-						</div>
-					</div>
-				</div>
+                    </div>
+                    <!-- Class used to seperate the columns and maintain layout-->
+                    <div class="w-100"></div>
+                    <div class="col">
+                        <p class="text-center px-2">I'm always seeking new experiences, perspectives and
+                            opportunities. If you want to share something with me, please go ahead. I'm open to
+                            discussion. Please comment, share, or repost my work. Feedback is always welcome!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex col-12 p-0">
+                <div class="row p-1 m-auto" id="contact">
+                    <div class="col d-flex justify-content-center">
+                        <h1 class="heading-font heading-size">Contact me</h1>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col d-flex justify-content-center">
 
-				<div class="d-flex col-12 p-0">
-					<div class="row p-1 m-auto" id="contact">
-						<div class="col d-flex justify-content-center">
-							<h1 class="heading-font heading-size">Contact me</h1>
-						</div>
-						<div class="w-100"></div>
-						<div class="col d-flex justify-content-center">
-							<form id="emailform" onsubmit="return sendMailContact(this);">
-								<div class="row contact-row">
-									<div class="col p-1">
-										<input type="text" name="name" placeholder="Name" class="form-control clear" required/>
-                                    </div>
-										<div class="col p-1">
-											<input type="tel" name="number" placeholder="Number (Optional)" class="form-control clear" />
-                                    </div>
-										</div>
-										<div class="row contact-row">
-											<div class="col mt-2 p-1">
-												<input type="email" name="email" placeholder="Email" class="form-control clear" required/>
-                                    </div>
-											</div>
-											<div class="row contact-row">
-												<div class="col mt-2 p-1">
-													<textarea name="message" placeholder="Send me a message." class="form-control clear" id="cmessage" required></textarea>
-												</div>
-											</div>
-											<div class="row contact-row">
-												<div class="col my-2 p-1 d-flex justify-content-center">
-													<input type="submit" class="btn btn-success" value="Send"/>
-                                    </div>
-												</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+                        <form id="contact-form" onsubmit="return sendMailContact(this);">
+                            <div class="row contact-row">
+                                <div class="col p-1">
+                                    <input type="text" name="name" placeholder="Name" class="form-control clear" required/>
+                                </div>
+                                <div class="col p-1">
+                                    <input type="tel" name="number" placeholder="Number (Optional)" class="form-control clear" />
+                                </div>
+                            </div>
+                            <div class="row contact-row">
+                                <div class="col mt-2 p-1">
+                                    <input type="email" name="email" placeholder="Email" class="form-control clear" required/>
+                                </div>
+                            </div>
+                            <div class="row contact-row">
+                                <div class="col mt-2 p-1">
+                                    <textarea name="message" placeholder="Send me a message." class="form-control clear" id="cmessage" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row contact-row">
+                                <div class="col my-2 p-1 d-flex justify-content-center">
+                                    <input type="submit" class="btn btn-success" value="Send"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</section>
 
-	<!--Seperate container for the footer to keep it pushed down to the bottom of the page-->
+	<!--Seperate container for the footer to keep it pushed down to the bottom of the page as the page content is too short to fill many viewports-->
 	<div class="footer-container">
-		<footer class="container-fluid">
-			<div class="row pb-1 pb-md-3">
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Newsletter</h2>
-					<p class="mb-0">Sign up here!</p>
-					<form id="emailform" class="form-group d-flex justify-content-center mb-1"
-						onsubmit="return sendMailNews(this);">
-						<input type="email" name="email" placeholder="Email" class="form-control" required/>
-						<input type="submit" value="Join" class="btn btn-success ml-2" />
-                </form>
-				</div>
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Contact</h2>
-					<p class="mb-0">Send me a message at the <a href="contact.html" class="footlink">Contact</a> page!
-						I'd love to know what you think.</p>
-				</div>
+        
+        <!-- Three section footer-->
+        <footer class="container-fluid">
+            <div class="row pb-1 pb-md-3">
 
-				<!-- 3. Code utilised from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
-				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Social</h2>
-					<ul class="list-inline social-links">
-						<li class="list-inline-item">
-							<a target="_blank" href="https://www.facebook.com/ridearg-411885722878522/">
-								<i class="fab fa-facebook" aria-hidden="true"></i>
-								<span class="sr-only">Facebook</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="https://www.instagram.com/ri.dearg/">
-								<i class="fab fa-instagram" aria-hidden="true"></i>
-								<span class="sr-only">Instagram</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="https://500px.com/horizonrecordblog">
-								<i class="fab fa-500px" aria-hidden="true"></i>
-								<span class="sr-only">500px</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a target="_blank" href="https://www.flickr.com/photos/horizon_photo/">
-								<i class="fab fa-flickr" aria-hidden="true"></i>
-								<span class="sr-only">Flickr</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!-- 3. End-->
+                <!-- Newsletter sign up -->
+                <div class=" col-sm-4 mt-3">
+                    <h2 class="heading-font heading-size">Newsletter</h2>
+                    <p class="mb-0">Sign up here!</p>
 
-			</div>
-		</footer>
+                    <!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+                    <form id="news-form" class="form-group d-flex justify-content-center mb-1"
+                        onsubmit="return sendMailNews(this);">
+                        <input type="email" name="email" placeholder="Email" class="form-control" required/>
+                        <input type="submit" value="Join" class="btn btn-success ml-2" />
+                    </form>
+                </div>
 
-		<!-- Modal for contact form popup-->
-		<div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="responsemodal"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg mt-5">
-				<div class="modal-content">
-					<div class="header-wrapper d-flex">
-						<div class="modal-header mx-auto p-0">
-							<h4 class="my-3 heading-font" id="emailmodalheader"></h4>
-						</div>
-					</div>
-					<div class="modal-body text-center">
-						<p class="my-0" id="emailmodalbody"></p>
-					</div>
-					<div class="modal-footer mx-auto">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
+                <!-- Links to contact page -->
+                <div class="col-sm-4 mt-3">
+                    <h2 class="heading-font heading-size">Contact</h2>
+                    <p class="mb-0">Send me a message at the <a href="contact.html" class="foot-link">Contact</a> page! I'd love to know what you think.</p>
+                </div>
+                
+                <!-- Social Link section -->
+                <!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+                <div class="col-sm-4 mt-3">
+                    <h2 class="heading-font heading-size">Social</h2>
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/ridearg-411885722878522/">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/ri.dearg/">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://500px.com/horizonrecordblog">
+                                <i class="fab fa-500px" aria-hidden="true"></i>
+                                <span class="sr-only">500px</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.flickr.com/photos/horizon_photo/">
+                                <i class="fab fa-flickr" aria-hidden="true"></i>
+                                <span class="sr-only">Flickr</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
+        <!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on succes or error-->
+    <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="email-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-5">
+            <div class="modal-content">
+                <div class="header-wrapper d-flex">
+                    <div class="modal-header mx-auto p-0">
+                        <!-- Heading is set by sendMail.js -->
+                        <h4 class="my-3 heading-font" id="email-modal-header"></h4>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Content is set by sendMail.js -->
+                    <p class="my-0" id="email-modal-body"></p>
+                </div>
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	</div>
-
-	<script src="assets/js/sendMail.js"></script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
 	<script src="assets/libraries/js/popper.min.js"></script>
 	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Script for sending email -->
+	<script src="assets/js/sendMail.js"></script>
 
 </body>
 

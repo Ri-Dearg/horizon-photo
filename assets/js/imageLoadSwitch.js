@@ -5,8 +5,8 @@ window.addEventListener('load', function () {
 
 /* Resets the class of each loaded image when the anchors are modified
 This allows the lazyLoad function to correctly blur and swap images on url change*/
-$('body').on('DOMSubtreeModified', '#galleryTitle', function() {
-    $('#galleryTitle').addClass('heading-font')
+$('body').on('DOMSubtreeModified', '#gallery-title', function() {
+    $('#gallery-title').addClass('heading-font')
     $('a').removeClass('is-loaded');
     setTimeout(lazyLoad, 1000);
 });
