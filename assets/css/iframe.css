@@ -1,10 +1,12 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-/*------------------------------------------------------Base*/
+/*------------------------------------------------------Basic*/
+/* Prevents Scrollbars */
 html {
     overflow: hidden;
     }
 
+/* Keeps the iframe flush with the map */
 body {
     padding-top: 0;
 }
@@ -18,14 +20,13 @@ h4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-left: 6px;
-    margin-right: 6px;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
 }
 
 /*------------------------------------------------------Gallery Layout*/
-/*Used to push the footer to the bottom of the page as the content does not fill the page on some devices*/
 /*The min-height is necessary to prevent content overflow and overlap on smaller devices with vertical columns*/
 .content-container-gallery {
     min-height: 83vh;
@@ -52,14 +53,10 @@ h4 {
     }
 }
 
-/* 1. End */
-
 /*------------------------------------------------------Gallery Blur*/
-
-/* 2. CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
+/* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
 /*Blur effects are necessary so the quickly-loaded thumbnails are not seen to be pixelated*/
 /* The same classes exist in index.css but necessitate different values, so they are saved in seperate files*/
-
 .card-image {
     width: 30vw;
     background: #000 center center no-repeat;
@@ -84,4 +81,3 @@ h4 {
     transition: filter 1s;
     transition: filter 1s, -webkit-filter 1s;
 }
-/* 2. End */

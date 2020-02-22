@@ -1,7 +1,7 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 /*------------------------------------------------------Basic*/
-/* 1. From fonts.google.com */
+/* From fonts.google.com */
 /* Used for headings */
 @font-face {
     font-family: 'Julius Sans One';
@@ -20,13 +20,12 @@
     font-weight: normal;
     font-style: normal;
 }
-/* 1. End */
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     overflow-x: hidden;
-    padding-top: 56px;
+    padding-top: 3.5rem;
 }
 
 .heading-font {
@@ -62,14 +61,13 @@ a:hover {
 nav {
     background-color: #000;
     font-family: 'Julius Sans One', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-size: 1.4rem;
     width: 100%;
-
 }
 
 nav ul,
-#collapseNavbar {
+#collapse-navbar {
     width: 100%
 }
 
@@ -92,7 +90,7 @@ nav ul,
 }
 
 .navbar-toggler {
-    margin-right: 3px;
+    margin-right: 0.1875rem;
 }
 
 /*------------------------------------------------------Section*/
@@ -115,11 +113,11 @@ footer {
     color: #111111;
 }
 
-.footlink {
+.foot-link {
     color: #00611C;
 }
 
-.footlink:hover {
+.foot-link:hover {
     color: #28a745
 }
 
@@ -128,34 +126,31 @@ footer {
 }
 
 /*------------------------------------------------------Modal Styles*/
-
-#emailmodal .modal-content,
-#emailmodal .modal-header,
-#emailmodal .modal-dialog {
+#email-modal .modal-content,
+#email-modal .modal-header,
+#email-modal .modal-dialog {
     color: #fff;
     background-color: rgb(0, 0, 0);
 }
 
-#emailmodal .modal-content {
-    border: 2px solid rgba(0, 97, 28, 0.8)
+#email-modal .modal-content {
+    border: 0.125rem solid rgba(0, 97, 28, 0.8)
 }
 
-
-#emailmodal .modal-header,
-#emailmodal .header-wrapper {
+#email-modal .modal-header,
+#email-modal .header-wrapper {
     color: #fff;
     background-color: #00611C;
     border: none;
 }
 
-#emailmodal button.close {
+#email-modal button.close {
     color: #D3D3D3;
 }
 
-#emailmodal button.close:hover {
+#email-modal button.close:hover {
     color: #fff;
 }
-
 
 /* 2. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
 .fab {
@@ -175,4 +170,3 @@ footer {
 .fab:hover {
     background-color: #00611C
 }
-/* 2. End */
