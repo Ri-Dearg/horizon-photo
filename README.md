@@ -43,7 +43,7 @@ Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
 - An arrow that scrolls back to the map appears after scrolling down
 - Iframe images, heading and blurb swap country on marker selection
 - Iframe height auto adjust on window resize and iframe images loading
-- All images use loading blur until they are fully loaded
+- All images use loading blur and thumbnail placeholders until they are fully loaded
 - An image popup modal appears when an image is clicked to highlight it
 - Form Validation
 - The newsletter allows people to sign up to receive the blog posts to the their inbox.
@@ -87,19 +87,21 @@ Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
 - A modal will clarify the success or the failure of the form submission and provide error codes.
 - An auto-reply to the form submission has been implemented.
 - For ease of use, the gallery automatically scrolls down to the iframe with the images amd an arrow is provided that scrolls back to the top.
-- The fixed navabar covered the heading, so I created an offset div to scroll to
-- External links open in a new tab
-- HTML has been validated with [https://validator.w3.org/]
-- CSS has been validated with [https://jigsaw.w3.org/css-validator/] and auto-prefixed with [https://autoprefixer.github.io/]
-- Each javascript file was tested on the site for errors and fucntionality using the console
-- Each feature was developed and tested in its own branch before being pushed to master
+- The fixed navabar covered the heading, so I created an offset div to scroll down to.
+- External links open in a new tab.
+- Images sytematically organised for iframe image switching functions.
+- HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/)
+- CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/)
+- Each javascript file was tested on the site for errors and fucntionality using the console.
+- gitignore file has been included to prevent system file commits
+- Each feature was developed and tested in its own branch before being pushed to master.
 
 ## Deployment
-1. I set up a git hub repository for deployment and set up an SSH key.
-0. I pushed the master branch to the Github Repository.
-0. I went to the settings of the repository and went to the Github pages section.
-0. I validated all HTML and CSS.
-0. I published the site from the master branch.
+1. Set up a git hub repository for deployment and set up an SSH key.
+0. Push the master branch to the Github Repository. The site will update automatically from the master branch.
+0. Go to the settings of the repository and select the Github pages section.
+0. Validate and test HTML, CSS and Javascript.
+0. Published the site from the master branch, ensure index.html is the landing page.
 
 ### User Deployment
 1. Download Master Branch.
