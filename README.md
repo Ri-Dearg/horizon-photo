@@ -6,43 +6,48 @@ Link to deployed project [here](https://ri-dearg.github.io/horizon-photo/index.h
 ## UX
 
 ### Outline
+The home page is desgined to have a big impact with a strong image upon loading. Image blur is used on the splash image as it may take a long time on a slow connection and must display at once for a greater impact. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline is made immediately evident to acquire give a indication of the theme. Below is a short introduction to the photographer, followed by a link to the gallery with an image of a map. Finally, there is the footer with basic details repeated and an option to subscribe to the newsletter.
 
-The home page is desgined to have a big impact with a strong image upon loading. A pre-loader is used to ensure the page is loaded before seeing it. An image with a person in it is used so the viewer can connect with it on a personal level. A landscape image is utilised to communicate the idea of travel. A jumbotron with a headline is made immediately evident to acquire give a indication of the theme. Below is a short introduction to the photographer, followed by links to the gallery. Finally, there is the footer with basic details repeated and an option to subscribe to the newsletter.  
+The flow is designed to first have an impact to create interest and highlight the work followed by basic necessary information about the photographer, and returning, following by highlighting the idea of travel. The footer finishes with any crucial info repeated and the option to subscribe to a newsletter.
 
-The flow is designed to first have an impact to create interest and highlight the work followed by basic necessary information about the photographer, and returning to highlight the work. The footer finishes with any crucial info repeated and the option to subscribe to a newsletter.
+Images used are of full quality as I felt it necessary for a photographer's website that the best quality is always utilised. Loading blur is used where appropriate to ensure that the images will be loaded at full quality without disruption to the user experience.
 
-Images used are of full quality as I felt it necessary for a photographer's website that the best quality is always utilised. Loading blur and a pre-loading ticker are used where appropriate to ensure that the images will be loaded at full quality without disruption to the user experience.
+### Layouts, Colours and Styles
+The layout utilised is simple, a sticky nav helps to navigate after scrolling down. The navbar collapses below medium devices as the spacing in the fonts becomes squahed on smaller devices. The logo shifts from the center on larger devices to the left side on smaller devices so it is always visible. The nav features only two obvious options for simplicity and a focus on what's important: the gallery. The footer contains basic options: newsletter, social links, contact. The gallery has a map with markers which, when clicked, open a gallery coressponding to the country. An infowindow opens, the map shifts to focus on it and after a few seconds the page automatically scrolls down to the images. Once the page shifts down an arrow appears that scrolls you back up to the map. The gallery is responsive and opens a large modal on an image click to highlight the photo, modal background is darkened significantly to highlight the photo. Contact page is simple and clean, with photographer info stacked on top of the form.
 
-### User Stories
-As a user interested in photography, or looking for a photgrapher to hire. The work is highlighted front and center, also highlighting the type of photgrpaher they may be. I would want to examine the Gallery or Contact. Both links are immediately avaialable in the navbar to view more work. I may be interested in the photographer, whom I can learn about by scrolling down. Once I scroll down, links to the gallery are again available to me, along with contact info.
-
-As a user interested in travel, the Blog is highlighted in the navbar and the newsletter is immediately obvious, so I can look at details of travel. Scrolling down I can see different locations whose galleries I can explore. In the footer is another link for the newsletter if I am interested in following the blog.
-
-### Colours and Styles
-The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. Transparent containers are used on top of the image so that the image remains visible throughout the site, without it taking up too much vertical space on mobile. This also means that the image does not shift around when opening and closing collapsable menus. A deep green is used as an accent to add color and create a thematic connection with nature. the dark colors highlight the colors of the photographs much better than a lighter color. This theme is continued throughout the site to retain a minimalistic, clean design with a focus on the photographer's work.
+The main color used is black, to keep the design clean and to contrast with the colors of the photos so that they remain the focus. Secondary colors used are a silver-grey or white to continue the clean look. A deep green is used as an accent to add color and create a thematic connection with nature. The dark colors highlight the colors of the photographs much better than a lighter color. This theme is continued throughout the site to retain a minimalistic, clean design with a focus on the photographer's work.
 
 The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings. 
 
-The navbar collapses below medium devices as the spacing in the fonts becomes squahed on smaller devices. The logo shifts from the center on larger devices to the left side on smaller devices so it is always visible.
+### User Stories
+As a user interested in photography, I expect to see a photography portfolio.
+
+As a user interested in travel, I expect to be able to explore locations through photography.
 
 ### Wireframes
-Wireframe: https://balsamiq.cloud/shm66pj/p116sdz
-The designs for each page changed quite a bit as worked progressed, so they do not represent the wireframes any longer.
+Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
 
 ## Features
 
 ### Features implemented
-- The newsletter allows people to sign up to receive the blog posts to the their inbox.
-- The gallery highlight the locations visited with a filter tab for each location and a pop-up modal for the enlarged images. A blur before the image has loaded eases the loading time and maintains the layout.
-- The blog is a collection of stories or information about the locations with related images, giving a story to images seen.
-- A simple contact page.
+
+- Map styled consistently with website
+- Map zooms differently based on device size
+- A map that is populated with markers featuring drop animation on load, bounce animation on selection
+- Marker information pulled from REST Countries API
+- Backup marker array so the map and gallery can still be populated if the API fails
+- The function skips the infowindow as it would not be able to be populated
+- Map has infowindow that auto-populates with content pulled from the API
+- Map features a fully responsive gallery within an iframe
+- Gallery auto-scrolls down after 2 seconds to iframe heading after selecting a marker
+- An arrow that scrolls back to the map appears after scrolling down
+- Iframe images, heading and blurb swap country on marker selection
+- Iframe height auto adjust on window resize and iframe images loading
+- All images use loading blur until they are fully loaded
+- An image popup modal appears when an image is clicked to highlight it
 - Form Validation
-
-#### Features Cancelled
-- ~~A map with location linked to photos~~
-- ~~Clicking on a location in the gallery will bring up a link to a blog post.~~
-- ~~Filter tabs are auto selected in gallery from home page links~~
-
+- The newsletter allows people to sign up to receive the blog posts to the their inbox.
+- Modal with success/error response on filling in forms ons the site
 
 ## Technologies Used
 - Languages
@@ -51,9 +56,9 @@ The designs for each page changed quite a bit as worked progressed, so they do n
     - [CSS](w3.org/standards/webdesign/htmlcss)
         * Styling
     - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-        * Pre-loader, filter switches, image loading blur
+        * Map, iframe, response windows
     - [JQuery](https://jquery.com/)
-        * Used for bootstrap and some scripts
+        * Map, iframe, response windows
 - Framework
     - [Bootstrap](https://getbootstrap.com/)
         * Used for basic styles and outline
@@ -64,43 +69,30 @@ The designs for each page changed quite a bit as worked progressed, so they do n
         * Font Styles
     - [Favicon Generator](https://www.favicon-generator.org/)
         * Favicons
-    - [Modernizr](https://modernizr.com/)
-        * Pre-loader
-
-I have also used numbers in my comments as a reference to highlight sections relevant to that comment. Example:
-```HTML
-<!-- 1. Comment with details of code use-->
-<div class="xxxyyy">
-...
-</div>
-<!-- 1. End -->
-```
+    - [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial)
+        * Map
+    - [REST Countries API](https://restcountries.eu/)
+        * Statistics for infowindow, marker information
 
 ## Testing
-So far I have only developed the homepage.
-I have tested the site and its layout on multiple devices and different sizes. It seems fully responsive with a clean layout on each device.
-
-The main issues I encountered were:
-- The navbar toggle icon would shift position when opening the collapsable menu to the bottom left from the top right. There were also issues with the alignment of the text and width after adding the jumbotron. I used CSS to tidy things up.
-- The logo image would display in the middle of the collapsable menu when expanded duw to its central position on larger devices, interrupting the list and meaning the logo would not be displayed in the navbar on smaller form factors. I placed two logos in the code and used bootstrap classes to set their display to none depending on device size.
-- I was not happy with the way the image was displayed on smaller devices as the person in the photo was out of view and much of the image was being cut off. I mirrored the image and made some containers transparent, laying them on top of the image instead of above and below. Resolved.
-- The fluid jumbotron was not fluid on larger devices. I wrapped more elements within it for resolution. The "About" title aligned to the right loked ugly on smaller device forms. I used bootstrap flex boxes to shift its position.
-- Had difficulty creating a transition that scaled the image, but did not immedteately clip the image beside it on the "ease-out" phase eve when using the z-index. Solved by creating a keyframe animation using the z-index.
-- Had to stop the animation from expanding the page width on mobile devices. Set overflow-x to hidden on the body element.
-- Newsletter form had unusual positioning on small desktop sizes. Had to change style so it is a responsive inline form.
-- The image was taking a long time to load, so I used a pre-loader to cover the page before the image fully loaded.
-- The layout of the gallery had uneven spaces at the end due to using a free template. I changed the display property of the gallery to flex and created div flex-columns inside flexbox that wrapped different pictures per column. I then auto aligned them vertically for a more even spacing between content. This also creates a much nicer aesthetic and better use of the modal on smaller device screens.
-- Gallery images were taking a long time and the progressive was ugly, so I used thumbnails and image blur to hold the layout and space of the image for a nicer aesthetic.
-- I added a modal as it was impossible to zoom in on the images in the normal gallery layout.
-- I had a secondary branch when testing out different gallery layouts. I deleted that branch after it was no longer useful.
-- The blog layout with images on alternating sides on a larger screen was messy in a vertical view on smaller screens. I used to classes to ensure the order was always correct on smaller viewports.
-- The text for each blog post was overflowing and creating an ugly layout when changing the viewport responsively. I truncated the text at a fixed line to best maintain the layout and the peek into the blog post.
-- The content on the contact page wasn't long enough so the footer would float up the page on longer devices. I added a container for the main content with a minimum viewport height and a seperate container for the footer, so it would be pushed down to the bottom of the page.
-- The containers on the contact page didn't stretch from top to the bottom, creating a small box of color on larger devices so I had to use flexboxes to fix the issue.
-- The content within the containers would not vertically center without a fixed height, so I had to adjust CSS values, however that brought issues of overflow on smaller devices. I set a min-height value along with a percentage value to fix this.
-- The CSS file had become difficult to parse, so I seperated the CSS styles per page, with one main CSS. This made things easier to examine and change.
-- I moved the all the CDN files to local so updating frameworks wouldn't effect the page.
-- Once the framework files were local I had difficulty organising my website structure, so I reorganised my files into resources, for my onw changeable files for the website, and vendors, for framework files I won't be editing.
+- I have tested the site and its layout on multiple devices and different sizes, on multiple browsers. It is fully responsive with a clean layout on each device.
+- The image loading blur has been thoroughly tested and gone through numerous iterations to optimise the smoothness of the transition on different devices and internet speeds.
+- Changes in the UI occur depending on size, such as map zoom level, navbar logo position, iframe height, modal size, image styling.
+- In case the REST Countries API fails, I have implemented a secondary backup array which will populate the map markers and provide enough info to change the images in the iframe.
+- Iframe adjusts height based on the content within and window size, as switching images often left images cut.
+- Animation length has been adjusted to aid in smoothing the transition
+- All forms have validation and will not submit without the proper information.
+- Different functions are provided for the newsletter and contact form.
+- Forms will clear their field upon successful submission and the page will not reload.
+- A modal will clarify the success or the failure of the form submission and provide error codes.
+- An auto-reply to the form submission has been implemented.
+- For ease of use, the gallery automatically scrolls down to the iframe with the images amd an arrow is provided that scrolls back to the top.
+- The fixed navabar covered the heading, so I created an offset div to scroll to
+- External links open in a new tab
+- HTML has been validated with [https://validator.w3.org/]
+- CSS has been validated with [https://jigsaw.w3.org/css-validator/] and auto-prefixed with [https://autoprefixer.github.io/]
+- Each javascript file was tested on the site for errors and fucntionality using the console
+- Each feature was developed and tested in its own branch before being pushed to master
 
 ## Deployment
 1. I set up a git hub repository for deployment and set up an SSH key.
@@ -112,7 +104,9 @@ The main issues I encountered were:
 ### User Deployment
 1. Download Master Branch.
 0. Unzip contents into a folder.
-0. Open up index.html in a web browser. Site should be totally accessible.
+0. Open up index.html in a web browser. Site will function offline.
+
+To run locally, you can clone this repository by clicking the clone button on the repository or by typing ```git clone https://github.com/Ri-Dearg/horizon-photo``` into your terminal. To disconnect from this repository, type ```git remote rm origin``` into the terminal.
 
 ## Credits
 
