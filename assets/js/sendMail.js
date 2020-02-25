@@ -10,8 +10,8 @@ newsF.addEventListener('submit', submitAct);
 // Prevents form refreshing the page
 function submitAct(event) {
     event.preventDefault();
-    $('#email-modal-header').html(`Please Wait...`);
-    $('#email-modal-body').html(`Sending...`);
+    $('#email-modal-header').html(`Sending...`);
+    $('#email-modal-body').html(`Please wait...);
     $('#email-modal').modal('show');
 }
 
