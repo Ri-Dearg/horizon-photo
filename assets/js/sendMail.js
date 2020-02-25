@@ -10,6 +10,9 @@ newsF.addEventListener('submit', submitAct);
 // Prevents form refreshing the page
 function submitAct(event) {
     event.preventDefault();
+    $('#email-modal-header').html(`Please Wait...`);
+    $('#email-modal-body').html(`Sending...`);
+    $('#email-modal').modal('show');
 }
 
 // Clears form fields. Fires only after a successful response
@@ -22,6 +25,7 @@ function clearInput() {
 
 // Posts thank you message into modal after successful response
 function okResponse() {
+
     $('#email-modal-header').html(`Thank You`);
     $('#email-modal-body').html(`You will receive a response shortly.`);
     $('#email-modal').modal('show');
