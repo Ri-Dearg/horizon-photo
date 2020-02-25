@@ -20,9 +20,11 @@ The main color used is black, to keep the design clean and to contrast with the 
 The fonts are sans-serif in keeping with the clean, minimal design elements. An uppercase font is used to emphasise all headings. 
 
 ### User Stories
-As a user interested in photography, I expect to see a photography portfolio.
+As a user interested in photography, I expect to see a varied photography portfolio.
 
 As a user interested in travel, I expect to be able to explore locations through photography.
+
+As a user interested in project work, I can use the contact form to reach the photographer.
 
 ### Wireframes
 Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
@@ -75,7 +77,7 @@ Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
         * Statistics for infowindow, marker information
 
 ## Testing
-- I have tested the site and its layout on multiple devices and different sizes, on multiple browsers. It is fully responsive with a clean layout on each device.
+- I have tested the site and its layout on multiple devices, different sizes, on multiple browsers. Mainly developed and tested using chrome developer mode. It is fully responsive with a clean layout on each device.
 - The image loading blur has been thoroughly tested and gone through numerous iterations to optimise the smoothness of the transition on different devices and internet speeds.
 - Changes in the UI occur depending on size, such as map zoom level, navbar logo position, iframe height, modal size, image styling.
 - In case the REST Countries API fails, I have implemented a secondary backup array which will populate the map markers and provide enough info to change the images in the iframe.
