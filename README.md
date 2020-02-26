@@ -92,6 +92,7 @@ Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
 - The fixed navabar covered the heading, so I created an offset div to scroll down to.
 - External links open in a new tab.
 - Images sytematically organised for iframe image switching functions.
+- Links checked with [W3C Link Checker](https://validator.w3.org/checklink)
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/)
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/)
 - Each javascript file was tested on the site for errors and fucntionality using the console and with [JSHint](https://jshint.com/).
