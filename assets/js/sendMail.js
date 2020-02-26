@@ -11,7 +11,7 @@ newsF.addEventListener('submit', submitAct);
 function submitAct(event) {
     event.preventDefault();
     $('#email-modal-header').html(`Sending...`);
-    $('#email-modal-body').html(`Please wait...);
+    $('#email-modal-body').html(`Please wait...`);
     $('#email-modal').modal('show');
 }
 
@@ -19,8 +19,8 @@ function submitAct(event) {
 function clearInput() {
     setTimeout( function() {
     $('.clear').val('');
-    $('textarea').val('')
-    }, 1000)
+    $('textarea').val('');
+    }, 1000);
 }
 
 // Posts thank you message into modal after successful response
@@ -38,7 +38,7 @@ function errorResponse(error) {
     $('#email-modal-body').html(`There appears to be a problem! <br>
                             Error Info: <br>
                             ${error.status}${error.text}`);
-    $('#email-modal').modal('show');;
+    $('#email-modal').modal('show');
 }
 
 // Sends form with all parameters for the contact form

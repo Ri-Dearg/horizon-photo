@@ -62,7 +62,7 @@ $(window).on('load', function () {
     });
 
     // resizes Gallery on window size change, otherwise iframe is incorrectly sized.
-    $(window).resize(galleryHeight)
+    $(window).resize(galleryHeight);
 
     // iterates through the array for matching country names and pushes them to the Countrydata variable
     function getData(data) {
@@ -146,7 +146,7 @@ $(window).on('load', function () {
             // Iterates through each image id, passing through info to swap out each anchor url
             function urlChange() {
                 // an array filled with tags attached to the end of each image (l= long, w=wide for each photo)
-                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3']
+                const idArray = ['l1', 'l2', 'l3', 'w1', 'w2', 'w3'];
                 for (i = 0; i < idArray.length; i++) { // iterates through the array to swap the url for each photo
                     ancSwap(idArray[i], lwr1); // passes the info to swap the urls 
                 }
