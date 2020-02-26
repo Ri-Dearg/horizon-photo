@@ -77,7 +77,7 @@ Wireframe: https://drive.google.com/open?id=17ZBPFFBDwHyMecXJiWNz-r5LhEaP79as
         * Statistics for infowindow, marker information
 
 ## Testing
-- I have tested the site and its layout on multiple devices, different sizes, on multiple browsers. Mainly developed and tested using chrome developer mode. It is fully responsive with a clean layout on each device.
+- I have tested the site and its layout on multiple android devices, different sizes, on multiple browsers. I was unable to test on iOS. Mainly developed and tested using chrome developer mode. It is fully responsive with a clean layout on each device.
 - The image loading blur has been thoroughly tested and gone through numerous iterations to optimise the smoothness of the transition on different devices and internet speeds.
 - Changes in the UI occur depending on size, such as map zoom level, navbar logo position, iframe height, modal size, image styling.
 - In case the REST Countries API fails, I have implemented a secondary backup array which will populate the map markers and provide enough info to change the images in the iframe.
