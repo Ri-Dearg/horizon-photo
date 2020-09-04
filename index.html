@@ -1,238 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="keywords" content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,">
-	<meta name="description" content="Explore the world through my photos">
-	<meta name="author" content="Rory Sheridan">
-
-	<!--Bootstrap CSS-->
-	<link rel="stylesheet" href="assets/libraries/bootstrap/bootstrap.min.css" type="text/css">
-
-	<!--Fontawesome CSS-->
-	<link rel="stylesheet" href="assets/libraries/fontawesome/css/all.min.css">
-
-	<!--favicon links from https://www.favicon-generator.org/-->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-	<link rel="manifest" href="assets/favicon/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-
-	<!--Main Stylesheet-->
-	<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
-
-	<!--Page Stylesheet-->
-	<link rel="stylesheet" href="assets/css/index.css" type="text/css" />
-
-	<title>Horizon Photography | Home</title>
-
-	<!-- EmailJS Script for contact / newsletter form -->
-	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-	<script>
-		(function(){
-            emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
-        })();
-	</script>
-
-</head>
-
-<body>
-
-	<header>
-
-        <!-- Sticky Navbar with collapsable hamburger menu for smaller screens-->
-		<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
-
-			<!-- Classes used to remove Logo's display on medium and above devices for the collapsable menu-->
-			<a href="index.html" class="d-md-none pl-3">
-				<img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-navbar" aria-controls="collapse-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapse-navbar">
-                <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item m-md-auto">
-                        <a class="nav-link pr-2 py-0 p-md-0" href="gallery.html">Gallery</a>
-                    </li>
-
-                    <!-- Classes used to remove Logo's display on smaller devices for the collapsable menu-->
-                    <li class="d-none d-md-block mx-md-3">
-                        <a href="index.html">
-                            <img src="assets/images/logo.png" alt="Brand Logo" class="navlogo navbar-brand m-0">
-                        </a>
-                    </li>
-                    <li class="nav-item m-md-auto">
-                        <a class="nav-link pr-2 py-0 p-md-0" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-		</nav>
-	</header>
-
-	<section>
-		<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
-		<div class="jumbotron jumbotron-fluid p-0 m-0">
-
-            <!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
-			<div class="container-fluid callout-container m-0 p-0 card-image"
-				style="background-image: url(assets/images/callout_tn.jpg);"
-				data-image-full="assets/images/callout.jpg">
-				<img class="d-none" src="assets/images/callout_tn.jpg" alt="splash image">
-
-				<!-- Jumbotron container-->
-				<div class="container-fluid" id="jumbo-text">
-					<div class="row">
-						<div class="col px-2">
-							<h2 class="display-4 m-0 heading-font heading-size pt-2">Explore</h2>
-							<p class="lead mt-0 mb-2 ml-1">Join us in our travels around the world. See the beauty through our eyes.</p>
+	<head>
+		<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta
+			name="keywords"
+			content="photography, gallery, travel, photo, landscape, portrait, photo gallery, nature photo,"
+		/>
+		<meta
+			name="description"
+			content="Explore the world through my photos"
+		/>
+		<meta name="author" content="Rory Sheridan" />
+		<!--Bootstrap CSS-->
+		<link
+			rel="stylesheet"
+			href="assets/libraries/bootstrap/bootstrap.min.css"
+			type="text/css"
+		/>
+		<!--Fontawesome CSS-->
+		<link
+			rel="stylesheet"
+			href="assets/libraries/fontawesome/css/all.min.css"
+		/>
+		<!--favicon links from https://www.favicon-generator.org/-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="assets/favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="assets/favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="assets/favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="assets/favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="assets/favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="assets/favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="assets/favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="assets/favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="assets/favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="assets/favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="assets/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta
+			name="msapplication-TileImage"
+			content="assets/favicon/ms-icon-144x144.png"
+		/>
+		<meta name="theme-color" content="#ffffff" />
+		<!--Main Stylesheet-->
+		<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+		<!--Page Stylesheet-->
+		<link rel="stylesheet" href="assets/css/index.css" type="text/css" />
+		<title>Horizon Photography | Home</title>
+		<!-- EmailJS Script for contact / newsletter form -->
+		<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+		<script>
+			(function () {
+				emailjs.init("user_PkLdFUIzcPhkp2uxm48Oa");
+			})();
+		</script>
+	</head>
+	<body>
+		<header>
+			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
+			<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
+				<a href="index.html" class="d-md-none pl-3">
+					<img
+						src="assets/images/logo.png"
+						alt="Brand Logo"
+						class="navlogo navbar-brand"
+					/>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#collapse-navbar"
+					aria-controls="collapse-navbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapse-navbar">
+					<ul class="navbar-nav justify-content-center">
+						<li class="nav-item m-md-auto">
+							<a
+								class="nav-link pr-2 py-0 p-md-0"
+								href="gallery.html"
+								>Gallery</a
+							>
+						</li>
+						<!-- Classes used to remove Logo's display on smaller devices for the collapsible menu-->
+						<li class="d-none d-md-block mx-md-3">
+							<a href="index.html">
+								<img
+									src="assets/images/logo.png"
+									alt="Brand Logo"
+									class="navlogo navbar-brand m-0"
+								/>
+							</a>
+						</li>
+						<li class="nav-item m-md-auto">
+							<a
+								class="nav-link pr-2 py-0 p-md-0"
+								href="contact.html"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<section>
+			<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+			<div class="jumbotron jumbotron-fluid p-0 m-0">
+				<!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
+				<div
+					class="container-fluid callout-container m-0 p-0 card-image"
+					style="background-image: url(assets/images/callout_tn.jpg)"
+					data-image-full="assets/images/callout.jpg"
+				>
+					<img
+						class="d-none"
+						src="assets/images/callout_tn.jpg"
+						alt="splash image"
+					/>
+					<!-- Jumbotron container-->
+					<div class="container-fluid" id="jumbo-text">
+						<div class="row">
+							<div class="col px-2">
+								<h2
+									class="display-4 m-0 heading-font heading-size pt-2"
+								>
+									Explore
+								</h2>
+								<p class="lead mt-0 mb-2 ml-1">
+									Join us in our travels around the world. See
+									the beauty through our eyes.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-        <!-- Small info section on photographer-->
-		<div class="container-fluid" id=about-me>
-			<div class="row">
-				<div class="col-md-4 d-flex p-3">
-					<img src="assets/images/portrait1-300.jpg" class="rounded-circle img-fluid m-auto d-block" id="portrait" alt="Photographer portrait">
-                </div>
-                <div class="col-md-8 my-auto">
-
-                    <!-- Class used to position the header to the right on medium and larger screens-->
-                    <div class="d-md-flex flex-row-reverse">
-                        <h1 class="display-4 heading-font heading-size pt-md-2">About</h1>
-                    </div>
-                    <p>I am a travel photogrpaher who loves to take pictures of things from all angles, be it food,
-                        cars, people, places and projects. I shot many outdoor projects accross continents. I work
-                        with locals and travellers, often split my time between daily living and toruist
-                        sights. I want to become a travel blogger, photographer and guide with my own personal style,
-                        developing a knowledge of my subject matter. I love authentic travel to absorb its richness and
-                        experience its nooks and crannies. The world is its own special place and I want to show this to everyone.</p>
-                </div>
-            </div>
-				
-                <!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
+			<!-- Small info section on photographer-->
+			<div class="container-fluid" id="about-me">
+				<div class="row">
+					<div class="col-md-4 d-flex p-3">
+						<img
+							src="assets/images/portrait1-300.jpg"
+							class="rounded-circle img-fluid m-auto d-block"
+							id="portrait"
+							alt="Photographer portrait"
+						/>
+					</div>
+					<div class="col-md-8 my-auto">
+						<!-- Class used to position the header to the right on medium and larger screens-->
+						<div class="d-md-flex flex-row-reverse">
+							<h1
+								class="display-4 heading-font heading-size pt-md-2"
+							>
+								About
+							</h1>
+						</div>
+						<p>
+							I am a travel photographer who loves to take
+							pictures of things from all angles, be it food,
+							cars, people, places and projects. I shot many
+							outdoor projects across continents. I work with
+							locals and travellers, often split my time between
+							daily living and tourist sights. I want to become a
+							travel blogger, photographer and guide with my own
+							personal style, developing a knowledge of my subject
+							matter. I love authentic travel to absorb its
+							richness and experience its nooks and crannies. The
+							world is its own special place and I want to show
+							this to everyone.
+						</p>
+					</div>
+				</div>
+				<!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
 				<div class="row">
 					<div id="map-link" class="col p-0 div-hover">
-						<a href="gallery.html" id="gallery-link" class="link-hover">
-							<h2 class="display-4 centered-link heading-font heading-size">Travel <br>
-                            Gallery</h2>
+						<a
+							href="gallery.html"
+							id="gallery-link"
+							class="link-hover"
+						>
+							<h2
+								class="display-4 centered-link heading-font heading-size"
+							>
+								Travel <br />
+								Gallery
+							</h2>
 						</a>
 					</div>
 				</div>
-        </div>
-	</section>
-
-    <!-- Three section footer-->
-	<footer class="container-fluid">
-		<div class="row pb-1 pb-md-3">
-
-            <!-- Newsletter sign up -->
-			<div class=" col-sm-4 mt-3">
-				<h2 class="heading-font heading-size">Newsletter</h2>
-				<p class="mb-0">Sign up here!</p>
-
-                <!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
-				<form id="news-form" class="form-group d-flex justify-content-center mb-1"
-					onsubmit="return sendMailNews(this);">
-					<input type="email" name="email" placeholder="Email" class="form-control" required/>
-					<input type="submit" value="Join" class="btn btn-success ml-2" />
-                </form>
 			</div>
-
-            <!-- Links to contact page -->
-			<div class="col-sm-4 mt-3">
-				<h2 class="heading-font heading-size">Contact</h2>
-				<p class="mb-0">Send me a message at the <a href="contact.html" class="foot-link">Contact</a> page! I'd love to know what you think.</p>
+		</section>
+		<!-- Three section footer-->
+		<footer class="container-fluid">
+			<div class="row pb-1 pb-md-3">
+				<!-- Newsletter sign up -->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font heading-size">Newsletter</h2>
+					<p class="mb-0">Sign up here!</p>
+					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+					<form
+						id="news-form"
+						class="form-group d-flex justify-content-center mb-1"
+						onsubmit="return sendMailNews(this);"
+					>
+						<input
+							type="email"
+							name="email"
+							placeholder="Email"
+							class="form-control"
+							required
+						/>
+						<input
+							type="submit"
+							value="Join"
+							class="btn btn-success ml-2"
+						/>
+					</form>
+				</div>
+				<!-- Links to contact page -->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font heading-size">Contact</h2>
+					<p class="mb-0">
+						Send me a message at the
+						<a href="contact.html" class="foot-link">Contact</a>
+						page! I'd love to know what you think.
+					</p>
+				</div>
+				<!-- Social Link section -->
+				<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font heading-size">Social</h2>
+					<ul class="list-inline social-links">
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.facebook.com/ridearg-411885722878522/"
+							>
+								<i
+									class="fab fa-facebook"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">Facebook</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.instagram.com/ri.dearg/"
+							>
+								<i
+									class="fab fa-instagram"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">Instagram</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://500px.com/horizonrecordblog"
+							>
+								<i class="fab fa-500px" aria-hidden="true"></i>
+								<span class="sr-only">500px</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.flickr.com/photos/horizon_photo/"
+							>
+								<i class="fab fa-flickr" aria-hidden="true"></i>
+								<span class="sr-only">Flickr</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-            
-            <!-- Social Link section -->
-			<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
-			<div class="col-sm-4 mt-3">
-				<h2 class="heading-font heading-size">Social</h2>
-				<ul class="list-inline social-links">
-					<li class="list-inline-item">
-						<a target="_blank" href="https://www.facebook.com/ridearg-411885722878522/">
-							<i class="fab fa-facebook" aria-hidden="true"></i>
-							<span class="sr-only">Facebook</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="https://www.instagram.com/ri.dearg/">
-							<i class="fab fa-instagram" aria-hidden="true"></i>
-							<span class="sr-only">Instagram</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="https://500px.com/horizonrecordblog">
-							<i class="fab fa-500px" aria-hidden="true"></i>
-							<span class="sr-only">500px</span>
-						</a>
-					</li>
-					<li class="list-inline-item">
-						<a target="_blank" href="https://www.flickr.com/photos/horizon_photo/">
-							<i class="fab fa-flickr" aria-hidden="true"></i>
-							<span class="sr-only">Flickr</span>
-						</a>
-					</li>
-				</ul>
+		</footer>
+		<!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on success or error-->
+		<div
+			class="modal fade"
+			id="email-modal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="email-modal"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg mt-5">
+				<div class="modal-content">
+					<div class="header-wrapper d-flex">
+						<div class="modal-header mx-auto p-0">
+							<!-- Heading is set by sendMail.js -->
+							<h4
+								class="my-3 heading-font"
+								id="email-modal-header"
+							></h4>
+						</div>
+					</div>
+					<div class="modal-body text-center">
+						<!-- Content is set by sendMail.js -->
+						<p class="my-0" id="email-modal-body"></p>
+					</div>
+					<div class="modal-footer mx-auto">
+						<button
+							type="button"
+							class="btn btn-success"
+							data-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
-	</footer>
-
-    <!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on succes or error-->
-    <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="email-modal" aria-hidden="true">
-        <div class="modal-dialog modal-lg mt-5">
-            <div class="modal-content">
-                <div class="header-wrapper d-flex">
-                    <div class="modal-header mx-auto p-0">
-                        <!-- Heading is set by sendMail.js -->
-                        <h4 class="my-3 heading-font" id="email-modal-header"></h4>
-                    </div>
-                </div>
-                <div class="modal-body text-center">
-                    <!-- Content is set by sendMail.js -->
-                    <p class="my-0" id="email-modal-body"></p>
-                </div>
-                <div class="modal-footer mx-auto">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
-	<script src="assets/libraries/js/popper.min.js"></script>
-	<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Script for image loading blur -->
-	<script src="assets/js/imageLoadSwitch.js"></script>
-
-    <!-- Script for sending email -->
-	<script src="assets/js/sendMail.js"></script>
-
-</body>
-
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>
+		<script src="assets/libraries/js/popper.min.js"></script>
+		<script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
+		<!-- Script for image loading blur -->
+		<script src="assets/js/imageLoadSwitch.js"></script>
+		<!-- Script for sending email -->
+		<script src="assets/js/sendMail.js"></script>
+	</body>
 </html>
