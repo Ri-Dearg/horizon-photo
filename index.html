@@ -172,93 +172,97 @@
 				</div>
 			</nav>
 		</header>
-		<section>
-			<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
-			<div class="jumbotron jumbotron-fluid p-0 m-0">
-				<!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
-				<div
-					class="container-fluid callout-container m-0 p-0 card-image"
-					style="background-image: url(assets/images/callout_tn.jpg)"
-					data-image-full="assets/images/callout.jpg"
-				>
-					<img
-						class="d-none"
-						src="assets/images/callout_tn.jpg"
-						alt="splash image"
-					/>
-					<!-- Jumbotron container-->
-					<div class="container-fluid" id="jumbo-text">
-						<div class="row">
-							<div class="col px-2">
-								<h2
-									class="display-4 m-0 heading-font heading-size pt-2"
-								>
-									Explore
-								</h2>
-								<p class="lead mt-0 mb-2 ml-1">
-									Join us in our travels around the world. See
-									the beauty through our eyes.
-								</p>
+		<main>
+			<section>
+				<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
+				<div class="jumbotron jumbotron-fluid p-0 m-0">
+					<!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
+					<div
+						class="container-fluid callout-container m-0 p-0 card-image"
+						style="
+							background-image: url(assets/images/callout_tn.jpg);
+						"
+						data-image-full="assets/images/callout.jpg"
+					>
+						<img
+							class="d-none"
+							src="assets/images/callout_tn.jpg"
+							alt="splash image"
+						/>
+						<!-- Jumbotron container-->
+						<div class="container-fluid" id="jumbo-text">
+							<div class="row">
+								<div class="col px-2">
+									<h2
+										class="display-4 m-0 heading-font heading-size pt-2"
+									>
+										Explore
+									</h2>
+									<p class="lead mt-0 mb-2 ml-1">
+										Join us in our travels around the world.
+										See the beauty through our eyes.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Small info section on photographer-->
-			<div class="container-fluid" id="about-me">
-				<div class="row">
-					<div class="col-md-4 d-flex p-3">
-						<img
-							src="assets/images/portrait1-300.jpg"
-							class="rounded-circle img-fluid m-auto d-block"
-							id="portrait"
-							alt="Photographer portrait"
-						/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<!-- Class used to position the header to the right on medium and larger screens-->
-						<div class="d-md-flex flex-row-reverse">
-							<h1
-								class="display-4 heading-font heading-size pt-md-2"
-							>
-								About
-							</h1>
+				<!-- Small info section on photographer-->
+				<article class="container-fluid" id="about-me">
+					<div class="row">
+						<div class="col-md-4 d-flex p-3">
+							<img
+								src="assets/images/portrait1-300.jpg"
+								class="rounded-circle img-fluid m-auto d-block"
+								id="portrait"
+								alt="Photographer portrait"
+							/>
 						</div>
-						<p>
-							I am a travel photographer who loves to take
-							pictures of things from all angles, be it food,
-							cars, people, places and projects. I shot many
-							outdoor projects across continents. I work with
-							locals and travellers, often split my time between
-							daily living and tourist sights. I want to become a
-							travel blogger, photographer and guide with my own
-							personal style, developing a knowledge of my subject
-							matter. I love authentic travel to absorb its
-							richness and experience its nooks and crannies. The
-							world is its own special place and I want to show
-							this to everyone.
-						</p>
+						<div class="col-md-8 my-auto">
+							<!-- Class used to position the header to the right on medium and larger screens-->
+							<div class="d-md-flex flex-row-reverse">
+								<h2
+									class="display-4 heading-font h1 heading-size pt-md-2"
+								>
+									About
+								</h2>
+							</div>
+							<p>
+								I am a travel photographer who loves to take
+								pictures of things from all angles, be it food,
+								cars, people, places and projects. I shot many
+								outdoor projects across continents. I work with
+								locals and travellers, often split my time
+								between daily living and tourist sights. I want
+								to become a travel blogger, photographer and
+								guide with my own personal style, developing a
+								knowledge of my subject matter. I love authentic
+								travel to absorb its richness and experience its
+								nooks and crannies. The world is its own special
+								place and I want to show this to everyone.
+							</p>
+						</div>
 					</div>
-				</div>
-				<!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
-				<div class="row">
-					<div id="map-link" class="col p-0 div-hover">
-						<a
-							href="gallery.html"
-							id="gallery-link"
-							class="link-hover"
-						>
-							<h2
-								class="display-4 centered-link heading-font heading-size"
+					<!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
+					<div class="row">
+						<div id="map-link" class="col p-0 div-hover">
+							<a
+								href="gallery.html"
+								id="gallery-link"
+								class="link-hover"
 							>
-								Travel <br />
-								Gallery
-							</h2>
-						</a>
+								<h2
+									class="display-4 centered-link heading-font heading-size"
+								>
+									Travel <br />
+									Gallery
+								</h2>
+							</a>
+						</div>
 					</div>
-				</div>
-			</div>
-		</section>
+				</article>
+			</section>
+		</main>
 		<!-- Three section footer-->
 		<footer class="container-fluid">
 			<div class="row pb-1 pb-md-3">

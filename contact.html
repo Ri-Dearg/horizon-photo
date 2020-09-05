@@ -173,103 +173,106 @@
 			</nav>
 		</header>
 		<!--Div used to keep the footer at the bottom of the page, as the page content does not fill the page on some devices-->
-		<section class="container-fluid p-0 mt-3 content-container-contact">
-			<div class="row p-0 m-0 h-100">
-				<div class="col-12 d-flex p-3" id="contact-tag">
-					<div class="row m-0 my-auto p-0">
-						<div class="col pb-3">
-							<img
-								src="assets/images/portrait1-300.jpg"
-								class="rounded-circle img-fluid m-auto d-block"
-								id="portrait"
-								alt="Photographer portrait"
-							/>
-						</div>
-						<!-- Class used to separate the columns and maintain layout-->
-						<div class="w-100"></div>
-						<div class="col">
-							<p class="text-center px-2">
-								I'm always seeking new experiences, perspectives
-								and opportunities. If you want to share
-								something with me, please go ahead. I'm open to
-								discussion. Please comment, share, or re-post my
-								work. Feedback is always welcome!
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="d-flex col-12 p-0">
-					<div class="row p-1 m-auto" id="contact">
-						<div class="col d-flex justify-content-center">
-							<h1 class="heading-font heading-size">
-								Contact me
-							</h1>
-						</div>
-						<div class="w-100"></div>
-						<div class="col d-flex justify-content-center">
-							<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
-							<form
-								id="contact-form"
-								onsubmit="return sendMailContact(this);"
-							>
-								<div class="row contact-row">
-									<div class="col p-1">
-										<input
-											type="text"
-											name="name"
-											placeholder="Name"
-											class="form-control clear"
-											required
-										/>
-									</div>
-									<div class="col p-1">
-										<input
-											type="tel"
-											name="number"
-											placeholder="Number (Optional)"
-											class="form-control clear"
-										/>
-									</div>
-								</div>
-								<div class="row contact-row">
-									<div class="col mt-2 p-1">
-										<input
-											type="email"
-											name="email"
-											placeholder="Email"
-											class="form-control clear"
-											required
-										/>
-									</div>
-								</div>
-								<div class="row contact-row">
-									<div class="col mt-2 p-1">
-										<textarea
-											name="message"
-											placeholder="Send me a message."
-											class="form-control clear"
-											id="cmessage"
-											required
-										></textarea>
-									</div>
-								</div>
-								<div class="row contact-row">
-									<div
-										class="col my-2 p-1 d-flex justify-content-center"
-									>
-										<input
-											type="submit"
-											class="btn btn-success"
-											value="Send"
-										/>
-									</div>
-								</div>
-							</form>
+		<main>
+			<section class="container-fluid p-0 mt-3 content-container-contact">
+				<article class="row p-0 m-0 h-100">
+					<div class="col-12 d-flex p-3" id="contact-tag">
+						<div class="row m-0 my-auto p-0">
+							<div class="col pb-3">
+								<img
+									src="assets/images/portrait1-300.jpg"
+									class="rounded-circle img-fluid m-auto d-block"
+									id="portrait"
+									alt="Photographer portrait"
+								/>
+							</div>
+							<!-- Class used to separate the columns and maintain layout-->
+							<div class="w-100"></div>
+							<div class="col">
+								<p class="text-center px-2">
+									I'm always seeking new experiences,
+									perspectives and opportunities. If you want
+									to share something with me, please go ahead.
+									I'm open to discussion. Please comment,
+									share, or re-post my work. Feedback is
+									always welcome!
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
+					<div class="d-flex col-12 p-0">
+						<div class="row p-1 m-auto" id="contact">
+							<div class="col d-flex justify-content-center">
+								<h1 class="heading-font heading-size">
+									Contact me
+								</h1>
+							</div>
+							<div class="w-100"></div>
+							<div class="col d-flex justify-content-center">
+								<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+								<form
+									id="contact-form"
+									onsubmit="return sendMailContact(this);"
+								>
+									<div class="row contact-row">
+										<div class="col p-1">
+											<input
+												type="text"
+												name="name"
+												placeholder="Name"
+												class="form-control clear"
+												required
+											/>
+										</div>
+										<div class="col p-1">
+											<input
+												type="tel"
+												name="number"
+												placeholder="Number (Optional)"
+												class="form-control clear"
+											/>
+										</div>
+									</div>
+									<div class="row contact-row">
+										<div class="col mt-2 p-1">
+											<input
+												type="email"
+												name="email"
+												placeholder="Email"
+												class="form-control clear"
+												required
+											/>
+										</div>
+									</div>
+									<div class="row contact-row">
+										<div class="col mt-2 p-1">
+											<textarea
+												name="message"
+												placeholder="Send me a message."
+												class="form-control clear"
+												id="cmessage"
+												required
+											></textarea>
+										</div>
+									</div>
+									<div class="row contact-row">
+										<div
+											class="col my-2 p-1 d-flex justify-content-center"
+										>
+											<input
+												type="submit"
+												class="btn btn-success"
+												value="Send"
+											/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
 		<!--Separate container for the footer to keep it pushed down to the bottom of the page as the page content is too short to fill many viewports-->
 		<div class="footer-container">
 			<!-- Three section footer-->
