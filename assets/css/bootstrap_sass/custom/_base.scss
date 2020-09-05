@@ -1,0 +1,172 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+/*------------------------------------------------------Basic*/
+/* From fonts.google.com */
+/* Used for headings */
+@font-face {
+	font-family: "Julius Sans One";
+	src: url("../fonts/juliussansone-regular-webfont.woff2") format("woff2"),
+		url("../fonts/juliussansone-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Used for general content */
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+		url("../fonts/montserrat-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-color: #000;
+	overflow-x: hidden;
+	padding-top: 3.5rem;
+}
+
+.heading-font {
+	font-family: "Julius Sans One", sans-serif;
+}
+
+.heading-size {
+	font-size: 1.8rem;
+}
+
+/* Links */
+a,
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Buttons to override Bootstrap*/
+.signup {
+	font-weight: 800;
+}
+
+.form-control,
+.btn {
+	border-radius: 0;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #00611c;
+}
+
+/*------------------------------------------------------Nav*/
+nav {
+	background-color: #000;
+	font-family: "Julius Sans One", sans-serif;
+	letter-spacing: 0.125rem;
+	font-size: 1.4rem;
+	width: 100%;
+}
+
+nav ul,
+#collapse-navbar {
+	width: 100%;
+}
+
+.navlogo {
+	width: 200px;
+	height: auto;
+}
+
+.nav-item {
+	text-align: right;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #d3d3d3;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+
+.navbar-toggler {
+	margin-right: 0.1875rem;
+}
+
+/*------------------------------------------------------Section*/
+main > section {
+	background-color: #000;
+	color: #fff;
+	text-align: justify;
+}
+
+/* Photographer Image */
+#portrait {
+	width: 100%;
+	height: auto;
+	max-width: 225px;
+}
+
+/*------------------------------------------------------Footer*/
+footer {
+	background-color: #d3d3d3;
+	color: #111111;
+}
+
+.foot-link {
+	color: #00611c;
+}
+
+.foot-link:hover {
+	color: #28a745;
+}
+
+.social-links {
+	font-size: 1.5rem;
+}
+
+/*------------------------------------------------------Modal Styles*/
+#email-modal .modal-content,
+#email-modal .modal-header,
+#email-modal .modal-dialog {
+	color: #fff;
+	background-color: rgb(0, 0, 0);
+}
+
+#email-modal .modal-content {
+	border: 0.125rem solid rgba(0, 97, 28, 0.8);
+}
+
+#email-modal .modal-header,
+#email-modal .header-wrapper {
+	color: #fff;
+	background-color: #00611c;
+	border: none;
+}
+
+#email-modal button.close {
+	color: #d3d3d3;
+}
+
+#email-modal button.close:hover {
+	color: #fff;
+}
+
+/* 2. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
+.fab {
+	color: #d3d3d3;
+	background: #111111;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	padding: 0.5rem;
+	text-align: center;
+	transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+	-o-transition: all 0.35s ease-in-out;
+}
+
+.fab:hover {
+	background-color: #00611c;
+}

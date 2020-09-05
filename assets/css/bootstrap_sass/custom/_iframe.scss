@@ -1,20 +1,5 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-/*------------------------------------------------------Basic*/
-/* Prevents Scrollbars */
-html {
-    overflow: hidden;
-    }
-
-/* Keeps the iframe flush with the map */
-body {
-    padding-top: 0;
-}
-
-h4 {
-    background-color: #00611C;
-}
-
 /*------------------------------------------------------Picture Spacing*/
 .pics {
     display: -webkit-box;
@@ -56,13 +41,10 @@ h4 {
 /*------------------------------------------------------Gallery Blur*/
 /* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
 /*Blur effects are necessary so the quickly-loaded thumbnails are not seen to be pixelated*/
-/* The same classes exist in index.css but necessitate different values, so they are saved in seperate files*/
-.card-image {
+.iframe-image {
     width: 30vw;
     background: #000 center center no-repeat;
     background-size: cover;
-    -webkit-filter: blur(6px);
-            filter: blur(6px);
 }
 
 /*Makes the thumbnail overlay invisible*/
@@ -72,9 +54,7 @@ h4 {
 }
 
 /* Removes the blur on load*/
-.card-image.is-loaded {
-    -webkit-filter: none;
-            filter: none;
+.card-image.is-loaded.iframe-image {
     -webkit-transition: -webkit-filter 1s;
     transition: -webkit-filter 1s;
     -o-transition: filter 1s;

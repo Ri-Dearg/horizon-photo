@@ -20,9 +20,6 @@
     position: relative;
 }
 
-#about-me {
-    background-color: #00611C;
-}
 
 /*------------------------------------------------------Jumbotron*/
 #jumbo-text {
@@ -32,6 +29,7 @@
     bottom: 0;
     left: 0;
 }
+
 
 /*------------------------------------------------------Section*/
 /* How to make a box a link: https://stackoverflow.com/a/8743920 */
@@ -126,7 +124,6 @@
 
 /* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
 /* Blur effects are necessary so the thumbnail is not seen to be pixelated*/
-/* The same classes exist in iframe.css but necessitate different values, so they are saved in seperate files*/
 .card-image {
     -webkit-filter: blur(6px);
             filter: blur(6px);
@@ -136,6 +133,9 @@
 .card-image.is-loaded {
     -webkit-filter: none;
             filter: none;
+}
+
+.card-image.is-loaded.splash-image {
     -webkit-transition: -webkit-filter 2s;
     transition: -webkit-filter 2s;
     -o-transition: filter 2s;
