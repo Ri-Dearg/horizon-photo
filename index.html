@@ -134,8 +134,8 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse w-100" id="collapse-navbar">
-					<ul class="navbar-nav justify-content-center w-100">
+				<div class="collapse navbar-collapse w-100 mb-2" id="collapse-navbar">
+					<ul class="navbar-nav w-100">
 						<li class="nav-item m-md-auto text-right">
 							<a
 								class="nav-link pr-2 py-0 p-md-0"
@@ -170,7 +170,7 @@
 				<div class="jumbotron jumbotron-fluid p-0 m-0">
 					<!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
 					<div
-						class="container-fluid callout-container m-0 p-0 card-image splash-image"
+						class="container-fluid callout-container d-flex position-relative bg-dark card-image splash-image m-0 p-0"
 						style="
 							background-image: url(assets/images/callout_tn.jpg);
 						"
@@ -182,7 +182,7 @@
 							alt="splash image"
 						/>
 						<!-- Jumbotron container-->
-						<div class="container-fluid" id="jumbo-text">
+						<div class="container-fluid position-absolute" id="jumbo-text">
 							<div class="row">
 								<div class="col px-2">
 									<h2
@@ -237,14 +237,14 @@
 					</div>
 					<!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
 					<div class="row">
-						<div id="map-link" class="col p-0 div-hover">
+						<div id="map-link" class="div-hover col bg-dark d-flex p-0">
 							<a
 								href="gallery.html"
 								id="gallery-link"
-								class="link-hover"
+								class="link-hover d-flex h-100 w-100"
 							>
 								<h2
-									class="centered-link heading-font h1"
+									class="text-center heading-font h1 m-auto"
 								>
 									Travel <br />
 									Gallery
