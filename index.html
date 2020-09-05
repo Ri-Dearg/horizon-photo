@@ -111,20 +111,20 @@
 			})();
 		</script>
 	</head>
-	<body>
+	<body class="bg-dark">
 		<header>
 			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
-			<nav class="navbar fixed-top navbar-expand-md navbar-dark p-0">
+			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font w-100 p-0">
 				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img
 						src="assets/images/logo.png"
 						alt="Brand Logo"
-						class="navlogo navbar-brand"
+						class="navlogo navbar-brand h-auto"
 					/>
 				</a>
 				<button
-					class="navbar-toggler"
+					class="navbar-toggler mr-1"
 					type="button"
 					data-toggle="collapse"
 					data-target="#collapse-navbar"
@@ -134,9 +134,9 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="collapse-navbar">
-					<ul class="navbar-nav justify-content-center">
-						<li class="nav-item m-md-auto">
+				<div class="collapse navbar-collapse w-100" id="collapse-navbar">
+					<ul class="navbar-nav justify-content-center w-100">
+						<li class="nav-item m-md-auto text-right">
 							<a
 								class="nav-link pr-2 py-0 p-md-0"
 								href="gallery.html"
@@ -149,11 +149,11 @@
 								<img
 									src="assets/images/logo.png"
 									alt="Brand Logo"
-									class="navlogo navbar-brand m-0"
+									class="navlogo navbar-brand m-0 h-auto"
 								/>
 							</a>
 						</li>
-						<li class="nav-item m-md-auto">
+						<li class="nav-item m-md-auto text-right">
 							<a
 								class="nav-link pr-2 py-0 p-md-0"
 								href="contact.html"
@@ -165,7 +165,7 @@
 			</nav>
 		</header>
 		<main>
-			<section>
+			<section class="bg-dark text-white text-justify">
 				<!-- Fluid Jumbotron must wrap around the container below for positioning: https://getbootstrap.com/docs/4.0/components/jumbotron/-->
 				<div class="jumbotron jumbotron-fluid p-0 m-0">
 					<!-- data-image-full class us utilised with lazyLoad function for progressive loading-->
@@ -186,7 +186,7 @@
 							<div class="row">
 								<div class="col px-2">
 									<h2
-										class="display-4 m-0 heading-font heading-size pt-2"
+										class="display-4 m-0 heading-font h3 pt-2"
 									>
 										Explore
 									</h2>
@@ -214,7 +214,7 @@
 							<!-- Class used to position the header to the right on medium and larger screens-->
 							<div class="d-md-flex flex-row-reverse">
 								<h2
-									class="display-4 heading-font h1 heading-size pt-md-2"
+									class="display-4 heading-font h1 h3 pt-md-2"
 								>
 									About
 								</h2>
@@ -244,7 +244,7 @@
 								class="link-hover"
 							>
 								<h2
-									class="display-4 centered-link heading-font heading-size"
+									class="display-4 centered-link heading-font h3"
 								>
 									Travel <br />
 									Gallery
@@ -260,7 +260,7 @@
 			<div class="row pb-1 pb-md-3">
 				<!-- Newsletter sign up -->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Newsletter</h2>
+					<h2 class="heading-font h3">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
 					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
 					<form
@@ -278,24 +278,24 @@
 						<input
 							type="submit"
 							value="Join"
-							class="btn btn-success ml-2"
+							class="btn btn-primary text-white ml-2"
 						/>
 					</form>
 				</div>
 				<!-- Links to contact page -->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Contact</h2>
+					<h2 class="heading-font h3">Contact</h2>
 					<p class="mb-0">
 						Send me a message at the
-						<a href="contact.html" class="foot-link">Contact</a>
+						<a href="contact.html" class="text-primary">Contact</a>
 						page! I'd love to know what you think.
 					</p>
 				</div>
 				<!-- Social Link section -->
 				<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font heading-size">Social</h2>
-					<ul class="list-inline social-links">
+					<h2 class="heading-font h3">Social</h2>
+					<ul class="list-inline h4">
 						<li class="list-inline-item">
 							<a
 								target="_blank"
@@ -352,9 +352,9 @@
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-lg mt-5">
-				<div class="modal-content">
-					<div class="header-wrapper d-flex">
-						<div class="modal-header mx-auto p-0">
+				<div class="modal-content bg-dark text-white">
+					<div class="header-wrapper bg-primary d-flex">
+						<div class="modal-header bg-primary mx-auto p-0">
 							<!-- Heading is set by sendMail.js -->
 							<h4
 								class="my-3 heading-font"
@@ -369,7 +369,7 @@
 					<div class="modal-footer mx-auto">
 						<button
 							type="button"
-							class="btn btn-success"
+							class="btn btn-primary text-white"
 							data-dismiss="modal"
 						>
 							Close

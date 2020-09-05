@@ -22,17 +22,11 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	background-color: #000;
-	overflow-x: hidden;
 	padding-top: 3.5rem;
 }
 
 .heading-font {
 	font-family: "Julius Sans One", sans-serif;
-}
-
-.heading-size {
-	font-size: 1.8rem;
 }
 
 /* Links */
@@ -42,42 +36,14 @@ a:hover {
 	color: #fff;
 }
 
-/* Buttons to override Bootstrap*/
-.signup {
-	font-weight: 800;
-}
-
-.form-control,
-.btn {
-	border-radius: 0;
-}
-
-.btn-success {
-	color: #fff;
-	background-color: #00611c;
-}
-
 /*------------------------------------------------------Nav*/
 nav {
-	background-color: #000;
-	font-family: "Julius Sans One", sans-serif;
 	letter-spacing: 0.125rem;
 	font-size: 1.4rem;
-	width: 100%;
-}
-
-nav ul,
-#collapse-navbar {
-	width: 100%;
 }
 
 .navlogo {
 	width: 200px;
-	height: auto;
-}
-
-.nav-item {
-	text-align: right;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -89,21 +55,10 @@ nav ul,
 	color: #fff;
 }
 
-.navbar-toggler {
-	margin-right: 0.1875rem;
-}
-
 /*------------------------------------------------------Section*/
-main > section {
-	background-color: #000;
-	color: #fff;
-	text-align: justify;
-}
 
 /* Photographer Image */
 #portrait {
-	width: 100%;
-	height: auto;
 	max-width: 225px;
 }
 
@@ -113,44 +68,21 @@ footer {
 	color: #111111;
 }
 
-.foot-link {
-	color: #00611c;
-}
-
 .foot-link:hover {
 	color: #28a745;
 }
 
-.social-links {
-	font-size: 1.5rem;
-}
 
 /*------------------------------------------------------Modal Styles*/
-#email-modal .modal-content,
-#email-modal .modal-header,
-#email-modal .modal-dialog {
-	color: #fff;
-	background-color: rgb(0, 0, 0);
-}
 
 #email-modal .modal-content {
 	border: 0.125rem solid rgba(0, 97, 28, 0.8);
-}
-
-#email-modal .modal-header,
-#email-modal .header-wrapper {
-	color: #fff;
-	background-color: #00611c;
-	border: none;
 }
 
 #email-modal button.close {
 	color: #d3d3d3;
 }
 
-#email-modal button.close:hover {
-	color: #fff;
-}
 
 /* 2. Code used from: https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/18-resume-for-download*/
 .fab {

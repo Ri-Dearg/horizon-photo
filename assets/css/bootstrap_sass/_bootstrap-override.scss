@@ -8,7 +8,15 @@
 /*For more details on these option please see the bootstrap documentation here:
 https://getbootstrap.com/docs/4.5/getting-started/theming/#sass-options*/
 
+/*Applies sharp edges as default.*/
+$enable-rounded: false;
+
+/*Applies responsive font sizes as default.*/
+$enable-responsive-font-sizes: true;
+
+/*Changes default class colors.*/
 $primary: #00611C;
+$dark: #000;
 
 @import "bootstrap/functions";
 @import "bootstrap/variables";
