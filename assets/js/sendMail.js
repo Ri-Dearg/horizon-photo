@@ -7,7 +7,10 @@ if (contactF) {
 contactF.addEventListener('submit', submitAct);}
 newsF.addEventListener('submit', submitAct);
 
-// Prevents form refreshing the page
+/**
+ * Prevents form refreshing the page on submission.
+ * @param {Object} event 
+ */
 function submitAct(event) {
     event.preventDefault();
     $('#email-modal-header').html(`Sending...`);
@@ -15,7 +18,9 @@ function submitAct(event) {
     $('#email-modal').modal('show');
 }
 
-// Clears form fields. Fires only after a successful response
+/**
+ * Clears the form fields after a successful response. Does not clear on error.
+ */
 function clearInput() {
     setTimeout( function() {
     $('.clear').val('');
@@ -23,16 +28,20 @@ function clearInput() {
     }, 1000);
 }
 
-// Posts thank you message into modal after successful response
+/**
+ * Posts thank you message into modal after successful response.
+ */
 function okResponse() {
-
     $('#email-modal-header').html(`Thank You`);
     $('#email-modal-body').html(`You will receive a response shortly.`);
     $('#email-modal').modal('show');
     clearInput();
 }
 
-// Posts failure message into modal after errror
+/**
+ * Posts failure message into modal after error
+ * @param {Object} error 
+ */
 function errorResponse(error) {
     $('#email-modal-header').html(`Sorry!`);
     $('#email-modal-body').html(`There appears to be a problem! <br>
@@ -41,7 +50,11 @@ function errorResponse(error) {
     $('#email-modal').modal('show');
 }
 
-// Sends form with all parameters for the contact form
+
+/**
+ * Sends form with all necessary parameters for the contact page form.
+ * @param {Object} contactForm 
+ */
 function sendMailContact(contactForm) {
     emailjs.send('horizon_photo', 'basic', {
         'user_name': contactForm.name.value,
@@ -58,7 +71,10 @@ function sendMailContact(contactForm) {
         });
 }
 
-// Sends form with parameters for the newsletter
+/**
+ * Sends form with all necessary parameters for the newsletter form.
+ * @param {Object} contactForm 
+ */
 function sendMailNews(contactForm) {
     emailjs.send('horizon_photo', 'basic', {
         'user_email': contactForm.email.value,
