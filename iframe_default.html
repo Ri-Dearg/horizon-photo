@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 	<head>
 		<!--All photos with author, copyright, license, etc can be found at https://unsplash.com/collections/8825126/used-in-horizon-photo-->
 		<meta charset="utf-8" />
@@ -16,12 +16,6 @@
 			content="Explore the world through my photos"
 		/>
 		<meta name="author" content="Rory Sheridan" />
-		<!--Bootstrap CSS-->
-		<link
-			rel="stylesheet"
-			href="assets/libraries/bootstrap/bootstrap.min.css"
-			type="text/css"
-		/>
 		<!--Fontawesome CSS-->
 		<link
 			rel="stylesheet"
@@ -108,17 +102,15 @@
 		<meta name="theme-color" content="#ffffff" />
 		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
-		<!--Page Stylesheet-->
-		<link rel="stylesheet" href="assets/css/iframe.css" type="text/css" />
 		<title>Horizon Photography | Gallery Selector</title>
 	</head>
-	<body>
+	<body class="pt-0">
 		<main>
 			<!-- General layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
 			<section class="container-fluid p-0 m-0 content-container-gallery">
 				<h1 class="d-none">Gallery Selector</h1>
 				<!-- Changes title based on country selected in the gallery map-->
-				<h4 class="text-center m-0 p-2" id="gallery-title">
+				<h4 class="bg-primary text-center m-0 p-2" id="gallery-title">
 					Explore the world through my photos.<br />
 					Click on a marker to see its gallery and read about it.
 				</h4>
@@ -135,7 +127,7 @@
 								<div class="my-auto pics">
 									<a
 										id="l1"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultl1_tn.jpg);
@@ -152,7 +144,7 @@
 								<div class="my-auto pics">
 									<a
 										id="w1"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultw1_tn.jpg);
@@ -171,7 +163,7 @@
 								<div class="my-auto pics">
 									<a
 										id="w2"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultw2_tn.jpg);
@@ -188,7 +180,7 @@
 								<div class="my-auto pics">
 									<a
 										id="l2"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultl2_tn.jpg);
@@ -207,7 +199,7 @@
 								<div class="my-auto pics">
 									<a
 										id="l3"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultl3_tn.jpg);
@@ -224,7 +216,7 @@
 								<div class="my-auto pics">
 									<a
 										id="w3"
-										class="card-image pop"
+										class="card-image iframe-image pop"
 										href="#"
 										style="
 											background-image: url(assets/images/default/defaultw3_tn.jpg);
