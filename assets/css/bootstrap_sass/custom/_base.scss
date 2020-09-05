@@ -102,3 +102,273 @@ footer {
 .fab:hover {
 	background-color: #00611c;
 }
+
+
+/*------------------------------------------------------CONTACT PAGE*/
+
+/*------------------------------------------------------Basic*/
+/* Controls the appearance of the forms so they don't extend too long */
+.contact-row {
+    max-width: 600px;
+}
+
+#cmessage {
+    height: 150px;
+}
+
+
+/*------------------------------------------------------GALLERY PAGE*/
+
+/*------------------------------------------------------Map*/
+#map {
+    height: 500px;
+}
+
+/*------------------------------------------------------iFrame*/
+
+/* Styles scroll-point so the fixed nav doesn't cover the iframe heading*/
+#scroll-point {
+    top: -56px;
+}
+
+/* Makes the modal backdrop darker so the image can stand out */
+.modal-backdrop.show {
+    opacity: 0.96;
+}
+
+/* Styles the corner cross */
+#image-modal button.close {
+    color: #D3D3D3;
+}
+
+#image-modal button.close:hover {
+    color: #fff;
+}
+
+/*------------------------------------------------------Google Maps infoWindow*/
+#infowindowlist {
+    list-style-type: none;
+}
+
+/*Box that holds the window*/  
+.gm-style {
+    font: inherit; 
+}
+
+/* style the base characteristics of the window */
+.gm-style .gm-style-iw {
+    font: inherit;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #252525;
+    top: 0;
+    left: 0;
+    padding-right: 10px !important;
+    display: block;
+}    
+
+/* style the little box point */
+.gm-style .gm-style-iw-t::after {
+    background: #252525;
+}
+
+/* remove the scroll-bars */
+.gm-style-iw-d {
+    overflow: hidden !important;
+}
+
+/*------------------------------------------------------Scroll to Top Arrow*/
+.fa-arrow-up {
+    color:rgba(255, 255, 255, 0.6);        
+    background: rgba(0, 97, 28, 0.6);   
+    width: 3rem;    
+    height: 3rem;
+    padding: 1rem;
+    bottom: 25px;
+    right: 25px;
+    font-size: 1.2rem;
+    display: none;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.fa-arrow-up:hover {
+    background: rgb(0, 97, 28);
+    bottom: 2rem;
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0.0625rem rgba(25, 41, 30, 0.8);
+            box-shadow: 0.1875rem 0.1875rem 0.0625rem rgba(25, 41, 30, 0.8);
+}
+
+
+/*------------------------------------------------------IFRAME PAGE*/
+
+/*------------------------------------------------------Picture Spacing*/
+.pics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+}
+
+/*------------------------------------------------------Gallery Layout*/
+/*The min-height is necessary to prevent content overflow and overlap on smaller devices with vertical columns*/
+.content-container-gallery {
+    min-height: 83vh;
+}
+
+/* 1. CSS utilised and edited for purpose from https://mdbootstrap.com/plugins/jquery/gallery/ */
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 3vw;
+    -moz-column-width: 3vw;
+    column-width: 3vw;
+}
+
+@media (max-width: 450px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 95vw;
+        -moz-column-width: 95vw;
+        column-width: 95vw;
+    }
+}
+
+/*------------------------------------------------------Image Blur*/
+/* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
+/*Blur effects are necessary so the quickly-loaded thumbnails are not seen to be pixelated*/
+.iframe-image {
+    width: 30vw;
+    background: #000 center center no-repeat;
+    background-size: cover;
+}
+
+/*Makes the thumbnail overlay invisible*/
+.card-image>img {
+    opacity: 0;
+}
+
+/* Removes the blur on load*/
+.card-image.is-loaded.iframe-image {
+    -webkit-transition: -webkit-filter 1s;
+    transition: -webkit-filter 1s;
+    -o-transition: filter 1s;
+    transition: filter 1s;
+    transition: filter 1s, -webkit-filter 1s;
+}
+
+
+/*------------------------------------------------------INDEX PAGE*/
+
+/*------------------------------------------------------Callout*/
+/*Background image is my own*/
+.callout-container {
+    height: 95vh;
+    background: no-repeat bottom right fixed;
+    background-size: cover;
+}
+
+
+/*------------------------------------------------------Jumbotron*/
+#jumbo-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #D3D3D3;
+    bottom: 0;
+    left: 0;
+}
+
+
+/*------------------------------------------------------Section*/
+
+#map-link {
+    height: 250px;
+    background: url("../images/mapimage.png") no-repeat;
+    background-size: cover;
+}
+
+/*------------------------------------------------------Animations*/
+.div-hover {
+    -webkit-animation: zoom-out 0.7s ease-in-out;
+    animation: zoom-out 0.7s ease-in-out;
+}
+
+.div-hover:hover {
+    -webkit-animation: zoom-in 0.7s ease-in-out forwards;
+    animation: zoom-in 0.7s ease-in-out forwards;
+}
+
+/* The dark box overlay on the images */
+.link-hover {
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+
+.link-hover:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+/* Code edited to purpose from https://stackoverflow.com/a/16516826 */
+/* z-index values utilised so that when the scale increases, the image hovered overs does not have one side clipped behind the image next to it.*/
+@-webkit-keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+    to {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+    to {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+}
+
+@-webkit-keyframes zoom-in {
+    0% {
+        -webkit-transform: scale(1);
+        z-index: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.06);
+        z-index: 2;
+    }
+}
+
+/* CSS utilised and edited for purpose from https://www.cssscript.com/progressive-image-lazy-loading-with-blur-effect/ */
+/* Blur effects are necessary so the thumbnail is not seen to be pixelated*/
+.card-image {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+}
+
+/* Removes the blur on load*/
+.card-image.is-loaded {
+    -webkit-filter: none;
+            filter: none;
+}
+
+.card-image.is-loaded.splash-image {
+    -webkit-transition: -webkit-filter 2s;
+    transition: -webkit-filter 2s;
+    -o-transition: filter 2s;
+    transition: filter 2s;
+    transition: filter 2s, -webkit-filter 2s;
+}
