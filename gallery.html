@@ -115,7 +115,7 @@
 	<body class="bg-dark">
 		<header>
 			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
-			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font w-100 p-0">
+			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0">
 				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img
@@ -177,7 +177,7 @@
 					<!-- Google Maps API map div-->
 					<div id="map" class="container-fluid"></div>
 					<!-- A div used for scrolling down to the iframe heading-->
-					<div id="scroll-point"></div>
+					<div id="scroll-point" class="d-block position-relative invisible"></div>
 					<!-- The iframe contains the basic gallery page layout and is modified with the script files to change content based on location -->
 					<iframe
 						src="iframe_default.html"
@@ -314,7 +314,7 @@
 			<div class="row pb-1 pb-md-3">
 				<!-- Newsletter sign up -->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font h3">Newsletter</h2>
+					<h2 class="heading-font h4">Newsletter</h2>
 					<p class="mb-0">Sign up here!</p>
 					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
 					<form
@@ -338,7 +338,7 @@
 				</div>
 				<!-- Links to contact page -->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font h3">Contact</h2>
+					<h2 class="heading-font h4">Contact</h2>
 					<p class="mb-0">
 						Send me a message at the
 						<a href="contact.html" class="text-primary">Contact</a>
@@ -348,7 +348,7 @@
 				<!-- Social Link section -->
 				<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
 				<div class="col-sm-4 mt-3">
-					<h2 class="heading-font h3">Social</h2>
+					<h2 class="heading-font h4">Social</h2>
 					<ul class="list-inline h4">
 						<li class="list-inline-item">
 							<a
@@ -406,9 +406,9 @@
 			aria-labelledby="image-modal"
 			aria-hidden="true"
 		>
-			<div class="modal-dialog modal-lg mt-5">
-				<div class="modal-content">
-					<div class="modal-body p-0">
+			<div class="modal-dialog bg-transparent modal-lg mt-5">
+				<div class="modal-content bg-transparent">
+					<div class="modal-body  p-0">
 						<button
 							type="button"
 							class="close"
@@ -465,7 +465,7 @@
 			</div>
 		</div>
 		<!-- Arrow used to scroll back to the top of the page after viewing gallery images-->
-		<a href="#"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+		<a href="#"><i class="fas fa-arrow-up position-fixed text-center rounded-circle" aria-hidden="true"></i></a>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>

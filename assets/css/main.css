@@ -7981,33 +7981,16 @@ footer {
   height: 150px;
 }
 
-/*Used to push the footer to the bottom of the page as the content does not fill the page on some devices*/
-/*The fixed height is necessary to vertically align the content in the center of the page on larger devices, the min-height is necessary to prevent content overflow and overlap on smaller devices with vertical columns*/
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-/*------------------------------------------------------Map*/
-.heading-font {
-  font-size: 1.4rem;
-}
-
 /*------------------------------------------------------Map*/
 #map {
   height: 500px;
 }
 
 /*------------------------------------------------------iFrame*/
-/* Styles scrollpoint so the fixed nav doesn't cover the iframe heading*/
+/* Styles scroll-point so the fixed nav doesn't cover the iframe heading*/
 #scroll-point {
-  display: block;
-  position: relative;
   top: -56px;
-  visibility: hidden;
-}
-
-/*------------------------------------------------------Gallery Modal*/
-#image-modal .modal-body,
-#image-modal .modal-content,
-#image-modal .modal-dialog {
-  background-color: rgba(0, 0, 0, 0);
 }
 
 /* Makes the modal backdrop darker so the image can stand out */
@@ -8024,7 +8007,7 @@ footer {
   color: #fff;
 }
 
-/*------------------------------------------------------Google Mpas infoWindow*/
+/*------------------------------------------------------Google Maps infoWindow*/
 #infowindowlist {
   list-style-type: none;
 }
@@ -8051,7 +8034,7 @@ footer {
   background: #252525;
 }
 
-/* remove the scrollbars */
+/* remove the scroll-bars */
 .gm-style-iw-d {
   overflow: hidden !important;
 }
@@ -8063,13 +8046,10 @@ footer {
   width: 3rem;
   height: 3rem;
   padding: 1rem;
-  position: fixed;
   bottom: 25px;
   right: 25px;
   font-size: 1.2rem;
-  text-align: center;
   display: none;
-  border-radius: 50%;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
