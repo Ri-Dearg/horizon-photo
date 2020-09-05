@@ -115,7 +115,9 @@
 	<body class="bg-dark">
 		<header>
 			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
-			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0">
+			<nav
+				class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0"
+			>
 				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img
@@ -135,7 +137,10 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse w-100 mb-2" id="collapse-navbar">
+				<div
+					class="collapse navbar-collapse w-100 mb-2"
+					id="collapse-navbar"
+				>
 					<ul class="navbar-nav w-100">
 						<li class="nav-item text-right m-md-auto">
 							<a
@@ -168,7 +173,9 @@
 		<!-- Heading included for validation, set to display: none as it is not necessary to see -->
 		<main>
 			<h1 class="d-none">Gallery</h1>
-			<section class="container-fluid bg-dark text-white text-justify p-0 m-0">
+			<section
+				class="container-fluid bg-dark text-white text-justify p-0 m-0"
+			>
 				<!-- Heading included for validation, set to display: none as it is not necessary to see -->
 				<h2 class="d-none">Travel Gallery</h2>
 				<article>
@@ -177,7 +184,10 @@
 					<!-- Google Maps API map div-->
 					<div id="map" class="container-fluid"></div>
 					<!-- A div used for scrolling down to the iframe heading-->
-					<div id="scroll-point" class="d-block position-relative invisible"></div>
+					<div
+						id="scroll-point"
+						class="d-block position-relative invisible"
+					></div>
 					<!-- The iframe contains the basic gallery page layout and is modified with the script files to change content based on location -->
 					<iframe
 						src="iframe_default.html"
@@ -310,7 +320,7 @@
 			</section>
 		</main>
 		<!-- Three section footer-->
-		<footer class="container-fluid">
+		<footer class="container-fluid mt-auto">
 			<div class="row pb-1 pb-md-3">
 				<!-- Newsletter sign up -->
 				<div class="col-sm-4 mt-3">
@@ -319,21 +329,27 @@
 					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
 					<form
 						id="news-form"
-						class="form-group d-flex justify-content-center mb-1"
+						class="form-group justify-content-center mb-1"
 						onsubmit="return sendMailNews(this);"
 					>
-						<input
-							type="email"
-							name="email"
-							placeholder="Email"
-							class="form-control"
-							required
-						/>
-						<input
-							type="submit"
-							value="Join"
-							class="btn btn-primary text-white ml-2"
-						/>
+						<div class="row">
+							<div class="col">
+								<input
+									type="email"
+									name="email"
+									placeholder="Email"
+									class="form-control"
+									required
+								/>
+							</div>
+							<div class="col-auto">
+								<input
+									type="submit"
+									value="Join"
+									class="btn btn-primary text-white"
+								/>
+							</div>
+						</div>
 					</form>
 				</div>
 				<!-- Links to contact page -->
@@ -356,7 +372,7 @@
 								href="https://www.facebook.com/ridearg-411885722878522/"
 							>
 								<i
-									class="fab fa-facebook"
+									class="fab fa-facebook rounded-circle text-center p-2"
 									aria-hidden="true"
 								></i>
 								<span class="sr-only">Facebook</span>
@@ -368,7 +384,7 @@
 								href="https://www.instagram.com/ri.dearg/"
 							>
 								<i
-									class="fab fa-instagram"
+									class="fab fa-instagram rounded-circle text-center p-2"
 									aria-hidden="true"
 								></i>
 								<span class="sr-only">Instagram</span>
@@ -379,7 +395,10 @@
 								target="_blank"
 								href="https://500px.com/horizonrecordblog"
 							>
-								<i class="fab fa-500px" aria-hidden="true"></i>
+								<i
+									class="fab fa-500px rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
 								<span class="sr-only">500px</span>
 							</a>
 						</li>
@@ -388,7 +407,10 @@
 								target="_blank"
 								href="https://www.flickr.com/photos/horizon_photo/"
 							>
-								<i class="fab fa-flickr" aria-hidden="true"></i>
+								<i
+									class="fab fa-flickr rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
 								<span class="sr-only">Flickr</span>
 							</a>
 						</li>
@@ -408,7 +430,7 @@
 		>
 			<div class="modal-dialog bg-transparent modal-lg mt-5">
 				<div class="modal-content bg-transparent">
-					<div class="modal-body  p-0">
+					<div class="modal-body p-0">
 						<button
 							type="button"
 							class="close"
@@ -465,7 +487,12 @@
 			</div>
 		</div>
 		<!-- Arrow used to scroll back to the top of the page after viewing gallery images-->
-		<a href="#"><i class="fas fa-arrow-up position-fixed text-center rounded-circle" aria-hidden="true"></i></a>
+		<a href="#"
+			><i
+				class="fas fa-arrow-up position-fixed text-center rounded-circle"
+				aria-hidden="true"
+			></i
+		></a>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="assets/libraries/jquery/jquery-3.4.1.min.js"></script>

@@ -115,7 +115,9 @@
 	<body class="min-vh-100 d-flex flex-column bg-dark">
 		<header>
 			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
-			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0">
+			<nav
+				class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0"
+			>
 				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img
@@ -135,7 +137,10 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse w-100 mb-2" id="collapse-navbar">
+				<div
+					class="collapse navbar-collapse w-100 mb-2"
+					id="collapse-navbar"
+				>
 					<ul class="navbar-nav w-100">
 						<li class="nav-item m-md-auto text-right">
 							<a
@@ -167,7 +172,9 @@
 		</header>
 		<!--Div used to keep the footer at the bottom of the page, as the page content does not fill the page on some devices-->
 		<main class="my-auto">
-			<section class="container-fluid bg-dark text-white text-justify p-0">
+			<section
+				class="container-fluid bg-dark text-white text-justify p-0"
+			>
 				<article class="row p-0 m-0 h-100">
 					<div class="col-12 p-3 bg-primary">
 						<div class="row m-0 my-auto w-100 p-0">
@@ -194,9 +201,7 @@
 					<div class="col-12 p-0">
 						<div class="row p-1 m-auto">
 							<div class="col-12 text-center">
-								<h1 class="heading-font h3">
-									Contact me
-								</h1>
+								<h1 class="heading-font h3">Contact me</h1>
 							</div>
 							<div class="col-12 text-center">
 								<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
@@ -246,9 +251,7 @@
 										</div>
 									</div>
 									<div class="row contact-row mx-auto">
-										<div
-											class="col my-2 p-1"
-										>
+										<div class="col my-2 p-1">
 											<input
 												type="submit"
 												class="btn btn-primary text-white"
@@ -264,134 +267,140 @@
 			</section>
 		</main>
 		<!--Separate container for the footer to keep it pushed down to the bottom of the page as the page content is too short to fill many viewports-->
-			<!-- Three section footer-->
-			<footer class="container-fluid mt-auto">
-				<div class="row pb-1 pb-md-3">
-					<!-- Newsletter sign up -->
-					<div class="col-sm-4 mt-3">
-						<h2 class="heading-font h4">Newsletter</h2>
-						<p class="mb-0">Sign up here!</p>
-						<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
-						<form
-							id="news-form"
-							class="form-group justify-content-center mb-1"
-							onsubmit="return sendMailNews(this);"
-						>
-							<input
-								type="email"
-								name="email"
-								placeholder="Email"
-								class="form-control"
-								required
-							/>
-							<input
-								type="submit"
-								value="Join"
-								class="btn btn-primary text-white ml-2"
-							/>
-						</form>
-					</div>
-					<!-- Links to contact page -->
-					<div class="col-sm-4 mt-3">
-						<h2 class="heading-font h4">Contact</h2>
-						<p class="mb-0">
-							Send me a message at the
-							<a href="contact.html" class="text-primary">Contact</a>
-							page! I'd love to know what you think.
-						</p>
-					</div>
-					<!-- Social Link section -->
-					<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
-					<div class="col-sm-4 mt-3">
-						<h2 class="heading-font h4">Social</h2>
-						<ul class="list-inline h4">
-							<li class="list-inline-item">
-								<a
-									target="_blank"
-									href="https://www.facebook.com/ridearg-411885722878522/"
-								>
-									<i
-										class="fab fa-facebook"
-										aria-hidden="true"
-									></i>
-									<span class="sr-only">Facebook</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a
-									target="_blank"
-									href="https://www.instagram.com/ri.dearg/"
-								>
-									<i
-										class="fab fa-instagram"
-										aria-hidden="true"
-									></i>
-									<span class="sr-only">Instagram</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a
-									target="_blank"
-									href="https://500px.com/horizonrecordblog"
-								>
-									<i
-										class="fab fa-500px"
-										aria-hidden="true"
-									></i>
-									<span class="sr-only">500px</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a
-									target="_blank"
-									href="https://www.flickr.com/photos/horizon_photo/"
-								>
-									<i
-										class="fab fa-flickr"
-										aria-hidden="true"
-									></i>
-									<span class="sr-only">Flickr</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</footer>
-			<!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on success or error-->
-			<div
-				class="modal fade"
-				id="email-modal"
-				tabindex="-1"
-				role="dialog"
-				aria-labelledby="email-modal"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-lg mt-5">
-					<div class="modal-content bg-dark text-white">
-						<div class="header-wrapper bg-primary d-flex">
-							<div class="modal-header bg-primary mx-auto p-0">
-								<!-- Heading is set by sendMail.js -->
-								<h4
-									class="my-3 heading-font"
-									id="email-modal-header"
-								></h4>
+		<!-- Three section footer-->
+		<footer class="container-fluid mt-auto">
+			<div class="row pb-1 pb-md-3">
+				<!-- Newsletter sign up -->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font h4">Newsletter</h2>
+					<p class="mb-0">Sign up here!</p>
+					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
+					<form
+						id="news-form"
+						class="form-group justify-content-center mb-1"
+						onsubmit="return sendMailNews(this);"
+					>
+						<div class="row">
+							<div class="col">
+								<input
+									type="email"
+									name="email"
+									placeholder="Email"
+									class="form-control"
+									required
+								/>
+							</div>
+							<div class="col-auto">
+								<input
+									type="submit"
+									value="Join"
+									class="btn btn-primary text-white"
+								/>
 							</div>
 						</div>
-						<div class="modal-body text-center">
-							<!-- Content is set by sendMail.js -->
-							<p class="my-0" id="email-modal-body"></p>
-						</div>
-						<div class="modal-footer mx-auto">
-							<button
-								type="button"
-								class="btn btn-primary text-white"
-								data-dismiss="modal"
+					</form>
+				</div>
+				<!-- Links to contact page -->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font h4">Contact</h2>
+					<p class="mb-0">
+						Send me a message at the
+						<a href="contact.html" class="text-primary">Contact</a>
+						page! I'd love to know what you think.
+					</p>
+				</div>
+				<!-- Social Link section -->
+				<!-- HTML layout from Resume Project: https://github.com/Ri-Dearg/resume-project/blob/master/index.html  (Correct link to COde Institute)-->
+				<div class="col-sm-4 mt-3">
+					<h2 class="heading-font h4">Social</h2>
+					<ul class="list-inline h4">
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.facebook.com/ridearg-411885722878522/"
 							>
-								Close
-							</button>
+								<i
+									class="fab fa-facebook rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">Facebook</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.instagram.com/ri.dearg/"
+							>
+								<i
+									class="fab fa-instagram rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">Instagram</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://500px.com/horizonrecordblog"
+							>
+								<i
+									class="fab fa-500px rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">500px</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a
+								target="_blank"
+								href="https://www.flickr.com/photos/horizon_photo/"
+							>
+								<i
+									class="fab fa-flickr rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
+								<span class="sr-only">Flickr</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- Modal for contact / newsletter form popup, styled in main.css, content is set by sendMail.js, based on success or error-->
+		<div
+			class="modal fade"
+			id="email-modal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="email-modal"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg mt-5">
+				<div class="modal-content bg-dark text-white">
+					<div class="header-wrapper bg-primary d-flex">
+						<div class="modal-header bg-primary mx-auto p-0">
+							<!-- Heading is set by sendMail.js -->
+							<h4
+								class="my-3 heading-font"
+								id="email-modal-header"
+							></h4>
 						</div>
 					</div>
+					<div class="modal-body text-center">
+						<!-- Content is set by sendMail.js -->
+						<p class="my-0" id="email-modal-body"></p>
+					</div>
+					<div class="modal-footer mx-auto">
+						<button
+							type="button"
+							class="btn btn-primary text-white"
+							data-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
 				</div>
+			</div>
 		</div>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

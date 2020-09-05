@@ -114,7 +114,9 @@
 	<body class="bg-dark">
 		<header>
 			<!-- Sticky Navbar with collapsible hamburger menu for smaller screens-->
-			<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0">
+			<nav
+				class="navbar fixed-top navbar-expand-md navbar-dark bg-dark heading-font h3 w-100 p-0"
+			>
 				<!-- Classes used to remove Logo's display on medium and above devices for the collapsible menu-->
 				<a href="index.html" class="d-md-none pl-3">
 					<img
@@ -134,7 +136,10 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse w-100 mb-2" id="collapse-navbar">
+				<div
+					class="collapse navbar-collapse w-100 mb-2"
+					id="collapse-navbar"
+				>
 					<ul class="navbar-nav w-100">
 						<li class="nav-item m-md-auto text-right">
 							<a
@@ -182,12 +187,13 @@
 							alt="splash image"
 						/>
 						<!-- Jumbotron container-->
-						<div class="container-fluid position-absolute" id="jumbo-text">
+						<div
+							class="container-fluid position-absolute"
+							id="jumbo-text"
+						>
 							<div class="row">
 								<div class="col px-2">
-									<h2
-										class="h1 heading-font m-0 pt-2"
-									>
+									<h2 class="h1 heading-font m-0 pt-2">
 										Explore
 									</h2>
 									<p class="lead mt-0 mb-2 ml-1">
@@ -213,11 +219,7 @@
 						<div class="col-md-8 my-auto">
 							<!-- Class used to position the header to the right on medium and larger screens-->
 							<div class="d-md-flex flex-row-reverse">
-								<h2
-									class="h1 heading-font pt-md-2"
-								>
-									About
-								</h2>
+								<h2 class="h1 heading-font pt-md-2">About</h2>
 							</div>
 							<p>
 								I am a travel photographer who loves to take
@@ -237,15 +239,16 @@
 					</div>
 					<!-- Animation created and used for impact "div-hover" class is the dark overlay, the id contains the background image -->
 					<div class="row">
-						<div id="map-link" class="div-hover col bg-dark d-flex p-0">
+						<div
+							id="map-link"
+							class="div-hover col bg-dark d-flex p-0"
+						>
 							<a
 								href="gallery.html"
 								id="gallery-link"
 								class="link-hover d-flex h-100 w-100"
 							>
-								<h2
-									class="text-center heading-font h1 m-auto"
-								>
+								<h2 class="text-center heading-font h1 m-auto">
 									Travel <br />
 									Gallery
 								</h2>
@@ -256,7 +259,7 @@
 			</section>
 		</main>
 		<!-- Three section footer-->
-		<footer class="container-fluid">
+		<footer class="container-fluid mt-auto">
 			<div class="row pb-1 pb-md-3">
 				<!-- Newsletter sign up -->
 				<div class="col-sm-4 mt-3">
@@ -265,21 +268,27 @@
 					<!-- Fires function in sendMail.js, sending form to sheridan.rp@gmail.com -->
 					<form
 						id="news-form"
-						class="form-group d-flex justify-content-center mb-1"
+						class="form-group justify-content-center mb-1"
 						onsubmit="return sendMailNews(this);"
 					>
-						<input
-							type="email"
-							name="email"
-							placeholder="Email"
-							class="form-control"
-							required
-						/>
-						<input
-							type="submit"
-							value="Join"
-							class="btn btn-primary text-white ml-2"
-						/>
+						<div class="row">
+							<div class="col">
+								<input
+									type="email"
+									name="email"
+									placeholder="Email"
+									class="form-control"
+									required
+								/>
+							</div>
+							<div class="col-auto">
+								<input
+									type="submit"
+									value="Join"
+									class="btn btn-primary text-white"
+								/>
+							</div>
+						</div>
 					</form>
 				</div>
 				<!-- Links to contact page -->
@@ -302,7 +311,7 @@
 								href="https://www.facebook.com/ridearg-411885722878522/"
 							>
 								<i
-									class="fab fa-facebook"
+									class="fab fa-facebook rounded-circle text-center p-2"
 									aria-hidden="true"
 								></i>
 								<span class="sr-only">Facebook</span>
@@ -314,7 +323,7 @@
 								href="https://www.instagram.com/ri.dearg/"
 							>
 								<i
-									class="fab fa-instagram"
+									class="fab fa-instagram rounded-circle text-center p-2"
 									aria-hidden="true"
 								></i>
 								<span class="sr-only">Instagram</span>
@@ -325,7 +334,10 @@
 								target="_blank"
 								href="https://500px.com/horizonrecordblog"
 							>
-								<i class="fab fa-500px" aria-hidden="true"></i>
+								<i
+									class="fab fa-500px rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
 								<span class="sr-only">500px</span>
 							</a>
 						</li>
@@ -334,7 +346,10 @@
 								target="_blank"
 								href="https://www.flickr.com/photos/horizon_photo/"
 							>
-								<i class="fab fa-flickr" aria-hidden="true"></i>
+								<i
+									class="fab fa-flickr rounded-circle text-center p-2"
+									aria-hidden="true"
+								></i>
 								<span class="sr-only">Flickr</span>
 							</a>
 						</li>
