@@ -24,7 +24,7 @@ https://getbootstrap.com/docs/4.5/getting-started/theming/#sass-options*/
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #00611C;
+  --primary: #00611c;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -157,7 +157,7 @@ sup {
 }
 
 a {
-  color: #00611C;
+  color: #00611c;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2138,8 +2138,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #00611C;
-  border-color: #00611C;
+  background-color: #00611c;
+  border-color: #00611c;
 }
 .btn-primary:hover {
   color: #fff;
@@ -2154,8 +2154,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #00611C;
-  border-color: #00611C;
+  background-color: #00611c;
+  border-color: #00611c;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
@@ -2377,25 +2377,25 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #00611C;
-  border-color: #00611C;
+  color: #00611c;
+  border-color: #00611c;
 }
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #00611C;
-  border-color: #00611C;
+  background-color: #00611c;
+  border-color: #00611c;
 }
 .btn-outline-primary:focus, .btn-outline-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 28, 0.5);
 }
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #00611C;
+  color: #00611c;
   background-color: transparent;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #00611C;
-  border-color: #00611C;
+  background-color: #00611c;
+  border-color: #00611c;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 28, 0.5);
@@ -2578,7 +2578,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #00611C;
+  color: #00611c;
   text-decoration: none;
 }
 .btn-link:hover {
@@ -2671,8 +2671,8 @@ input[type=button].btn-block {
 }
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #00611C;
-  background-color: #00611C;
+  border-color: #00611c;
+  background-color: #00611c;
 }
 .custom-control-input:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 28, 0.25);
@@ -2724,8 +2724,8 @@ input[type=button].btn-block {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
 }
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #00611C;
-  background-color: #00611C;
+  border-color: #00611c;
+  background-color: #00611c;
 }
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e");
@@ -2921,7 +2921,7 @@ input[type=button].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #00611C;
+  background-color: #00611c;
   border: 0;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -2945,7 +2945,7 @@ input[type=button].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #00611C;
+  background-color: #00611c;
   border: 0;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -2972,7 +2972,7 @@ input[type=button].btn-block {
   margin-top: 0;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
-  background-color: #00611C;
+  background-color: #00611c;
   border: 0;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -3081,7 +3081,7 @@ input[type=button].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #00611C;
+  background-color: #00611c;
 }
 
 .nav-fill .nav-item {
@@ -3529,8 +3529,8 @@ input[type=button].btn-block {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #00611C;
-  border-color: #00611C;
+  background-color: #00611c;
+  border-color: #00611c;
 }
 .list-group-item + .list-group-item {
   border-top-width: 0;
@@ -3983,7 +3983,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #00611C !important;
+  background-color: #00611c !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -4111,7 +4111,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #00611C !important;
+  border-color: #00611c !important;
 }
 
 .border-secondary {
@@ -7674,7 +7674,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #00611C !important;
+  color: #00611c !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -7998,7 +7998,7 @@ footer {
 
 /* Styles the corner cross */
 #image-modal button.close {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 #image-modal button.close:hover {
@@ -8134,7 +8134,7 @@ footer {
 /*------------------------------------------------------Jumbotron*/
 #jumbo-text {
   background-color: rgba(0, 0, 0, 0.7);
-  color: #D3D3D3;
+  color: #d3d3d3;
   bottom: 0;
   left: 0;
 }

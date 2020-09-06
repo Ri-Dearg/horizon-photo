@@ -107,7 +107,9 @@
 	<body class="pt-0 bg-dark">
 		<main>
 			<!-- General layout utilised and edited to purpose using flexboxes for a more even vertical centering from https://mdbootstrap.com/plugins/jquery/gallery/ -->
-			<section class="container-fluid p-0 m-0 bg-dark text-white text-justify content-container-gallery">
+			<section
+				class="container-fluid p-0 m-0 bg-dark text-white text-justify content-container-gallery"
+			>
 				<h1 class="d-none">Gallery Selector</h1>
 				<!-- Changes title based on country selected in the gallery map-->
 				<h4 class="bg-primary text-center m-0 p-2" id="gallery-title">
@@ -120,7 +122,7 @@
 					<p id="country-blurb" class="text-center m-1 p-2"></p>
 					<div class="row mx-auto mt-1">
 						<!--The gallery layout is wrapped in a flex-box to give images of different pixel heights even vertical spacing.
-				        The combination of the pop and card-image classes load a thumbnail image of a small file size and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger file size and may take a while to load-->
+                     The combination of the pop and card-image classes load a thumbnail image of a small file size and blur it, to hold the layout better and to let the user know there are images loading. This is done because the images are of a much larger file size and may take a while to load-->
 						<section class="gallery d-flex mx-auto">
 							<h2 class="d-none">Country Photos</h2>
 							<div class="d-flex flex-column">
