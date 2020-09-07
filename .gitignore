@@ -1,2 +1,5 @@
 .c9/
 .theia/
+assets/css/bootstrap/
+*.css
+*.css.map
