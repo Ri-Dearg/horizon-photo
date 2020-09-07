@@ -10,7 +10,7 @@ newsF.addEventListener("submit", submitAct);
 
 /**
  * Prevents form refreshing the page on submission.
- * @param {Object} event
+ * @param {Object} event - The form submitting
  */
 function submitAct(event) {
 	event.preventDefault();
@@ -41,7 +41,7 @@ function okResponse() {
 
 /**
  * Posts failure message into modal after error
- * @param {Object} error
+ * @param {Object} error - The error object if there is an issue sending the form.
  */
 function errorResponse(error) {
 	$("#email-modal-header").html(`Sorry!`);
@@ -53,7 +53,7 @@ function errorResponse(error) {
 
 /**
  * Sends form with all necessary parameters for the contact page form.
- * @param {Object} contactForm
+ * @param {Object} contactForm - The form sent by the contact me form
  */
 function sendMailContact(contactForm) {
 	emailjs
@@ -77,12 +77,12 @@ function sendMailContact(contactForm) {
 
 /**
  * Sends form with all necessary parameters for the newsletter form.
- * @param {Object} contactForm
+ * @param {Object} newsF - The form sent by the newsletter box.
  */
-function sendMailNews(contactForm) {
+function sendMailNews(newsF) {
 	emailjs
 		.send("horizon_photo", "basic", {
-			user_email: contactForm.email.value,
+			user_email: newsF.email.value,
 		})
 		.then(
 			function (response) {

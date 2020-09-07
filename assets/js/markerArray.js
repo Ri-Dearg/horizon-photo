@@ -1,4 +1,3 @@
-// Backup array in case the REST Countries API fails
 {                                                                         
 "locations" : [ 
     {"attributes": {"title": "Ireland", "Latitude": 53.305494, "Longitude": -7.737649}},

@@ -1,4 +1,5 @@
-// Countries to match in the API for display on the map
+// Countries to match in the API for display on the map.
+// A country can be added here, and a marker will be automatically generated with info filled
 const countryName = [
 	"Canada",
 	"China",
