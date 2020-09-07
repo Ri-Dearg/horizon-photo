@@ -164,8 +164,6 @@ function bounce(markNum) {
 	}
 }
 
-// Allows selection of elements within the iframe
-const iframeC = $("iframe#iframe-gallery").contents();
 
 /**
  * This function swaps all of the data in the iframe.
@@ -176,6 +174,7 @@ const iframeC = $("iframe#iframe-gallery").contents();
  * @param {string} markTitle - The title of the marker, the name of the country.
  */
 function pageSwitch(markTitle) {
+
 	// takes the marker title, changes it to lowercase and removes spaces (e.g. from USA) for use in urls
 	const lwr1 = markTitle.toLowerCase().replace(/\s+/g, "");
 
@@ -188,7 +187,7 @@ function pageSwitch(markTitle) {
 	 */
 	function ancSwap(idArrayNum, lwr1) {
 		// selects the correct image id
-		const findID = iframeC.find(`#${idArrayNum}`);
+		const findID = window.iframeC.find(`#${idArrayNum}`);
 		findID.css(
 			"background-image",
 			`url(assets/images/${lwr1}/${lwr1}${idArrayNum}_tn.jpg)`
@@ -213,7 +212,7 @@ function pageSwitch(markTitle) {
 		}
 
 		// adjusts the iframe height upon all images loading, doing so before will set incorrect height
-		iframeC
+		window.iframeC
 			.find(
 				"#l1 > img",
 				"#l2 > img",
@@ -231,19 +230,19 @@ function pageSwitch(markTitle) {
 	 */
 	function galleryChoice(markTitle) {
 		// selects unique country blurbs from the gallery for insertion into the iframe
-		const blurbContent = $(`#${lwr1}-content`).html();
+        const blurbContent = $(`#${lwr1}-content`).html();
 		setTimeout(function () {
 			// Creates a heading for the iframe and fills an empty element in the iframe with the blurb
-			iframeC.find("#gallery-title").html(`${markTitle}`);
-			iframeC.find("#country-blurb").html(`${blurbContent}`);
+			window.iframeC.find("#gallery-title").html(`${markTitle}`);
+            window.iframeC.find("#country-blurb").html(`${blurbContent}`);
 			urlChange();
 		}, 900);
 	}
 
 	// animates the switch so the image change is less noticeable
 	$("iframe#iframe-gallery")
-		.fadeOut(1000)
-		.fadeIn(1000, galleryChoice(markTitle));
+		.fadeOut(1000, galleryChoice(markTitle))
+		.fadeIn(1000);
 }
 
 /**
@@ -351,6 +350,9 @@ $(document).ready(function () {
 });
 
 $(window).on("load", function () {
+    // Allows selection of elements within the iframe
+    window.iframeC = $("iframe#iframe-gallery").contents();
+
 	// Declare a global variable for the infoWIndow once the window has loaded.
 	window.infowindow = new google.maps.InfoWindow();
 
@@ -376,7 +378,7 @@ $(window).on("load", function () {
 	$(window).resize(galleryHeight);
 
 	// Opens a modal in gallery.html when an image in the iframe is clicked
-	iframeC.find(".pop").on("click", function () {
+	window.iframeC.find(".pop").on("click", function () {
 		$(".imagepreview").attr("src", $(this).attr("data-image-full"));
 		$("#image-modal").modal("show");
 	});
